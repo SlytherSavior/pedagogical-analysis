@@ -1,0 +1,1249 @@
+{
+    "metadata": {
+        "title": "Tangent Lines and Rates of Change",
+        "url": "https://tutorial.math.lamar.edu/Classes/CalcI/Tangents_Rates.aspx"
+    },
+    "content": [
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "In this section we are going to take a look at two fairly important problems in the study of calculus.  There are two reasons for looking at these problems now."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "First, both of these problems will lead us into the study of limits, which is the topic of this chapter after all.  Looking at these problems here will allow us to start to understand just what a limit is and what it can tell us about a function."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Secondly, the rate of change problem that we’re going to be looking at is one of the most important concepts that we’ll encounter in the second chapter of this course.  In fact, it’s probably one of the most important concepts that we’ll encounter in the whole course.  So, looking at it now will get us to start thinking about it from the very beginning."
+        },
+        {
+            "html_tag": "h4",
+            "type": "heading",
+            "text": "Tangent Lines"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "The first problem that we’re going to take a look at is the tangent line problem.  Before getting into this problem it would probably be best to define a tangent line."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "A tangent line to the function 𝑓 ⁡ ( 𝑥 ) f ⁡ ( x ) at the point 𝑥 = 𝑎 x = a is a line that just touches the graph of the function at the point in question and is “parallel” (in some way) to the graph at that point.  Take a look at the graph below."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ⁡ ( 𝑥 ) f ⁡ ( x )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 x = a"
+        },
+        {
+            "html_tag": "div",
+            "type": "image",
+            "text": "",
+            "images": [
+                {
+                    "src": "Tangents_Rates_Files/image001.webp",
+                    "alt": "A graph of some (unknown) function as well as a line.  Indicated on the graph is a point where the line forms a tangent line to the graph of the function (i.e. is parallel to the graph of the function) and a point where the line does not form a tangent line to the graph of the function (i.e. is not parallel to the graph of the function).",
+                    "class": []
+                }
+            ]
+        },
+        {
+            "html_tag": "img",
+            "type": "image",
+            "text": "A graph of some (unknown) function as well as a line.  Indicated on the graph is a point where the line forms a tangent line to the graph of the function (i.e. is parallel to the graph of the function) and a point where the line does not form a tangent line to the graph of the function (i.e. is not parallel to the graph of the function).",
+            "src": "Tangents_Rates_Files/image001.webp",
+            "alt": "A graph of some (unknown) function as well as a line.  Indicated on the graph is a point where the line forms a tangent line to the graph of the function (i.e. is parallel to the graph of the function) and a point where the line does not form a tangent line to the graph of the function (i.e. is not parallel to the graph of the function).",
+            "class": []
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "In this graph the line is a tangent line at the indicated point because it just touches the graph at that point and is also “parallel” to the graph at that point.  Likewise, at the second point shown, the line does just touch the graph at that point, but it is not “parallel” to the graph at that point and so it’s not a tangent line to the graph at that point."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "At the second point shown (the point where the line isn’t a tangent line) we will sometimes call the line a secant line ."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "We’ve used the word parallel a couple of times now and we should probably be a little careful with it.  In general, we will think of a line and a graph as being parallel at a point if they are both moving in the same direction at that point.  So, in the first point above the graph and the line are moving in the same direction and so we will say they are parallel at that point.  At the second point, on the other hand, the line and the graph are not moving in the same direction so they aren’t parallel at that point."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Okay, now that we’ve gotten the definition of a tangent line out of the way let’s move on to the tangent line problem.  That’s probably best done with an example."
+        },
+        {
+            "html_tag": "div",
+            "type": "example",
+            "text": "Example 1 Find the tangent line to 𝑓 ⁡ ( 𝑥 ) = 1 5 − 2 ⁢ 𝑥 2 f ⁡ ( x ) = 15 − 2 ⁢ x 2 at 𝑥 = 1 x = 1 . Show Solution We know from algebra that to find the equation of a line we need either two points on the line or a single point on the line and the slope of the line.  Since we know that we are after a tangent line we do have a point that is on the line.  The tangent line and the graph of the function must touch at 𝑥 x = 1 so the point ( 1 , 𝑓 ⁡ ( 1 ) ) = ( 1 , 1 3 ) ( 1 , f ⁡ ( 1 ) ) = ( 1 , 13 ) must be on the line. Now we reach the problem.  This is all that we know about the tangent line.  In order to find the tangent line we need either a second point or the slope of the tangent line.  Since the only reason for needing a second point is to allow us to find the slope of the tangent line let’s just concentrate on seeing if we can determine the slope of the tangent line. At this point in time all that we’re going to be able to do is to get an estimate for the slope of the tangent line, but if we do it correctly we should be able to get an estimate that is in fact the actual slope of the tangent line.  We’ll do this by starting with the point that we’re after, let’s call it 𝑃 = ( 1 , 1 3 ) P = ( 1 , 13 ) .  We will then pick another point that lies on the graph of the function, let’s call that point 𝑄 = ( 𝑥 , 𝑓 ⁡ ( 𝑥 ) ) Q = ( x , f ⁡ ( x ) ) . For the sake of argument let’s take 𝑥 = 2 x = 2 and so the second point will be 𝑄 = ( 2 , 7 ) Q = ( 2 , 7 ) .  Below is a graph of the function, the tangent line and the secant line that connects 𝑃 P and 𝑄 Q . We can see from this graph that the secant and tangent lines are somewhat similar and so the slope of the secant line should be somewhat close to the actual slope of the tangent line.  So, as an estimate of the slope of the tangent line we can use the slope of the secant line, let’s call it 𝑚 𝑃 ⁢ 𝑄 m P ⁢ Q , which is, 𝑚 𝑃 ⁢ 𝑄 = 𝑓 ⁡ ( 2 ) − 𝑓 ⁡ ( 1 ) 2 − 1 = 7 − 1 3 1 = − 6 m P ⁢ Q = f ⁡ ( 2 ) − f ⁡ ( 1 ) 2 − 1 = 7 − 13 1 = − 6 Now, if we weren’t too interested in accuracy we could say this is good enough and use this as an estimate of the slope of the tangent line.  However, we would like an estimate that is at least somewhat close the actual value.  So, to get a better estimate we can take an 𝑥 x that is closer to 𝑥 = 1 x = 1 and redo the work above to get a new estimate on the slope.  We could then take a third value of 𝑥 x even closer yet and get an even better estimate. In other words, as we take 𝑄 Q closer and closer to 𝑃 P the slope of the secant line connecting 𝑄 Q and 𝑃 P should be getting closer and closer to the slope of the tangent line.  If you are viewing this on the web, the image below shows this process. As you can see (animation won't work on all pdf viewers unfortunately) as we moved 𝑄 Q in closer and closer to 𝑃 P the secant lines does start to look more and more like the tangent line and so the approximate slopes ( i.e. the slopes of the secant lines) are getting closer and closer to the exact slope.  Also, do not worry about how I got the exact or approximate slopes.  We’ll be computing the approximate slopes shortly and we’ll be able to compute the exact slope in a few sections. In this figure we only looked at 𝑄 Q ’s that were to the right of 𝑃 P , but we could have just as easily used 𝑄 Q ’s that were to the left of 𝑃 P and we would have received the same results.  In fact, we should always take a look at 𝑄 Q ’s that are on both sides of 𝑃 P .  In this case the same thing is happening on both sides of 𝑃 P .  However, we will eventually see that doesn’t have to happen.  Therefore, we should always take a look at what is happening on both sides of the point in question when doing this kind of process. So, let’s see if we can come up with the approximate slopes we showed above, and hence an estimation of the slope of the tangent line.  In order to simplify the process a little let’s get a formula for the slope of the line between 𝑃 P and 𝑄 Q , 𝑚 𝑃 ⁢ 𝑄 m P ⁢ Q , that will work for any 𝑥 x that we choose to work with.  We can get a formula by finding the slope between 𝑃 P and 𝑄 Q using the “general” form of 𝑄 = ( 𝑥 , 𝑓 ⁡ ( 𝑥 ) ) Q = ( x , f ⁡ ( x ) ) . 𝑚 𝑃 ⁢ 𝑄 = 𝑓 ⁡ ( 𝑥 ) − 𝑓 ⁡ ( 1 ) 𝑥 − 1 = 1 5 − 2 ⁢ 𝑥 2 − 1 3 𝑥 − 1 = 2 − 2 ⁢ 𝑥 2 𝑥 − 1 m P ⁢ Q = f ⁡ ( x ) − f ⁡ ( 1 ) x − 1 = 15 − 2 ⁢ x 2 − 13 x − 1 = 2 − 2 ⁢ x 2 x − 1 Now, let’s pick some values of 𝑥 x getting closer and closer to 𝑥 = 1 x = 1 , plug in and get some slopes. 𝑥 x 𝑚 𝑃 ⁢ 𝑄 m P ⁢ Q 𝑥 x 𝑚 𝑃 ⁢ 𝑄 m P ⁢ Q 2 -6 0 -2 1.5 -5 0.5 -3 1.1 -4.2 0.9 -3.8 1.01 -4.02 0.99 -3.98 1.001 -4.002 0.999 -3.998 1.0001 -4.0002 0.9999 -3.9998 So, if we take 𝑥 x ’s to the right of 1 and move them in very close to 1 it appears that the slope of the secant lines appears to be approaching -4.  Likewise, if we take 𝑥 x ’s to the left of 1 and move them in very close to 1 the slope of the secant lines again appears to be approaching -4. Based on this evidence it seems that the slopes of the secant lines are approaching -4 as we move in towards 𝑥 = 1 x = 1 , so we will estimate that the slope of the tangent line is also -4.  As noted above, this is the correct value and we will be able to prove this eventually. Now, the equation of the line that goes through ( 𝑎 , 𝑓 ⁡ ( 𝑎 ) ) ( a , f ⁡ ( a ) ) is given by 𝑦 = 𝑓 ⁡ ( 𝑎 ) + 𝑚 ⁢ ( 𝑥 − 𝑎 ) y = f ⁡ ( a ) + m ⁢ ( x − a ) Therefore, the equation of the tangent line to 𝑓 ⁡ ( 𝑥 ) = 1 5 − 2 ⁢ 𝑥 2 f ⁡ ( x ) = 15 − 2 ⁢ x 2 at 𝑥 = 1 x = 1 is 𝑦 = 1 3 − 4 ⁢ ( 𝑥 − 1 ) = − 4 ⁢ 𝑥 + 1 7 y = 13 − 4 ⁢ ( x − 1 ) = − 4 ⁢ x + 17",
+            "images": [
+                {
+                    "src": "Tangents_Rates_Files/image002.webp",
+                    "alt": "This is a graph of \\(f\\left( x \\right)=15-2{{x}^{2}}\\).   It is a parabola with vertex at (0,15) and opens downward and is graphed on the range \\(-1 < x < 3\\).  Also on the graph are two points at P=(1,13) and Q=(2,7) and the secant line that goes through those two points.  The tangent line to the graph of the function at (1,13) is also shown for reference purposes.",
+                    "class": []
+                },
+                {
+                    "src": "Tangents_Rates_Files/image003.webp",
+                    "alt": "This graph is similar to the graph above except it is “animated” when viewed with a web browser.  The point P is still (1,13) and the point Q starts at (2,7) and moves along the graph of \\(f\\left( x \\right)\\) getting closer and closer to the point P.  As Q moves closer to P the secant line through P and Q also adjusts and starts looking more and more like the tangent line.",
+                    "class": []
+                }
+            ]
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ⁡ ( 𝑥 ) = 1 5 − 2 ⁢ 𝑥 2 f ⁡ ( x ) = 15 − 2 ⁢ x 2"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑥 = 1 x = 1"
+        },
+        {
+            "html_tag": "div",
+            "type": "example-content",
+            "text": "Show Solution We know from algebra that to find the equation of a line we need either two points on the line or a single point on the line and the slope of the line.  Since we know that we are after a tangent line we do have a point that is on the line.  The tangent line and the graph of the function must touch at 𝑥 x = 1 so the point ( 1 , 𝑓 ⁡ ( 1 ) ) = ( 1 , 1 3 ) ( 1 , f ⁡ ( 1 ) ) = ( 1 , 13 ) must be on the line. Now we reach the problem.  This is all that we know about the tangent line.  In order to find the tangent line we need either a second point or the slope of the tangent line.  Since the only reason for needing a second point is to allow us to find the slope of the tangent line let’s just concentrate on seeing if we can determine the slope of the tangent line. At this point in time all that we’re going to be able to do is to get an estimate for the slope of the tangent line, but if we do it correctly we should be able to get an estimate that is in fact the actual slope of the tangent line.  We’ll do this by starting with the point that we’re after, let’s call it 𝑃 = ( 1 , 1 3 ) P = ( 1 , 13 ) .  We will then pick another point that lies on the graph of the function, let’s call that point 𝑄 = ( 𝑥 , 𝑓 ⁡ ( 𝑥 ) ) Q = ( x , f ⁡ ( x ) ) . For the sake of argument let’s take 𝑥 = 2 x = 2 and so the second point will be 𝑄 = ( 2 , 7 ) Q = ( 2 , 7 ) .  Below is a graph of the function, the tangent line and the secant line that connects 𝑃 P and 𝑄 Q . We can see from this graph that the secant and tangent lines are somewhat similar and so the slope of the secant line should be somewhat close to the actual slope of the tangent line.  So, as an estimate of the slope of the tangent line we can use the slope of the secant line, let’s call it 𝑚 𝑃 ⁢ 𝑄 m P ⁢ Q , which is, 𝑚 𝑃 ⁢ 𝑄 = 𝑓 ⁡ ( 2 ) − 𝑓 ⁡ ( 1 ) 2 − 1 = 7 − 1 3 1 = − 6 m P ⁢ Q = f ⁡ ( 2 ) − f ⁡ ( 1 ) 2 − 1 = 7 − 13 1 = − 6 Now, if we weren’t too interested in accuracy we could say this is good enough and use this as an estimate of the slope of the tangent line.  However, we would like an estimate that is at least somewhat close the actual value.  So, to get a better estimate we can take an 𝑥 x that is closer to 𝑥 = 1 x = 1 and redo the work above to get a new estimate on the slope.  We could then take a third value of 𝑥 x even closer yet and get an even better estimate. In other words, as we take 𝑄 Q closer and closer to 𝑃 P the slope of the secant line connecting 𝑄 Q and 𝑃 P should be getting closer and closer to the slope of the tangent line.  If you are viewing this on the web, the image below shows this process. As you can see (animation won't work on all pdf viewers unfortunately) as we moved 𝑄 Q in closer and closer to 𝑃 P the secant lines does start to look more and more like the tangent line and so the approximate slopes ( i.e. the slopes of the secant lines) are getting closer and closer to the exact slope.  Also, do not worry about how I got the exact or approximate slopes.  We’ll be computing the approximate slopes shortly and we’ll be able to compute the exact slope in a few sections. In this figure we only looked at 𝑄 Q ’s that were to the right of 𝑃 P , but we could have just as easily used 𝑄 Q ’s that were to the left of 𝑃 P and we would have received the same results.  In fact, we should always take a look at 𝑄 Q ’s that are on both sides of 𝑃 P .  In this case the same thing is happening on both sides of 𝑃 P .  However, we will eventually see that doesn’t have to happen.  Therefore, we should always take a look at what is happening on both sides of the point in question when doing this kind of process. So, let’s see if we can come up with the approximate slopes we showed above, and hence an estimation of the slope of the tangent line.  In order to simplify the process a little let’s get a formula for the slope of the line between 𝑃 P and 𝑄 Q , 𝑚 𝑃 ⁢ 𝑄 m P ⁢ Q , that will work for any 𝑥 x that we choose to work with.  We can get a formula by finding the slope between 𝑃 P and 𝑄 Q using the “general” form of 𝑄 = ( 𝑥 , 𝑓 ⁡ ( 𝑥 ) ) Q = ( x , f ⁡ ( x ) ) . 𝑚 𝑃 ⁢ 𝑄 = 𝑓 ⁡ ( 𝑥 ) − 𝑓 ⁡ ( 1 ) 𝑥 − 1 = 1 5 − 2 ⁢ 𝑥 2 − 1 3 𝑥 − 1 = 2 − 2 ⁢ 𝑥 2 𝑥 − 1 m P ⁢ Q = f ⁡ ( x ) − f ⁡ ( 1 ) x − 1 = 15 − 2 ⁢ x 2 − 13 x − 1 = 2 − 2 ⁢ x 2 x − 1 Now, let’s pick some values of 𝑥 x getting closer and closer to 𝑥 = 1 x = 1 , plug in and get some slopes. 𝑥 x 𝑚 𝑃 ⁢ 𝑄 m P ⁢ Q 𝑥 x 𝑚 𝑃 ⁢ 𝑄 m P ⁢ Q 2 -6 0 -2 1.5 -5 0.5 -3 1.1 -4.2 0.9 -3.8 1.01 -4.02 0.99 -3.98 1.001 -4.002 0.999 -3.998 1.0001 -4.0002 0.9999 -3.9998 So, if we take 𝑥 x ’s to the right of 1 and move them in very close to 1 it appears that the slope of the secant lines appears to be approaching -4.  Likewise, if we take 𝑥 x ’s to the left of 1 and move them in very close to 1 the slope of the secant lines again appears to be approaching -4. Based on this evidence it seems that the slopes of the secant lines are approaching -4 as we move in towards 𝑥 = 1 x = 1 , so we will estimate that the slope of the tangent line is also -4.  As noted above, this is the correct value and we will be able to prove this eventually. Now, the equation of the line that goes through ( 𝑎 , 𝑓 ⁡ ( 𝑎 ) ) ( a , f ⁡ ( a ) ) is given by 𝑦 = 𝑓 ⁡ ( 𝑎 ) + 𝑚 ⁢ ( 𝑥 − 𝑎 ) y = f ⁡ ( a ) + m ⁢ ( x − a ) Therefore, the equation of the tangent line to 𝑓 ⁡ ( 𝑥 ) = 1 5 − 2 ⁢ 𝑥 2 f ⁡ ( x ) = 15 − 2 ⁢ x 2 at 𝑥 = 1 x = 1 is 𝑦 = 1 3 − 4 ⁢ ( 𝑥 − 1 ) = − 4 ⁢ 𝑥 + 1 7 y = 13 − 4 ⁢ ( x − 1 ) = − 4 ⁢ x + 17",
+            "images": [
+                {
+                    "src": "Tangents_Rates_Files/image002.webp",
+                    "alt": "This is a graph of \\(f\\left( x \\right)=15-2{{x}^{2}}\\).   It is a parabola with vertex at (0,15) and opens downward and is graphed on the range \\(-1 < x < 3\\).  Also on the graph are two points at P=(1,13) and Q=(2,7) and the secant line that goes through those two points.  The tangent line to the graph of the function at (1,13) is also shown for reference purposes.",
+                    "class": []
+                },
+                {
+                    "src": "Tangents_Rates_Files/image003.webp",
+                    "alt": "This graph is similar to the graph above except it is “animated” when viewed with a web browser.  The point P is still (1,13) and the point Q starts at (2,7) and moves along the graph of \\(f\\left( x \\right)\\) getting closer and closer to the point P.  As Q moves closer to P the secant line through P and Q also adjusts and starts looking more and more like the tangent line.",
+                    "class": []
+                }
+            ]
+        },
+        {
+            "html_tag": "div",
+            "type": "solution",
+            "text": "We know from algebra that to find the equation of a line we need either two points on the line or a single point on the line and the slope of the line.  Since we know that we are after a tangent line we do have a point that is on the line.  The tangent line and the graph of the function must touch at 𝑥 x = 1 so the point ( 1 , 𝑓 ⁡ ( 1 ) ) = ( 1 , 1 3 ) ( 1 , f ⁡ ( 1 ) ) = ( 1 , 13 ) must be on the line. Now we reach the problem.  This is all that we know about the tangent line.  In order to find the tangent line we need either a second point or the slope of the tangent line.  Since the only reason for needing a second point is to allow us to find the slope of the tangent line let’s just concentrate on seeing if we can determine the slope of the tangent line. At this point in time all that we’re going to be able to do is to get an estimate for the slope of the tangent line, but if we do it correctly we should be able to get an estimate that is in fact the actual slope of the tangent line.  We’ll do this by starting with the point that we’re after, let’s call it 𝑃 = ( 1 , 1 3 ) P = ( 1 , 13 ) .  We will then pick another point that lies on the graph of the function, let’s call that point 𝑄 = ( 𝑥 , 𝑓 ⁡ ( 𝑥 ) ) Q = ( x , f ⁡ ( x ) ) . For the sake of argument let’s take 𝑥 = 2 x = 2 and so the second point will be 𝑄 = ( 2 , 7 ) Q = ( 2 , 7 ) .  Below is a graph of the function, the tangent line and the secant line that connects 𝑃 P and 𝑄 Q . We can see from this graph that the secant and tangent lines are somewhat similar and so the slope of the secant line should be somewhat close to the actual slope of the tangent line.  So, as an estimate of the slope of the tangent line we can use the slope of the secant line, let’s call it 𝑚 𝑃 ⁢ 𝑄 m P ⁢ Q , which is, 𝑚 𝑃 ⁢ 𝑄 = 𝑓 ⁡ ( 2 ) − 𝑓 ⁡ ( 1 ) 2 − 1 = 7 − 1 3 1 = − 6 m P ⁢ Q = f ⁡ ( 2 ) − f ⁡ ( 1 ) 2 − 1 = 7 − 13 1 = − 6 Now, if we weren’t too interested in accuracy we could say this is good enough and use this as an estimate of the slope of the tangent line.  However, we would like an estimate that is at least somewhat close the actual value.  So, to get a better estimate we can take an 𝑥 x that is closer to 𝑥 = 1 x = 1 and redo the work above to get a new estimate on the slope.  We could then take a third value of 𝑥 x even closer yet and get an even better estimate. In other words, as we take 𝑄 Q closer and closer to 𝑃 P the slope of the secant line connecting 𝑄 Q and 𝑃 P should be getting closer and closer to the slope of the tangent line.  If you are viewing this on the web, the image below shows this process. As you can see (animation won't work on all pdf viewers unfortunately) as we moved 𝑄 Q in closer and closer to 𝑃 P the secant lines does start to look more and more like the tangent line and so the approximate slopes ( i.e. the slopes of the secant lines) are getting closer and closer to the exact slope.  Also, do not worry about how I got the exact or approximate slopes.  We’ll be computing the approximate slopes shortly and we’ll be able to compute the exact slope in a few sections. In this figure we only looked at 𝑄 Q ’s that were to the right of 𝑃 P , but we could have just as easily used 𝑄 Q ’s that were to the left of 𝑃 P and we would have received the same results.  In fact, we should always take a look at 𝑄 Q ’s that are on both sides of 𝑃 P .  In this case the same thing is happening on both sides of 𝑃 P .  However, we will eventually see that doesn’t have to happen.  Therefore, we should always take a look at what is happening on both sides of the point in question when doing this kind of process. So, let’s see if we can come up with the approximate slopes we showed above, and hence an estimation of the slope of the tangent line.  In order to simplify the process a little let’s get a formula for the slope of the line between 𝑃 P and 𝑄 Q , 𝑚 𝑃 ⁢ 𝑄 m P ⁢ Q , that will work for any 𝑥 x that we choose to work with.  We can get a formula by finding the slope between 𝑃 P and 𝑄 Q using the “general” form of 𝑄 = ( 𝑥 , 𝑓 ⁡ ( 𝑥 ) ) Q = ( x , f ⁡ ( x ) ) . 𝑚 𝑃 ⁢ 𝑄 = 𝑓 ⁡ ( 𝑥 ) − 𝑓 ⁡ ( 1 ) 𝑥 − 1 = 1 5 − 2 ⁢ 𝑥 2 − 1 3 𝑥 − 1 = 2 − 2 ⁢ 𝑥 2 𝑥 − 1 m P ⁢ Q = f ⁡ ( x ) − f ⁡ ( 1 ) x − 1 = 15 − 2 ⁢ x 2 − 13 x − 1 = 2 − 2 ⁢ x 2 x − 1 Now, let’s pick some values of 𝑥 x getting closer and closer to 𝑥 = 1 x = 1 , plug in and get some slopes. 𝑥 x 𝑚 𝑃 ⁢ 𝑄 m P ⁢ Q 𝑥 x 𝑚 𝑃 ⁢ 𝑄 m P ⁢ Q 2 -6 0 -2 1.5 -5 0.5 -3 1.1 -4.2 0.9 -3.8 1.01 -4.02 0.99 -3.98 1.001 -4.002 0.999 -3.998 1.0001 -4.0002 0.9999 -3.9998 So, if we take 𝑥 x ’s to the right of 1 and move them in very close to 1 it appears that the slope of the secant lines appears to be approaching -4.  Likewise, if we take 𝑥 x ’s to the left of 1 and move them in very close to 1 the slope of the secant lines again appears to be approaching -4. Based on this evidence it seems that the slopes of the secant lines are approaching -4 as we move in towards 𝑥 = 1 x = 1 , so we will estimate that the slope of the tangent line is also -4.  As noted above, this is the correct value and we will be able to prove this eventually. Now, the equation of the line that goes through ( 𝑎 , 𝑓 ⁡ ( 𝑎 ) ) ( a , f ⁡ ( a ) ) is given by 𝑦 = 𝑓 ⁡ ( 𝑎 ) + 𝑚 ⁢ ( 𝑥 − 𝑎 ) y = f ⁡ ( a ) + m ⁢ ( x − a ) Therefore, the equation of the tangent line to 𝑓 ⁡ ( 𝑥 ) = 1 5 − 2 ⁢ 𝑥 2 f ⁡ ( x ) = 15 − 2 ⁢ x 2 at 𝑥 = 1 x = 1 is 𝑦 = 1 3 − 4 ⁢ ( 𝑥 − 1 ) = − 4 ⁢ 𝑥 + 1 7 y = 13 − 4 ⁢ ( x − 1 ) = − 4 ⁢ x + 17",
+            "images": [
+                {
+                    "src": "Tangents_Rates_Files/image002.webp",
+                    "alt": "This is a graph of \\(f\\left( x \\right)=15-2{{x}^{2}}\\).   It is a parabola with vertex at (0,15) and opens downward and is graphed on the range \\(-1 < x < 3\\).  Also on the graph are two points at P=(1,13) and Q=(2,7) and the secant line that goes through those two points.  The tangent line to the graph of the function at (1,13) is also shown for reference purposes.",
+                    "class": []
+                },
+                {
+                    "src": "Tangents_Rates_Files/image003.webp",
+                    "alt": "This graph is similar to the graph above except it is “animated” when viewed with a web browser.  The point P is still (1,13) and the point Q starts at (2,7) and moves along the graph of \\(f\\left( x \\right)\\) getting closer and closer to the point P.  As Q moves closer to P the secant line through P and Q also adjusts and starts looking more and more like the tangent line.",
+                    "class": []
+                }
+            ]
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "We know from algebra that to find the equation of a line we need either two points on the line or a single point on the line and the slope of the line.  Since we know that we are after a tangent line we do have a point that is on the line.  The tangent line and the graph of the function must touch at 𝑥 x = 1 so the point ( 1 , 𝑓 ⁡ ( 1 ) ) = ( 1 , 1 3 ) ( 1 , f ⁡ ( 1 ) ) = ( 1 , 13 ) must be on the line."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "( 1 , 𝑓 ⁡ ( 1 ) ) = ( 1 , 1 3 ) ( 1 , f ⁡ ( 1 ) ) = ( 1 , 13 )"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Now we reach the problem.  This is all that we know about the tangent line.  In order to find the tangent line we need either a second point or the slope of the tangent line.  Since the only reason for needing a second point is to allow us to find the slope of the tangent line let’s just concentrate on seeing if we can determine the slope of the tangent line."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "At this point in time all that we’re going to be able to do is to get an estimate for the slope of the tangent line, but if we do it correctly we should be able to get an estimate that is in fact the actual slope of the tangent line.  We’ll do this by starting with the point that we’re after, let’s call it 𝑃 = ( 1 , 1 3 ) P = ( 1 , 13 ) .  We will then pick another point that lies on the graph of the function, let’s call that point 𝑄 = ( 𝑥 , 𝑓 ⁡ ( 𝑥 ) ) Q = ( x , f ⁡ ( x ) ) ."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑃 = ( 1 , 1 3 ) P = ( 1 , 13 )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑄 = ( 𝑥 , 𝑓 ⁡ ( 𝑥 ) ) Q = ( x , f ⁡ ( x ) )"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "For the sake of argument let’s take 𝑥 = 2 x = 2 and so the second point will be 𝑄 = ( 2 , 7 ) Q = ( 2 , 7 ) .  Below is a graph of the function, the tangent line and the secant line that connects 𝑃 P and 𝑄 Q ."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 2 x = 2"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑄 = ( 2 , 7 ) Q = ( 2 , 7 )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑃 P"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑄 Q"
+        },
+        {
+            "html_tag": "div",
+            "type": "image",
+            "text": "",
+            "images": [
+                {
+                    "src": "Tangents_Rates_Files/image002.webp",
+                    "alt": "This is a graph of \\(f\\left( x \\right)=15-2{{x}^{2}}\\).   It is a parabola with vertex at (0,15) and opens downward and is graphed on the range \\(-1 < x < 3\\).  Also on the graph are two points at P=(1,13) and Q=(2,7) and the secant line that goes through those two points.  The tangent line to the graph of the function at (1,13) is also shown for reference purposes.",
+                    "class": []
+                }
+            ]
+        },
+        {
+            "html_tag": "img",
+            "type": "image",
+            "text": "This is a graph of \\(f\\left( x \\right)=15-2{{x}^{2}}\\).   It is a parabola with vertex at (0,15) and opens downward and is graphed on the range \\(-1 < x < 3\\).  Also on the graph are two points at P=(1,13) and Q=(2,7) and the secant line that goes through those two points.  The tangent line to the graph of the function at (1,13) is also shown for reference purposes.",
+            "src": "Tangents_Rates_Files/image002.webp",
+            "alt": "This is a graph of \\(f\\left( x \\right)=15-2{{x}^{2}}\\).   It is a parabola with vertex at (0,15) and opens downward and is graphed on the range \\(-1 < x < 3\\).  Also on the graph are two points at P=(1,13) and Q=(2,7) and the secant line that goes through those two points.  The tangent line to the graph of the function at (1,13) is also shown for reference purposes.",
+            "class": []
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "We can see from this graph that the secant and tangent lines are somewhat similar and so the slope of the secant line should be somewhat close to the actual slope of the tangent line.  So, as an estimate of the slope of the tangent line we can use the slope of the secant line, let’s call it 𝑚 𝑃 ⁢ 𝑄 m P ⁢ Q , which is,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑚 𝑃 ⁢ 𝑄 m P ⁢ Q"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑚 𝑃 ⁢ 𝑄 = 𝑓 ⁡ ( 2 ) − 𝑓 ⁡ ( 1 ) 2 − 1 = 7 − 1 3 1 = − 6 m P ⁢ Q = f ⁡ ( 2 ) − f ⁡ ( 1 ) 2 − 1 = 7 − 13 1 = − 6"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Now, if we weren’t too interested in accuracy we could say this is good enough and use this as an estimate of the slope of the tangent line.  However, we would like an estimate that is at least somewhat close the actual value.  So, to get a better estimate we can take an 𝑥 x that is closer to 𝑥 = 1 x = 1 and redo the work above to get a new estimate on the slope.  We could then take a third value of 𝑥 x even closer yet and get an even better estimate."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 1 x = 1"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "In other words, as we take 𝑄 Q closer and closer to 𝑃 P the slope of the secant line connecting 𝑄 Q and 𝑃 P should be getting closer and closer to the slope of the tangent line.  If you are viewing this on the web, the image below shows this process."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑄 Q"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑃 P"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑄 Q"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑃 P"
+        },
+        {
+            "html_tag": "div",
+            "type": "image",
+            "text": "",
+            "images": [
+                {
+                    "src": "Tangents_Rates_Files/image003.webp",
+                    "alt": "This graph is similar to the graph above except it is “animated” when viewed with a web browser.  The point P is still (1,13) and the point Q starts at (2,7) and moves along the graph of \\(f\\left( x \\right)\\) getting closer and closer to the point P.  As Q moves closer to P the secant line through P and Q also adjusts and starts looking more and more like the tangent line.",
+                    "class": []
+                }
+            ]
+        },
+        {
+            "html_tag": "img",
+            "type": "image",
+            "text": "This graph is similar to the graph above except it is “animated” when viewed with a web browser.  The point P is still (1,13) and the point Q starts at (2,7) and moves along the graph of \\(f\\left( x \\right)\\) getting closer and closer to the point P.  As Q moves closer to P the secant line through P and Q also adjusts and starts looking more and more like the tangent line.",
+            "src": "Tangents_Rates_Files/image003.webp",
+            "alt": "This graph is similar to the graph above except it is “animated” when viewed with a web browser.  The point P is still (1,13) and the point Q starts at (2,7) and moves along the graph of \\(f\\left( x \\right)\\) getting closer and closer to the point P.  As Q moves closer to P the secant line through P and Q also adjusts and starts looking more and more like the tangent line.",
+            "class": []
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "As you can see (animation won't work on all pdf viewers unfortunately) as we moved 𝑄 Q in closer and closer to 𝑃 P the secant lines does start to look more and more like the tangent line and so the approximate slopes ( i.e. the slopes of the secant lines) are getting closer and closer to the exact slope.  Also, do not worry about how I got the exact or approximate slopes.  We’ll be computing the approximate slopes shortly and we’ll be able to compute the exact slope in a few sections."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑄 Q"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑃 P"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "In this figure we only looked at 𝑄 Q ’s that were to the right of 𝑃 P , but we could have just as easily used 𝑄 Q ’s that were to the left of 𝑃 P and we would have received the same results.  In fact, we should always take a look at 𝑄 Q ’s that are on both sides of 𝑃 P .  In this case the same thing is happening on both sides of 𝑃 P .  However, we will eventually see that doesn’t have to happen.  Therefore, we should always take a look at what is happening on both sides of the point in question when doing this kind of process."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑄 Q"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑃 P"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑄 Q"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑃 P"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑄 Q"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑃 P"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑃 P"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "So, let’s see if we can come up with the approximate slopes we showed above, and hence an estimation of the slope of the tangent line.  In order to simplify the process a little let’s get a formula for the slope of the line between 𝑃 P and 𝑄 Q , 𝑚 𝑃 ⁢ 𝑄 m P ⁢ Q , that will work for any 𝑥 x that we choose to work with.  We can get a formula by finding the slope between 𝑃 P and 𝑄 Q using the “general” form of 𝑄 = ( 𝑥 , 𝑓 ⁡ ( 𝑥 ) ) Q = ( x , f ⁡ ( x ) ) ."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑃 P"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑄 Q"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑚 𝑃 ⁢ 𝑄 m P ⁢ Q"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑃 P"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑄 Q"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑄 = ( 𝑥 , 𝑓 ⁡ ( 𝑥 ) ) Q = ( x , f ⁡ ( x ) )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑚 𝑃 ⁢ 𝑄 = 𝑓 ⁡ ( 𝑥 ) − 𝑓 ⁡ ( 1 ) 𝑥 − 1 = 1 5 − 2 ⁢ 𝑥 2 − 1 3 𝑥 − 1 = 2 − 2 ⁢ 𝑥 2 𝑥 − 1 m P ⁢ Q = f ⁡ ( x ) − f ⁡ ( 1 ) x − 1 = 15 − 2 ⁢ x 2 − 13 x − 1 = 2 − 2 ⁢ x 2 x − 1"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Now, let’s pick some values of 𝑥 x getting closer and closer to 𝑥 = 1 x = 1 , plug in and get some slopes."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 1 x = 1"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑚 𝑃 ⁢ 𝑄 m P ⁢ Q"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑚 𝑃 ⁢ 𝑄 m P ⁢ Q"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "So, if we take 𝑥 x ’s to the right of 1 and move them in very close to 1 it appears that the slope of the secant lines appears to be approaching -4.  Likewise, if we take 𝑥 x ’s to the left of 1 and move them in very close to 1 the slope of the secant lines again appears to be approaching -4."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Based on this evidence it seems that the slopes of the secant lines are approaching -4 as we move in towards 𝑥 = 1 x = 1 , so we will estimate that the slope of the tangent line is also -4.  As noted above, this is the correct value and we will be able to prove this eventually."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 1 x = 1"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Now, the equation of the line that goes through ( 𝑎 , 𝑓 ⁡ ( 𝑎 ) ) ( a , f ⁡ ( a ) ) is given by"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "( 𝑎 , 𝑓 ⁡ ( 𝑎 ) ) ( a , f ⁡ ( a ) )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑦 = 𝑓 ⁡ ( 𝑎 ) + 𝑚 ⁢ ( 𝑥 − 𝑎 ) y = f ⁡ ( a ) + m ⁢ ( x − a )"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Therefore, the equation of the tangent line to 𝑓 ⁡ ( 𝑥 ) = 1 5 − 2 ⁢ 𝑥 2 f ⁡ ( x ) = 15 − 2 ⁢ x 2 at 𝑥 = 1 x = 1 is"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ⁡ ( 𝑥 ) = 1 5 − 2 ⁢ 𝑥 2 f ⁡ ( x ) = 15 − 2 ⁢ x 2"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 1 x = 1"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑦 = 1 3 − 4 ⁢ ( 𝑥 − 1 ) = − 4 ⁢ 𝑥 + 1 7 y = 13 − 4 ⁢ ( x − 1 ) = − 4 ⁢ x + 17"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "There are a couple of important points to note about our work above.  First, we looked at points that were on both sides of 𝑥 = 1 x = 1 .  In this kind of process it is important to never assume that what is happening on one side of a point will also be happening on the other side as well.  We should always look at what is happening on both sides of the point.  In this example we could sketch a graph and from that guess that what is happening on one side will also be happening on the other, but we will usually not have the graphs in front of us or be able to easily get them."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 1 x = 1"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Next, notice that when we say we’re going to move in close to the point in question we do mean that we’re going to move in very close and we also used more than just a couple of points.  We should never try to determine a trend based on a couple of points that aren’t really all that close to the point in question."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "The next thing to notice is really a warning more than anything.  The values of 𝑚 𝑃 ⁢ 𝑄 m P ⁢ Q in this example were fairly “nice” and it was pretty clear what value they were approaching after a couple of computations.  In most cases this will not be the case.  Most values will be far “messier” and you’ll often need quite a few computations to be able to get an estimate.  You should always use at least four points, on each side to get the estimate.  Two points is never sufficient to get a good estimate and three points will also often not be sufficient to get a good estimate.  Generally, you keeping picking points closer and closer to the point you are looking at until the change in the value between two successive points is getting very small."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑚 𝑃 ⁢ 𝑄 m P ⁢ Q"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Last, we were after something that was happening at 𝑥 = 1 x = 1 and we couldn’t actually plug 𝑥 = 1 x = 1 into our formula for the slope.  Despite this limitation we were able to determine some information about what was happening at 𝑥 = 1 x = 1 simply by looking at what was happening around 𝑥 = 1 x = 1 .  This is more important than you might at first realize and we will be discussing this point in detail in later sections."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 1 x = 1"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 1 x = 1"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 1 x = 1"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 1 x = 1"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Before moving on let’s do a quick review of just what we did in the above example.  We wanted the tangent line to 𝑓 ⁡ ( 𝑥 ) f ⁡ ( x ) at a point 𝑥 = 𝑎 x = a .  First, we know that the point 𝑃 = ( 𝑎 , 𝑓 ⁡ ( 𝑎 ) ) P = ( a , f ⁡ ( a ) ) will be on the tangent line.  Next, we’ll take a second point that is on the graph of the function, call it 𝑄 = ( 𝑥 , 𝑓 ⁡ ( 𝑥 ) ) Q = ( x , f ⁡ ( x ) ) and compute the slope of the line connecting 𝑃 P and 𝑄 Q as follows,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ⁡ ( 𝑥 ) f ⁡ ( x )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 x = a"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑃 = ( 𝑎 , 𝑓 ⁡ ( 𝑎 ) ) P = ( a , f ⁡ ( a ) )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑄 = ( 𝑥 , 𝑓 ⁡ ( 𝑥 ) ) Q = ( x , f ⁡ ( x ) )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑃 P"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑄 Q"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑚 𝑃 ⁢ 𝑄 = 𝑓 ⁡ ( 𝑥 ) − 𝑓 ⁡ ( 𝑎 ) 𝑥 − 𝑎 m P ⁢ Q = f ⁡ ( x ) − f ⁡ ( a ) x − a"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "We then take values of 𝑥 x that get closer and closer to 𝑥 = 𝑎 x = a (making sure to look at 𝑥 x ’s on both sides of 𝑥 = 𝑎 x = a and use this list of values to estimate the slope of the tangent line, 𝑚 m ."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 x = a"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 x = a"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑚 m"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "The tangent line will then be,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑦 = 𝑓 ⁡ ( 𝑎 ) + 𝑚 ⁢ ( 𝑥 − 𝑎 ) y = f ⁡ ( a ) + m ⁢ ( x − a )"
+        },
+        {
+            "html_tag": "h4",
+            "type": "heading",
+            "text": "Rates of Change"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "The next problem that we need to look at is the rate of change problem.  As mentioned earlier, this will turn out to be one of the most important concepts that we will look at throughout this course."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Here we are going to consider a function, 𝑓 ⁡ ( 𝑥 ) f ⁡ ( x ) , that represents some quantity that varies as 𝑥 x varies.  For instance, maybe 𝑓 ⁡ ( 𝑥 ) f ⁡ ( x ) represents the amount of water in a holding tank after 𝑥 x minutes.  Or maybe 𝑓 ⁡ ( 𝑥 ) f ⁡ ( x ) is the distance traveled by a car after 𝑥 x hours.  In both of these example we used 𝑥 x to represent time.  Of course 𝑥 x doesn’t have to represent time, but it makes for examples that are easy to visualize."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ⁡ ( 𝑥 ) f ⁡ ( x )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ⁡ ( 𝑥 ) f ⁡ ( x )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ⁡ ( 𝑥 ) f ⁡ ( x )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "What we want to do here is determine just how fast 𝑓 ⁡ ( 𝑥 ) f ⁡ ( x ) is changing at some point, say 𝑥 = 𝑎 x = a .  This is called the instantaneous rate of change or sometimes just rate of change of 𝑓 ⁡ ( 𝑥 ) f ⁡ ( x ) at 𝑥 = 𝑎 x = a ."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ⁡ ( 𝑥 ) f ⁡ ( x )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 x = a"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ⁡ ( 𝑥 ) f ⁡ ( x )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 x = a"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "As with the tangent line problem all that we’re going to be able to do at this point is to estimate the rate of change.  So, let’s continue with the examples above and think of 𝑓 ⁡ ( 𝑥 ) f ⁡ ( x ) as something that is changing in time and 𝑥 x being the time measurement.  Again, 𝑥 x doesn’t have to represent time but it will make the explanation a little easier.  While we can’t compute the instantaneous rate of change at this point we can find the average rate of change."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ⁡ ( 𝑥 ) f ⁡ ( x )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "To compute the average rate of change of 𝑓 ⁡ ( 𝑥 ) f ⁡ ( x ) at 𝑥 = 𝑎 x = a all we need to do is to choose another point, say 𝑥 x , and then the average rate of change will be,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ⁡ ( 𝑥 ) f ⁡ ( x )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 x = a"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝐴 . 𝑅 . 𝐶 . = c h a n g e i n 𝑓 ⁡ ( 𝑥 ) c h a n g e i n 𝑥 = 𝑓 ⁡ ( 𝑥 ) − 𝑓 ⁡ ( 𝑎 ) 𝑥 − 𝑎 A . R . C . = change in f ⁡ ( x ) change in x = f ⁡ ( x ) − f ⁡ ( a ) x − a"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Then to estimate the instantaneous rate of change at 𝑥 = 𝑎 x = a all we need to do is to choose values of 𝑥 x getting closer and closer to 𝑥 = 𝑎 x = a (don’t forget to choose them on both sides of 𝑥 = 𝑎 x = a ) and compute values of 𝐴 . 𝑅 . 𝐶 . A . R . C . We can then estimate the instantaneous rate of change from that."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 x = a"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 x = a"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 x = a"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝐴 . 𝑅 . 𝐶 . A . R . C ."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Let’s take a look at an example."
+        },
+        {
+            "html_tag": "div",
+            "type": "example",
+            "text": "Example 2 Suppose that the amount of air in a balloon after 𝑡 t hours is given by 𝑉 ⁡ ( 𝑡 ) = 𝑡 3 − 6 ⁢ 𝑡 2 + 3 5 V ⁡ ( t ) = t 3 − 6 ⁢ t 2 + 35 Estimate the instantaneous rate of change of the volume after 5 hours. Show Solution Okay.  The first thing that we need to do is get a formula for the average rate of change of the volume.  In this case this is, 𝐴 . 𝑅 . 𝐶 . = 𝑉 ⁡ ( 𝑡 ) − 𝑉 ⁡ ( 5 ) 𝑡 − 5 = 𝑡 3 − 6 ⁢ 𝑡 2 + 3 5 − 1 0 𝑡 − 5 = 𝑡 3 − 6 ⁢ 𝑡 2 + 2 5 𝑡 − 5 A . R . C . = V ⁡ ( t ) − V ⁡ ( 5 ) t − 5 = t 3 − 6 ⁢ t 2 + 35 − 10 t − 5 = t 3 − 6 ⁢ t 2 + 25 t − 5 To estimate the instantaneous rate of change of the volume at 𝑡 = 5 t = 5 we just need to pick values of 𝑡 t that are getting closer and closer to 𝑡 = 5 t = 5 .  Here is a table of values of 𝑡 t and the average rate of change for those values. 𝑡 t 𝐴 . 𝑅 . 𝐶 . A . R . C . 𝑡 t 𝐴 . 𝑅 . 𝐶 . A . R . C . 6 25.0 4 7.0 5.5 19.75 4.5 10.75 5.1 15.91 4.9 14.11 5.01 15.0901 4.99 14.9101 5.001 15.009001 4.999 14.991001 5.0001 15.00090001 4.9999 14.99910001 So, from this table it looks like the average rate of change is approaching 15 and so we can estimate that the instantaneous rate of change is 15 at this point."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑡 t"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑉 ⁡ ( 𝑡 ) = 𝑡 3 − 6 ⁢ 𝑡 2 + 3 5 V ⁡ ( t ) = t 3 − 6 ⁢ t 2 + 35"
+        },
+        {
+            "html_tag": "div",
+            "type": "example-content",
+            "text": "Show Solution Okay.  The first thing that we need to do is get a formula for the average rate of change of the volume.  In this case this is, 𝐴 . 𝑅 . 𝐶 . = 𝑉 ⁡ ( 𝑡 ) − 𝑉 ⁡ ( 5 ) 𝑡 − 5 = 𝑡 3 − 6 ⁢ 𝑡 2 + 3 5 − 1 0 𝑡 − 5 = 𝑡 3 − 6 ⁢ 𝑡 2 + 2 5 𝑡 − 5 A . R . C . = V ⁡ ( t ) − V ⁡ ( 5 ) t − 5 = t 3 − 6 ⁢ t 2 + 35 − 10 t − 5 = t 3 − 6 ⁢ t 2 + 25 t − 5 To estimate the instantaneous rate of change of the volume at 𝑡 = 5 t = 5 we just need to pick values of 𝑡 t that are getting closer and closer to 𝑡 = 5 t = 5 .  Here is a table of values of 𝑡 t and the average rate of change for those values. 𝑡 t 𝐴 . 𝑅 . 𝐶 . A . R . C . 𝑡 t 𝐴 . 𝑅 . 𝐶 . A . R . C . 6 25.0 4 7.0 5.5 19.75 4.5 10.75 5.1 15.91 4.9 14.11 5.01 15.0901 4.99 14.9101 5.001 15.009001 4.999 14.991001 5.0001 15.00090001 4.9999 14.99910001 So, from this table it looks like the average rate of change is approaching 15 and so we can estimate that the instantaneous rate of change is 15 at this point."
+        },
+        {
+            "html_tag": "div",
+            "type": "solution",
+            "text": "Okay.  The first thing that we need to do is get a formula for the average rate of change of the volume.  In this case this is, 𝐴 . 𝑅 . 𝐶 . = 𝑉 ⁡ ( 𝑡 ) − 𝑉 ⁡ ( 5 ) 𝑡 − 5 = 𝑡 3 − 6 ⁢ 𝑡 2 + 3 5 − 1 0 𝑡 − 5 = 𝑡 3 − 6 ⁢ 𝑡 2 + 2 5 𝑡 − 5 A . R . C . = V ⁡ ( t ) − V ⁡ ( 5 ) t − 5 = t 3 − 6 ⁢ t 2 + 35 − 10 t − 5 = t 3 − 6 ⁢ t 2 + 25 t − 5 To estimate the instantaneous rate of change of the volume at 𝑡 = 5 t = 5 we just need to pick values of 𝑡 t that are getting closer and closer to 𝑡 = 5 t = 5 .  Here is a table of values of 𝑡 t and the average rate of change for those values. 𝑡 t 𝐴 . 𝑅 . 𝐶 . A . R . C . 𝑡 t 𝐴 . 𝑅 . 𝐶 . A . R . C . 6 25.0 4 7.0 5.5 19.75 4.5 10.75 5.1 15.91 4.9 14.11 5.01 15.0901 4.99 14.9101 5.001 15.009001 4.999 14.991001 5.0001 15.00090001 4.9999 14.99910001 So, from this table it looks like the average rate of change is approaching 15 and so we can estimate that the instantaneous rate of change is 15 at this point."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Okay.  The first thing that we need to do is get a formula for the average rate of change of the volume.  In this case this is,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝐴 . 𝑅 . 𝐶 . = 𝑉 ⁡ ( 𝑡 ) − 𝑉 ⁡ ( 5 ) 𝑡 − 5 = 𝑡 3 − 6 ⁢ 𝑡 2 + 3 5 − 1 0 𝑡 − 5 = 𝑡 3 − 6 ⁢ 𝑡 2 + 2 5 𝑡 − 5 A . R . C . = V ⁡ ( t ) − V ⁡ ( 5 ) t − 5 = t 3 − 6 ⁢ t 2 + 35 − 10 t − 5 = t 3 − 6 ⁢ t 2 + 25 t − 5"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "To estimate the instantaneous rate of change of the volume at 𝑡 = 5 t = 5 we just need to pick values of 𝑡 t that are getting closer and closer to 𝑡 = 5 t = 5 .  Here is a table of values of 𝑡 t and the average rate of change for those values."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑡 = 5 t = 5"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑡 t"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑡 = 5 t = 5"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑡 t"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑡 t"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝐴 . 𝑅 . 𝐶 . A . R . C ."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑡 t"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝐴 . 𝑅 . 𝐶 . A . R . C ."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "So, from this table it looks like the average rate of change is approaching 15 and so we can estimate that the instantaneous rate of change is 15 at this point."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "So, just what does this tell us about the volume at 𝑡 = 5 t = 5 ?  Let’s put some units on the answer from above.  This might help us to see what is happening to the volume at this point.  Let’s suppose that the units on the volume were in cm 3 .  The units on the rate of change (both average and instantaneous) are then cm 3 /hr."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑡 = 5 t = 5"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "We have estimated that at 𝑡 = 5 t = 5 the volume is changing at a rate of 15 cm 3 /hr.  This means that at 𝑡 = 5 t = 5 the volume is changing in such a way that, if the rate were constant, then an hour later there would be 15 cm 3 more air in the balloon than there was at 𝑡 = 5 t = 5 ."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑡 = 5 t = 5"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑡 = 5 t = 5"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑡 = 5 t = 5"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "We do need to be careful here however.  In reality there probably won’t be 15 cm 3 more air in the balloon after an hour.  The rate at which the volume is changing is generally not constant so we can’t make any real determination as to what the volume will be in another hour.  What we can say is that the volume is increasing, since the instantaneous rate of change is positive, and if we had rates of change for other values of 𝑡 t we could compare the numbers and see if the rate of change is faster or slower at the other points."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑡 t"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "For instance, at 𝑡 = 4 t = 4 the instantaneous rate of change is 0 cm 3 /hr and at 𝑡 = 3 t = 3 the instantaneous rate of change is -9 cm 3 /hr.  We’ll leave it to you to check these rates of change.  In fact, that would be a good exercise to see if you can build a table of values that will support our claims on these rates of change."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑡 = 4 t = 4"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑡 = 3 t = 3"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Anyway, back to the example.  At 𝑡 = 4 t = 4 the rate of change is zero and so at this point in time the volume is not changing at all.  That doesn’t mean that it will not change in the future.  It just means that exactly at 𝑡 = 4 t = 4 the volume isn’t changing.  Likewise, at 𝑡 = 3 t = 3 the volume is decreasing since the rate of change at that point is negative.  We can also say that, regardless of the increasing/decreasing aspects of the rate of change, the volume of the balloon is changing faster at 𝑡 = 5 t = 5 than it is at 𝑡 = 3 t = 3 since 15 is larger than 9."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑡 = 4 t = 4"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑡 = 4 t = 4"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑡 = 3 t = 3"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑡 = 5 t = 5"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑡 = 3 t = 3"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "We will be talking a lot more about rates of change when we get into the next chapter."
+        },
+        {
+            "html_tag": "h4",
+            "type": "heading",
+            "text": "Velocity Problem"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Let’s briefly look at the velocity problem.  Many calculus books will treat this as its own problem.  We however, like to think of this as a special case of the rate of change problem.  In the velocity problem we are given a position function of an object, 𝑓 ⁡ ( 𝑡 ) f ⁡ ( t ) , that gives the position of an object at time 𝑡 t .  Then to compute the instantaneous velocity of the object we just need to recall that the velocity is nothing more than the rate at which the position is changing."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ⁡ ( 𝑡 ) f ⁡ ( t )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑡 t"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "In other words, to estimate the instantaneous velocity we would first compute the average velocity,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝐴 . 𝑉 . = c h a n g e i n p o s i t i o n t i m e t r a v e l e d = 𝑓 ⁡ ( 𝑡 ) − 𝑓 ⁡ ( 𝑎 ) 𝑡 − 𝑎 A . V . = change in position time traveled = f ⁡ ( t ) − f ⁡ ( a ) t − a"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "and then take values of 𝑡 t closer and closer to 𝑡 = 𝑎 t = a and use these values to estimate the instantaneous velocity."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑡 t"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑡 = 𝑎 t = a"
+        },
+        {
+            "html_tag": "h4",
+            "type": "heading",
+            "text": "Change of Notation"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "There is one last thing that we need to do in this section before we move on.  The main point of this section was to introduce us to a couple of key concepts and ideas that we will see throughout the first portion of this course as well as get us started down the path towards limits."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Before we move into limits officially let’s go back and do a little work that will relate both (or all three if you include velocity as a separate problem) problems to a more general concept."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "First, notice that whether we wanted the tangent line, instantaneous rate of change, or instantaneous velocity each of these came down to using exactly the same formula.  Namely,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ⁡ ( 𝑥 ) − 𝑓 ⁡ ( 𝑎 ) 𝑥 − 𝑎 ( 1 ) ( 1 ) f ⁡ ( x ) − f ⁡ ( a ) x − a"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "This should suggest that all three of these problems are then really the same problem.  In fact this is the case as we will see in the next chapter.  We are really working the same problem in each of these cases the only difference is the interpretation of the results."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "In preparation for the next section where we will discuss this in much more detail we need to do a quick change of notation.  It’s easier to do here since we’ve already invested a fair amount of time into these problems."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "In all of these problems we wanted to determine what was happening at 𝑥 = 𝑎 x = a .  To do this we chose another value of 𝑥 x and plugged into ( 1 ) (1) .  For what we were doing here that is probably most intuitive way of doing it.  However, when we start looking at these problems as a single problem ( 1 ) (1) will not be the best formula to work with."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 x = a"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "( 1 ) (1)"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "( 1 ) (1)"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "What we’ll do instead is to first determine how far from 𝑥 = 𝑎 x = a we want to move and then define our new point based on that decision.  So, if we want to move a distance of ℎ h from 𝑥 = 𝑎 x = a the new point would be 𝑥 = 𝑎 + ℎ x = a + h .  This is shown in the sketch below."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 x = a"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "ℎ h"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 x = a"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 + ℎ x = a + h"
+        },
+        {
+            "html_tag": "div",
+            "type": "image",
+            "text": "",
+            "images": [
+                {
+                    "src": "Tangents_Rates_Files/image004.webp",
+                    "alt": "",
+                    "class": []
+                }
+            ]
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "As we saw in our work above it is important to take values of 𝑥 x that are both sides of 𝑥 = 𝑎 x = a . This way of choosing new value of 𝑥 x will do this for us as we can see in the sketch above.  If ℎ > 0 h > 0 we will get value of 𝑥 x that are to the right of 𝑥 = 𝑎 x = a and if ℎ < 0 h < 0 we will get values of 𝑥 x that are to the left of 𝑥 = 𝑎 x = a and both are given by 𝑥 = 𝑎 + ℎ x = a + h ."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 x = a"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "ℎ > 0 h > 0"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 x = a"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "ℎ < 0 h < 0"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 x = a"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 + ℎ x = a + h"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Now, with this new way of getting a second value of 𝑥 x ( 1 ) (1) will become,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "( 1 ) (1)"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ⁡ ( 𝑥 ) − 𝑓 ⁡ ( 𝑎 ) 𝑥 − 𝑎 = 𝑓 ⁡ ( 𝑎 + ℎ ) − 𝑓 ⁡ ( 𝑎 ) 𝑎 + ℎ − 𝑎 = 𝑓 ⁡ ( 𝑎 + ℎ ) − 𝑓 ⁡ ( 𝑎 ) ℎ f ⁡ ( x ) − f ⁡ ( a ) x − a = f ⁡ ( a + h ) − f ⁡ ( a ) a + h − a = f ⁡ ( a + h ) − f ⁡ ( a ) h"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Now, this is for a specific value of 𝑥 x , i.e. 𝑥 = 𝑎 x = a and we’ll rarely be looking at these at specific values of 𝑥 x .  So, we take the final step in the above equation and replace the 𝑎 a with 𝑥 x to get,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 x = a"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑎 a"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ⁡ ( 𝑥 + ℎ ) − 𝑓 ⁡ ( 𝑥 ) ℎ f ⁡ ( x + h ) − f ⁡ ( x ) h"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "This gives us a formula for a general value of 𝑥 x and on the surface it might seem that this is going to be an overly complicated way of dealing with this stuff.  However, as we will see it will often be easier to deal with this form than it will be to deal with the original form, ( 1 ) (1) ."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "( 1 ) (1)"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Jump to"
+        }
+    ],
+    "analysis": {
+        "paragraphs": 62,
+        "equations": 0,
+        "images": 7,
+        "examples": 2,
+        "example_content": 2,
+        "solution_content": 2
+    }
+}
