@@ -16,7 +16,6 @@ IMPORTANT RULES:
 2. Do not assume that a pedagogical feature exists if there
    is no evidence for it.
 3. Every score must be supported by evidence from the article.
-4. Use the provided block IDs when citing evidence.
 5. Do not evaluate topic relevance or image relevance.
    Those are handled by separate systems.
 6. Do not evaluate general writing quality unless it affects

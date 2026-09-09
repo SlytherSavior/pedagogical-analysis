@@ -21,7 +21,6 @@ load_dotenv(Path(__file__).with_name(".env"))
 
 
 def load_article(path):
-    """Load structured article JSON."""
 
     with open(path, "r", encoding="utf-8") as file:
         return json.load(file)
@@ -29,7 +28,6 @@ def load_article(path):
 
 
 def validate_analysis(result):
-    """Basic validation of the LLM response."""
 
     required_criteria = [
         "explanation_quality",
@@ -86,7 +84,6 @@ def validate_analysis(result):
 
 
 def save_analysis(result, path):
-    """Save LLM analysis as JSON."""
 
     path.parent.mkdir(
         parents=True,
@@ -144,12 +141,11 @@ def evaluate_article(article):
 
 def main():
 
-    print("Loading article...")
 
     article = load_article(INPUT_FILE)
+    print(f"Loaded article from {INPUT_FILE}")
 
-    print("Sending article to LLM...")
-
+    print("Evaluating article with LLM...")
     result = evaluate_article(article)
 
     print("LLM analysis completed.")
