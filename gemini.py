@@ -14,8 +14,8 @@ from prompt import SYSTEM_PROMPT, build_prompt
 
 MODEL = "gemini-3.6-flash"
 
-INPUT_FILE = Path("content_analysis.json")
-OUTPUT_FILE = Path("llm_analysis.json")
+INPUT_FILE = Path("content_analysis2.json")
+OUTPUT_FILE = Path("llm_analysis2.json")
 
 load_dotenv(Path(__file__).with_name(".env"))
 

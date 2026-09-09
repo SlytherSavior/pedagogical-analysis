@@ -1,8 +1,8 @@
 import json
 #let's try to analyze what the inital json extracted from the scraper looks like and count the number of examples, images, equations ... anything imp for pedagogical analysis purposes .. :)
 
-def count_items(filename="categorical_analysis.json"):
-    save_file_name = "content_analysis.json"
+def count_items(filename="categorical_analysis2.json"):
+    save_file_name = "content_analysis2.json"
     paragraph = 0 
     equations = 0 
     images = 0 

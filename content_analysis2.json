@@ -1,0 +1,1116 @@
+{
+    "metadata": {
+        "title": "Tangent Lines and Rates of Change",
+        "url": "https://tutorial.math.lamar.edu/Classes/CalcII/TaylorSeries.aspx"
+    },
+    "content": [
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "In the previous section we started looking at writing down a power series representation of a function. The problem with the approach in that section is that everything came down to needing to be able to relate the function in some way to"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "1 1 − 𝑥 1 1 − x"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "and while there are many functions out there that can be related to this function there are many more that simply can’t be related to this."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "So, without taking anything away from the process we looked at in the previous section, what we need to do is come up with a more general method for writing a power series representation for a function."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "So, for the time being, let’s make two assumptions. First, let’s assume that the function 𝑓 ⁡ ( 𝑥 ) f ⁡ ( x ) does in fact have a power series representation about 𝑥 = 𝑎 x = a ,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ⁡ ( 𝑥 ) f ⁡ ( x )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 x = a"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ⁡ ( 𝑥 ) = ∞ ∑ 𝑛 = 0 𝑐 𝑛 ⁢ ( 𝑥 − 𝑎 ) 𝑛 = 𝑐 0 + 𝑐 1 ⁢ ( 𝑥 − 𝑎 ) + 𝑐 2 ⁢ ( 𝑥 − 𝑎 ) 2 + 𝑐 3 ⁢ ( 𝑥 − 𝑎 ) 3 + 𝑐 4 ⁢ ( 𝑥 − 𝑎 ) 4 + ⋯ f ⁡ ( x ) = ∑ n = 0 ∞ c n ⁢ ( x − a ) n = c 0 + c 1 ⁢ ( x − a ) + c 2 ⁢ ( x − a ) 2 + c 3 ⁢ ( x − a ) 3 + c 4 ⁢ ( x − a ) 4 + ⋯"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Next, we will need to assume that the function, 𝑓 ⁡ ( 𝑥 ) f ⁡ ( x ) , has derivatives of every order and that we can in fact find them all."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ⁡ ( 𝑥 ) f ⁡ ( x )"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Now that we’ve assumed that a power series representation exists we need to determine what the coefficients, 𝑐 𝑛 c n , are. This is easier than it might at first appear to be. Let’s first just evaluate everything at 𝑥 = 𝑎 x = a . This gives,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑐 𝑛 c n"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 x = a"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ⁡ ( 𝑎 ) = 𝑐 0 f ⁡ ( a ) = c 0"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "So, all the terms except the first are zero and we now know what 𝑐 0 c 0 is. Unfortunately, there isn’t any other value of 𝑥 x that we can plug into the function that will allow us to quickly find any of the other coefficients. However, if we take the derivative of the function (and its power series) then plug in 𝑥 = 𝑎 x = a we get,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑐 0 c 0"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 x = a"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ′ ⁡ ( 𝑥 ) = 𝑐 1 + 2 ⁢ 𝑐 2 ⁢ ( 𝑥 − 𝑎 ) + 3 ⁢ 𝑐 3 ⁢ ( 𝑥 − 𝑎 ) 2 + 4 ⁢ 𝑐 4 ⁢ ( 𝑥 − 𝑎 ) 3 + ⋯ 𝑓 ′ ⁡ ( 𝑎 ) = 𝑐 1 f ′ ⁡ ( x ) = c 1 + 2 ⁢ c 2 ⁢ ( x − a ) + 3 ⁢ c 3 ⁢ ( x − a ) 2 + 4 ⁢ c 4 ⁢ ( x − a ) 3 + ⋯ f ′ ⁡ ( a ) = c 1"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "and we now know 𝑐 1 c 1 ."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑐 1 c 1"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Let’s continue with this idea and find the second derivative."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ″ ⁡ ( 𝑥 ) = 2 ⁢ 𝑐 2 + 3 ⁢ ( 2 ) ⁢ 𝑐 3 ⁢ ( 𝑥 − 𝑎 ) + 4 ⁢ ( 3 ) ⁢ 𝑐 4 ⁢ ( 𝑥 − 𝑎 ) 2 + ⋯ 𝑓 ″ ⁡ ( 𝑎 ) = 2 ⁢ 𝑐 2 f ″ ⁡ ( x ) = 2 ⁢ c 2 + 3 ⁢ ( 2 ) ⁢ c 3 ⁢ ( x − a ) + 4 ⁢ ( 3 ) ⁢ c 4 ⁢ ( x − a ) 2 + ⋯ f ″ ⁡ ( a ) = 2 ⁢ c 2"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "So, it looks like,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑐 2 = 𝑓 ″ ⁡ ( 𝑎 ) 2 c 2 = f ″ ⁡ ( a ) 2"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Using the third derivative gives,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ‴ ⁡ ( 𝑥 ) = 3 ⁢ ( 2 ) ⁢ 𝑐 3 + 4 ⁢ ( 3 ) ⁢ ( 2 ) ⁢ 𝑐 4 ⁢ ( 𝑥 − 𝑎 ) + ⋯ 𝑓 ‴ ⁡ ( 𝑎 ) = 3 ⁢ ( 2 ) ⁢ 𝑐 3 ⁢ ⇒ ⁢ 𝑐 3 = 𝑓 ‴ ⁡ ( 𝑎 ) 3 ⁢ ( 2 ) f ‴ ⁡ ( x ) = 3 ⁢ ( 2 ) ⁢ c 3 + 4 ⁢ ( 3 ) ⁢ ( 2 ) ⁢ c 4 ⁢ ( x − a ) + ⋯ f ‴ ⁡ ( a ) = 3 ⁢ ( 2 ) ⁢ c 3 ⁢ ⇒ ⁢ c 3 = f ‴ ⁡ ( a ) 3 ⁢ ( 2 )"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Using the fourth derivative gives,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ( 4 ) ⁡ ( 𝑥 ) = 4 ⁢ ( 3 ) ⁢ ( 2 ) ⁢ 𝑐 4 + 5 ⁢ ( 4 ) ⁢ ( 3 ) ⁢ ( 2 ) ⁢ 𝑐 5 ⁢ ( 𝑥 − 𝑎 ) ⋯ 𝑓 ( 4 ) ⁡ ( 𝑎 ) = 4 ⁢ ( 3 ) ⁢ ( 2 ) ⁢ 𝑐 4 ⁢ ⇒ ⁢ 𝑐 4 = 𝑓 ( 4 ) ⁡ ( 𝑎 ) 4 ⁢ ( 3 ) ⁢ ( 2 ) f ( 4 ) ⁡ ( x ) = 4 ⁢ ( 3 ) ⁢ ( 2 ) ⁢ c 4 + 5 ⁢ ( 4 ) ⁢ ( 3 ) ⁢ ( 2 ) ⁢ c 5 ⁢ ( x − a ) ⋯ f ( 4 ) ⁡ ( a ) = 4 ⁢ ( 3 ) ⁢ ( 2 ) ⁢ c 4 ⁢ ⇒ ⁢ c 4 = f ( 4 ) ⁡ ( a ) 4 ⁢ ( 3 ) ⁢ ( 2 )"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Hopefully by this time you’ve seen the pattern here. It looks like, in general, we’ve got the following formula for the coefficients."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑐 𝑛 = 𝑓 ( 𝑛 ) ⁡ ( 𝑎 ) 𝑛 ! c n = f ( n ) ⁡ ( a ) n !"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "This even works for 𝑛 = 0 n = 0 if you recall that 0 ! = 1 0 ! = 1 and define 𝑓 ( 0 ) ⁡ ( 𝑥 ) = 𝑓 ⁡ ( 𝑥 ) f ( 0 ) ⁡ ( x ) = f ⁡ ( x ) ."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑛 = 0 n = 0"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "0 ! = 1 0 ! = 1"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ( 0 ) ⁡ ( 𝑥 ) = 𝑓 ⁡ ( 𝑥 ) f ( 0 ) ⁡ ( x ) = f ⁡ ( x )"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "So, provided a power series representation for the function 𝑓 ⁡ ( 𝑥 ) f ⁡ ( x ) about 𝑥 = 𝑎 x = a exists the Taylor Series for 𝑓 ⁡ ( 𝑥 ) f ⁡ ( x ) about 𝑥 = 𝑎 x = a is,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ⁡ ( 𝑥 ) f ⁡ ( x )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 x = a"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ⁡ ( 𝑥 ) f ⁡ ( x )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 𝑎 x = a"
+        },
+        {
+            "html_tag": "h4",
+            "type": "heading",
+            "text": "Taylor Series"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ⁡ ( 𝑥 ) = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( 𝑎 ) 𝑛 ! ⁢ ( 𝑥 − 𝑎 ) 𝑛 = 𝑓 ⁡ ( 𝑎 ) + 𝑓 ′ ⁡ ( 𝑎 ) ⁢ ( 𝑥 − 𝑎 ) + 𝑓 ″ ⁡ ( 𝑎 ) 2 ! ⁢ ( 𝑥 − 𝑎 ) 2 + 𝑓 ‴ ⁡ ( 𝑎 ) 3 ! ⁢ ( 𝑥 − 𝑎 ) 3 + ⋯ f ⁡ ( x ) = ∑ n = 0 ∞ f ( n ) ⁡ ( a ) n ! ⁢ ( x − a ) n = f ⁡ ( a ) + f ′ ⁡ ( a ) ⁢ ( x − a ) + f ″ ⁡ ( a ) 2 ! ⁢ ( x − a ) 2 + f ‴ ⁡ ( a ) 3 ! ⁢ ( x − a ) 3 + ⋯"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "If we use 𝑎 = 0 a = 0 , so we are talking about the Taylor Series about 𝑥 = 0 x = 0 , we call the series a Maclaurin Series for 𝑓 ⁡ ( 𝑥 ) f ⁡ ( x ) or,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑎 = 0 a = 0"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 0 x = 0"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ⁡ ( 𝑥 ) f ⁡ ( x )"
+        },
+        {
+            "html_tag": "h4",
+            "type": "heading",
+            "text": "Maclaurin Series"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ⁡ ( 𝑥 ) = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( 0 ) 𝑛 ! ⁢ 𝑥 𝑛 = 𝑓 ⁡ ( 0 ) + 𝑓 ′ ⁡ ( 0 ) ⁢ 𝑥 + 𝑓 ″ ⁡ ( 0 ) 2 ! ⁢ 𝑥 2 + 𝑓 ‴ ⁡ ( 0 ) 3 ! ⁢ 𝑥 3 + ⋯ f ⁡ ( x ) = ∑ n = 0 ∞ f ( n ) ⁡ ( 0 ) n ! ⁢ x n = f ⁡ ( 0 ) + f ′ ⁡ ( 0 ) ⁢ x + f ″ ⁡ ( 0 ) 2 ! ⁢ x 2 + f ‴ ⁡ ( 0 ) 3 ! ⁢ x 3 + ⋯"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Before working any examples of Taylor Series we first need to address the assumption that a Taylor Series will in fact exist for a given function. Let’s start out with some notation and definitions that we’ll need."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "To determine a condition that must be true in order for a Taylor series to exist for a function let’s first define the n th degree Taylor polynomial of 𝑓 ⁡ ( 𝑥 ) f ⁡ ( x ) as,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ⁡ ( 𝑥 ) f ⁡ ( x )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑇 𝑛 ⁡ ( 𝑥 ) = 𝑛 ∑ 𝑖 = 0 𝑓 ( 𝑖 ) ⁡ ( 𝑎 ) 𝑖 ! ⁢ ( 𝑥 − 𝑎 ) 𝑖 T n ⁡ ( x ) = ∑ i = 0 n f ( i ) ⁡ ( a ) i ! ⁢ ( x − a ) i"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Note that this really is a polynomial of degree at most 𝑛 n . If we were to write out the sum without the summation notation this would clearly be an n th degree polynomial. We’ll see a nice application of Taylor\n      polynomials in the next section."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑛 n"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Notice as well that for the full Taylor Series,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( 𝑎 ) 𝑛 ! ⁢ ( 𝑥 − 𝑎 ) 𝑛 ∑ n = 0 ∞ f ( n ) ⁡ ( a ) n ! ⁢ ( x − a ) n"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "the 𝑛 n th degree Taylor polynomial is just the partial sum for the series."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑛 n"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Next, the remainder is defined to be,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑅 𝑛 ⁡ ( 𝑥 ) = 𝑓 ⁡ ( 𝑥 ) − 𝑇 𝑛 ⁡ ( 𝑥 ) R n ⁡ ( x ) = f ⁡ ( x ) − T n ⁡ ( x )"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "So, the remainder is really just the error between the function 𝑓 ⁡ ( 𝑥 ) f ⁡ ( x ) and the 𝑛 n th degree Taylor polynomial for a given 𝑛 n ."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ⁡ ( 𝑥 ) f ⁡ ( x )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑛 n"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑛 n"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "With this definition note that we can then write the function as,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ⁡ ( 𝑥 ) = 𝑇 𝑛 ⁡ ( 𝑥 ) + 𝑅 𝑛 ⁡ ( 𝑥 ) f ⁡ ( x ) = T n ⁡ ( x ) + R n ⁡ ( x )"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "We now have the following Theorem."
+        },
+        {
+            "html_tag": "h4",
+            "type": "heading",
+            "text": "Theorem"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Suppose that 𝑓 ⁡ ( 𝑥 ) = 𝑇 𝑛 ⁡ ( 𝑥 ) + 𝑅 𝑛 ⁡ ( 𝑥 ) f ⁡ ( x ) = T n ⁡ ( x ) + R n ⁡ ( x ) . Then if,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ⁡ ( 𝑥 ) = 𝑇 𝑛 ⁡ ( 𝑥 ) + 𝑅 𝑛 ⁡ ( 𝑥 ) f ⁡ ( x ) = T n ⁡ ( x ) + R n ⁡ ( x )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "l i m 𝑛 → ∞ ⁡ 𝑅 𝑛 ⁡ ( 𝑥 ) = 0 lim n → ∞ ⁡ R n ⁡ ( x ) = 0"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "for | 𝑥 − 𝑎 | < 𝑅 | x − a | < R then,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "| 𝑥 − 𝑎 | < 𝑅 | x − a | < R"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ⁡ ( 𝑥 ) = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( 𝑎 ) 𝑛 ! ⁢ ( 𝑥 − 𝑎 ) 𝑛 f ⁡ ( x ) = ∑ n = 0 ∞ f ( n ) ⁡ ( a ) n ! ⁢ ( x − a ) n"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "on | 𝑥 − 𝑎 | < 𝑅 | x − a | < R ."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "| 𝑥 − 𝑎 | < 𝑅 | x − a | < R"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "In general, showing that l i m 𝑛 → ∞ ⁡ 𝑅 𝑛 ⁡ ( 𝑥 ) = 0 lim n → ∞ ⁡ R n ⁡ ( x ) = 0 is a somewhat difficult process and so we will be assuming that this can be done for some 𝑅 R in all of the examples that we’ll be looking at."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "l i m 𝑛 → ∞ ⁡ 𝑅 𝑛 ⁡ ( 𝑥 ) = 0 lim n → ∞ ⁡ R n ⁡ ( x ) = 0"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑅 R"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Now let’s look at some examples."
+        },
+        {
+            "html_tag": "div",
+            "type": "example",
+            "text": "Example 1 Find the Taylor Series for 𝑓 ⁡ ( 𝑥 ) = 𝐞 𝑥 f ⁡ ( x ) = e x about 𝑥 = 0 x = 0 . Show Solution This is actually one of the easier Taylor Series that we’ll be asked to compute. To find the Taylor Series for a function we will need to determine a general formula for 𝑓 ( 𝑛 ) ⁡ ( 𝑎 ) f ( n ) ⁡ ( a ) . This is one of the few functions where this is easy to do right from the start. To get a formula for 𝑓 ( 𝑛 ) ⁡ ( 0 ) f ( n ) ⁡ ( 0 ) all we need to do is recognize that, 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = 𝐞 𝑥 𝑛 = 0 , 1 , 2 , 3 , … f ( n ) ⁡ ( x ) = e x n = 0 , 1 , 2 , 3 , … and so, 𝑓 ( 𝑛 ) ⁡ ( 0 ) = 𝐞 0 = 1 𝑛 = 0 , 1 , 2 , 3 , … f ( n ) ⁡ ( 0 ) = e 0 = 1 n = 0 , 1 , 2 , 3 , … Therefore, the Taylor series for 𝑓 ⁡ ( 𝑥 ) = 𝐞 𝑥 f ⁡ ( x ) = e x about 𝑥 = 0 x = 0 is, 𝐞 𝑥 = ∞ ∑ 𝑛 = 0 1 𝑛 ! ⁢ 𝑥 𝑛 = ∞ ∑ 𝑛 = 0 𝑥 𝑛 𝑛 ! e x = ∑ n = 0 ∞ 1 n ! ⁢ x n = ∑ n = 0 ∞ x n n !"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ⁡ ( 𝑥 ) = 𝐞 𝑥 f ⁡ ( x ) = e x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑥 = 0 x = 0"
+        },
+        {
+            "html_tag": "div",
+            "type": "example-content",
+            "text": "Show Solution This is actually one of the easier Taylor Series that we’ll be asked to compute. To find the Taylor Series for a function we will need to determine a general formula for 𝑓 ( 𝑛 ) ⁡ ( 𝑎 ) f ( n ) ⁡ ( a ) . This is one of the few functions where this is easy to do right from the start. To get a formula for 𝑓 ( 𝑛 ) ⁡ ( 0 ) f ( n ) ⁡ ( 0 ) all we need to do is recognize that, 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = 𝐞 𝑥 𝑛 = 0 , 1 , 2 , 3 , … f ( n ) ⁡ ( x ) = e x n = 0 , 1 , 2 , 3 , … and so, 𝑓 ( 𝑛 ) ⁡ ( 0 ) = 𝐞 0 = 1 𝑛 = 0 , 1 , 2 , 3 , … f ( n ) ⁡ ( 0 ) = e 0 = 1 n = 0 , 1 , 2 , 3 , … Therefore, the Taylor series for 𝑓 ⁡ ( 𝑥 ) = 𝐞 𝑥 f ⁡ ( x ) = e x about 𝑥 = 0 x = 0 is, 𝐞 𝑥 = ∞ ∑ 𝑛 = 0 1 𝑛 ! ⁢ 𝑥 𝑛 = ∞ ∑ 𝑛 = 0 𝑥 𝑛 𝑛 ! e x = ∑ n = 0 ∞ 1 n ! ⁢ x n = ∑ n = 0 ∞ x n n !"
+        },
+        {
+            "html_tag": "div",
+            "type": "solution",
+            "text": "This is actually one of the easier Taylor Series that we’ll be asked to compute. To find the Taylor Series for a function we will need to determine a general formula for 𝑓 ( 𝑛 ) ⁡ ( 𝑎 ) f ( n ) ⁡ ( a ) . This is one of the few functions where this is easy to do right from the start. To get a formula for 𝑓 ( 𝑛 ) ⁡ ( 0 ) f ( n ) ⁡ ( 0 ) all we need to do is recognize that, 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = 𝐞 𝑥 𝑛 = 0 , 1 , 2 , 3 , … f ( n ) ⁡ ( x ) = e x n = 0 , 1 , 2 , 3 , … and so, 𝑓 ( 𝑛 ) ⁡ ( 0 ) = 𝐞 0 = 1 𝑛 = 0 , 1 , 2 , 3 , … f ( n ) ⁡ ( 0 ) = e 0 = 1 n = 0 , 1 , 2 , 3 , … Therefore, the Taylor series for 𝑓 ⁡ ( 𝑥 ) = 𝐞 𝑥 f ⁡ ( x ) = e x about 𝑥 = 0 x = 0 is, 𝐞 𝑥 = ∞ ∑ 𝑛 = 0 1 𝑛 ! ⁢ 𝑥 𝑛 = ∞ ∑ 𝑛 = 0 𝑥 𝑛 𝑛 ! e x = ∑ n = 0 ∞ 1 n ! ⁢ x n = ∑ n = 0 ∞ x n n !"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "This is actually one of the easier Taylor Series that we’ll be asked to compute. To find the Taylor Series for a function we will need to determine a general formula for 𝑓 ( 𝑛 ) ⁡ ( 𝑎 ) f ( n ) ⁡ ( a ) . This is one of the few functions where this is easy to do right from the start."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ( 𝑛 ) ⁡ ( 𝑎 ) f ( n ) ⁡ ( a )"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "To get a formula for 𝑓 ( 𝑛 ) ⁡ ( 0 ) f ( n ) ⁡ ( 0 ) all we need to do is recognize that,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ( 𝑛 ) ⁡ ( 0 ) f ( n ) ⁡ ( 0 )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = 𝐞 𝑥 𝑛 = 0 , 1 , 2 , 3 , … f ( n ) ⁡ ( x ) = e x n = 0 , 1 , 2 , 3 , …"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "and so,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ( 𝑛 ) ⁡ ( 0 ) = 𝐞 0 = 1 𝑛 = 0 , 1 , 2 , 3 , … f ( n ) ⁡ ( 0 ) = e 0 = 1 n = 0 , 1 , 2 , 3 , …"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Therefore, the Taylor series for 𝑓 ⁡ ( 𝑥 ) = 𝐞 𝑥 f ⁡ ( x ) = e x about 𝑥 = 0 x = 0 is,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ⁡ ( 𝑥 ) = 𝐞 𝑥 f ⁡ ( x ) = e x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 0 x = 0"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝐞 𝑥 = ∞ ∑ 𝑛 = 0 1 𝑛 ! ⁢ 𝑥 𝑛 = ∞ ∑ 𝑛 = 0 𝑥 𝑛 𝑛 ! e x = ∑ n = 0 ∞ 1 n ! ⁢ x n = ∑ n = 0 ∞ x n n !"
+        },
+        {
+            "html_tag": "div",
+            "type": "example",
+            "text": "Example 2 Find the Taylor Series for 𝑓 ⁡ ( 𝑥 ) = 𝐞 − 𝑥 f ⁡ ( x ) = e − x about 𝑥 = 0 x = 0 . Show Solution There are two ways to do this problem. Both are fairly simple, however one of them requires significantly less work. We’ll work both solutions since the longer one has some nice ideas that we’ll see in other examples. Solution 1 As with the first example we’ll need to get a formula for 𝑓 ( 𝑛 ) ⁡ ( 0 ) f ( n ) ⁡ ( 0 ) . However, unlike the first one we’ve got a little more work to do. Let’s first take some derivatives and evaluate them at 𝑥 = 0 x = 0 . 𝑓 ( 0 ) ⁡ ( 𝑥 ) = 𝐞 − 𝑥 𝑓 ( 0 ) ⁡ ( 0 ) = 1 𝑓 ( 1 ) ⁡ ( 𝑥 ) = − 𝐞 − 𝑥 𝑓 ( 1 ) ⁡ ( 0 ) = − 1 𝑓 ( 2 ) ⁡ ( 𝑥 ) = 𝐞 − 𝑥 𝑓 ( 2 ) ⁡ ( 0 ) = 1 𝑓 ( 3 ) ⁡ ( 𝑥 ) = − 𝐞 − 𝑥 𝑓 ( 3 ) ⁡ ( 0 ) = − 1 ⋮ ⋮ 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = ( − 1 ) 𝑛 ⁢ 𝐞 − 𝑥 𝑓 ( 𝑛 ) ⁡ ( 0 ) = ( − 1 ) 𝑛 𝑛 = 0 , 1 , 2 , 3 f ( 0 ) ⁡ ( x ) = e − x f ( 0 ) ⁡ ( 0 ) = 1 f ( 1 ) ⁡ ( x ) = − e − x f ( 1 ) ⁡ ( 0 ) = − 1 f ( 2 ) ⁡ ( x ) = e − x f ( 2 ) ⁡ ( 0 ) = 1 f ( 3 ) ⁡ ( x ) = − e − x f ( 3 ) ⁡ ( 0 ) = − 1 ⋮ ⋮ f ( n ) ⁡ ( x ) = ( − 1 ) n ⁢ e − x f ( n ) ⁡ ( 0 ) = ( − 1 ) n n = 0 , 1 , 2 , 3 After a couple of computations we were able to get general formulas for both 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) f ( n ) ⁡ ( x ) and 𝑓 ( 𝑛 ) ⁡ ( 0 ) f ( n ) ⁡ ( 0 ) . We often won’t be able to get a general formula for 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) f ( n ) ⁡ ( x ) so don’t get too excited about getting that formula. Also, as we will see it won’t always be easy to get a general formula for 𝑓 ( 𝑛 ) ⁡ ( 𝑎 ) f ( n ) ⁡ ( a ) . So, in this case we’ve got general formulas so all we need to do is plug these into the Taylor Series formula and be done with the problem. 𝐞 − 𝑥 = ∞ ∑ 𝑛 = 0 ( − 1 ) 𝑛 ⁢ 𝑥 𝑛 𝑛 ! e − x = ∑ n = 0 ∞ ( − 1 ) n ⁢ x n n ! Solution 2 The previous solution wasn’t too bad and we often have to do things in that manner. However, in this case there is a much shorter solution method. In the previous section we used series that we’ve already found to help us find a new series. Let’s do the same thing with this one. We already know a Taylor Series for 𝐞 𝑥 e x about 𝑥 = 0 x = 0 and in this case the only difference is we’ve got a “- 𝑥 x ” in the exponent instead of just an 𝑥 x . So, all we need to do is replace the 𝑥 x in the Taylor Series that we found in the first example with “- 𝑥 x ”. 𝐞 − 𝑥 = ∞ ∑ 𝑛 = 0 ( − 𝑥 ) 𝑛 𝑛 ! = ∞ ∑ 𝑛 = 0 ( − 1 ) 𝑛 ⁢ 𝑥 𝑛 𝑛 ! e − x = ∑ n = 0 ∞ ( − x ) n n ! = ∑ n = 0 ∞ ( − 1 ) n ⁢ x n n ! This is a much shorter method of arriving at the same answer so don’t forget about using previously computed series where possible (and allowed of course)."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ⁡ ( 𝑥 ) = 𝐞 − 𝑥 f ⁡ ( x ) = e − x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑥 = 0 x = 0"
+        },
+        {
+            "html_tag": "div",
+            "type": "example-content",
+            "text": "Show Solution There are two ways to do this problem. Both are fairly simple, however one of them requires significantly less work. We’ll work both solutions since the longer one has some nice ideas that we’ll see in other examples. Solution 1 As with the first example we’ll need to get a formula for 𝑓 ( 𝑛 ) ⁡ ( 0 ) f ( n ) ⁡ ( 0 ) . However, unlike the first one we’ve got a little more work to do. Let’s first take some derivatives and evaluate them at 𝑥 = 0 x = 0 . 𝑓 ( 0 ) ⁡ ( 𝑥 ) = 𝐞 − 𝑥 𝑓 ( 0 ) ⁡ ( 0 ) = 1 𝑓 ( 1 ) ⁡ ( 𝑥 ) = − 𝐞 − 𝑥 𝑓 ( 1 ) ⁡ ( 0 ) = − 1 𝑓 ( 2 ) ⁡ ( 𝑥 ) = 𝐞 − 𝑥 𝑓 ( 2 ) ⁡ ( 0 ) = 1 𝑓 ( 3 ) ⁡ ( 𝑥 ) = − 𝐞 − 𝑥 𝑓 ( 3 ) ⁡ ( 0 ) = − 1 ⋮ ⋮ 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = ( − 1 ) 𝑛 ⁢ 𝐞 − 𝑥 𝑓 ( 𝑛 ) ⁡ ( 0 ) = ( − 1 ) 𝑛 𝑛 = 0 , 1 , 2 , 3 f ( 0 ) ⁡ ( x ) = e − x f ( 0 ) ⁡ ( 0 ) = 1 f ( 1 ) ⁡ ( x ) = − e − x f ( 1 ) ⁡ ( 0 ) = − 1 f ( 2 ) ⁡ ( x ) = e − x f ( 2 ) ⁡ ( 0 ) = 1 f ( 3 ) ⁡ ( x ) = − e − x f ( 3 ) ⁡ ( 0 ) = − 1 ⋮ ⋮ f ( n ) ⁡ ( x ) = ( − 1 ) n ⁢ e − x f ( n ) ⁡ ( 0 ) = ( − 1 ) n n = 0 , 1 , 2 , 3 After a couple of computations we were able to get general formulas for both 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) f ( n ) ⁡ ( x ) and 𝑓 ( 𝑛 ) ⁡ ( 0 ) f ( n ) ⁡ ( 0 ) . We often won’t be able to get a general formula for 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) f ( n ) ⁡ ( x ) so don’t get too excited about getting that formula. Also, as we will see it won’t always be easy to get a general formula for 𝑓 ( 𝑛 ) ⁡ ( 𝑎 ) f ( n ) ⁡ ( a ) . So, in this case we’ve got general formulas so all we need to do is plug these into the Taylor Series formula and be done with the problem. 𝐞 − 𝑥 = ∞ ∑ 𝑛 = 0 ( − 1 ) 𝑛 ⁢ 𝑥 𝑛 𝑛 ! e − x = ∑ n = 0 ∞ ( − 1 ) n ⁢ x n n ! Solution 2 The previous solution wasn’t too bad and we often have to do things in that manner. However, in this case there is a much shorter solution method. In the previous section we used series that we’ve already found to help us find a new series. Let’s do the same thing with this one. We already know a Taylor Series for 𝐞 𝑥 e x about 𝑥 = 0 x = 0 and in this case the only difference is we’ve got a “- 𝑥 x ” in the exponent instead of just an 𝑥 x . So, all we need to do is replace the 𝑥 x in the Taylor Series that we found in the first example with “- 𝑥 x ”. 𝐞 − 𝑥 = ∞ ∑ 𝑛 = 0 ( − 𝑥 ) 𝑛 𝑛 ! = ∞ ∑ 𝑛 = 0 ( − 1 ) 𝑛 ⁢ 𝑥 𝑛 𝑛 ! e − x = ∑ n = 0 ∞ ( − x ) n n ! = ∑ n = 0 ∞ ( − 1 ) n ⁢ x n n ! This is a much shorter method of arriving at the same answer so don’t forget about using previously computed series where possible (and allowed of course)."
+        },
+        {
+            "html_tag": "div",
+            "type": "solution",
+            "text": "There are two ways to do this problem. Both are fairly simple, however one of them requires significantly less work. We’ll work both solutions since the longer one has some nice ideas that we’ll see in other examples. Solution 1 As with the first example we’ll need to get a formula for 𝑓 ( 𝑛 ) ⁡ ( 0 ) f ( n ) ⁡ ( 0 ) . However, unlike the first one we’ve got a little more work to do. Let’s first take some derivatives and evaluate them at 𝑥 = 0 x = 0 . 𝑓 ( 0 ) ⁡ ( 𝑥 ) = 𝐞 − 𝑥 𝑓 ( 0 ) ⁡ ( 0 ) = 1 𝑓 ( 1 ) ⁡ ( 𝑥 ) = − 𝐞 − 𝑥 𝑓 ( 1 ) ⁡ ( 0 ) = − 1 𝑓 ( 2 ) ⁡ ( 𝑥 ) = 𝐞 − 𝑥 𝑓 ( 2 ) ⁡ ( 0 ) = 1 𝑓 ( 3 ) ⁡ ( 𝑥 ) = − 𝐞 − 𝑥 𝑓 ( 3 ) ⁡ ( 0 ) = − 1 ⋮ ⋮ 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = ( − 1 ) 𝑛 ⁢ 𝐞 − 𝑥 𝑓 ( 𝑛 ) ⁡ ( 0 ) = ( − 1 ) 𝑛 𝑛 = 0 , 1 , 2 , 3 f ( 0 ) ⁡ ( x ) = e − x f ( 0 ) ⁡ ( 0 ) = 1 f ( 1 ) ⁡ ( x ) = − e − x f ( 1 ) ⁡ ( 0 ) = − 1 f ( 2 ) ⁡ ( x ) = e − x f ( 2 ) ⁡ ( 0 ) = 1 f ( 3 ) ⁡ ( x ) = − e − x f ( 3 ) ⁡ ( 0 ) = − 1 ⋮ ⋮ f ( n ) ⁡ ( x ) = ( − 1 ) n ⁢ e − x f ( n ) ⁡ ( 0 ) = ( − 1 ) n n = 0 , 1 , 2 , 3 After a couple of computations we were able to get general formulas for both 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) f ( n ) ⁡ ( x ) and 𝑓 ( 𝑛 ) ⁡ ( 0 ) f ( n ) ⁡ ( 0 ) . We often won’t be able to get a general formula for 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) f ( n ) ⁡ ( x ) so don’t get too excited about getting that formula. Also, as we will see it won’t always be easy to get a general formula for 𝑓 ( 𝑛 ) ⁡ ( 𝑎 ) f ( n ) ⁡ ( a ) . So, in this case we’ve got general formulas so all we need to do is plug these into the Taylor Series formula and be done with the problem. 𝐞 − 𝑥 = ∞ ∑ 𝑛 = 0 ( − 1 ) 𝑛 ⁢ 𝑥 𝑛 𝑛 ! e − x = ∑ n = 0 ∞ ( − 1 ) n ⁢ x n n ! Solution 2 The previous solution wasn’t too bad and we often have to do things in that manner. However, in this case there is a much shorter solution method. In the previous section we used series that we’ve already found to help us find a new series. Let’s do the same thing with this one. We already know a Taylor Series for 𝐞 𝑥 e x about 𝑥 = 0 x = 0 and in this case the only difference is we’ve got a “- 𝑥 x ” in the exponent instead of just an 𝑥 x . So, all we need to do is replace the 𝑥 x in the Taylor Series that we found in the first example with “- 𝑥 x ”. 𝐞 − 𝑥 = ∞ ∑ 𝑛 = 0 ( − 𝑥 ) 𝑛 𝑛 ! = ∞ ∑ 𝑛 = 0 ( − 1 ) 𝑛 ⁢ 𝑥 𝑛 𝑛 ! e − x = ∑ n = 0 ∞ ( − x ) n n ! = ∑ n = 0 ∞ ( − 1 ) n ⁢ x n n ! This is a much shorter method of arriving at the same answer so don’t forget about using previously computed series where possible (and allowed of course)."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "There are two ways to do this problem. Both are fairly simple, however one of them requires significantly less work. We’ll work both solutions since the longer one has some nice ideas that we’ll see in other examples."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Solution 1 As with the first example we’ll need to get a formula for 𝑓 ( 𝑛 ) ⁡ ( 0 ) f ( n ) ⁡ ( 0 ) . However, unlike the first one we’ve got a little more work to do. Let’s first take some derivatives and evaluate them at 𝑥 = 0 x = 0 ."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ( 𝑛 ) ⁡ ( 0 ) f ( n ) ⁡ ( 0 )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 0 x = 0"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ( 0 ) ⁡ ( 𝑥 ) = 𝐞 − 𝑥 𝑓 ( 0 ) ⁡ ( 0 ) = 1 𝑓 ( 1 ) ⁡ ( 𝑥 ) = − 𝐞 − 𝑥 𝑓 ( 1 ) ⁡ ( 0 ) = − 1 𝑓 ( 2 ) ⁡ ( 𝑥 ) = 𝐞 − 𝑥 𝑓 ( 2 ) ⁡ ( 0 ) = 1 𝑓 ( 3 ) ⁡ ( 𝑥 ) = − 𝐞 − 𝑥 𝑓 ( 3 ) ⁡ ( 0 ) = − 1 ⋮ ⋮ 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = ( − 1 ) 𝑛 ⁢ 𝐞 − 𝑥 𝑓 ( 𝑛 ) ⁡ ( 0 ) = ( − 1 ) 𝑛 𝑛 = 0 , 1 , 2 , 3 f ( 0 ) ⁡ ( x ) = e − x f ( 0 ) ⁡ ( 0 ) = 1 f ( 1 ) ⁡ ( x ) = − e − x f ( 1 ) ⁡ ( 0 ) = − 1 f ( 2 ) ⁡ ( x ) = e − x f ( 2 ) ⁡ ( 0 ) = 1 f ( 3 ) ⁡ ( x ) = − e − x f ( 3 ) ⁡ ( 0 ) = − 1 ⋮ ⋮ f ( n ) ⁡ ( x ) = ( − 1 ) n ⁢ e − x f ( n ) ⁡ ( 0 ) = ( − 1 ) n n = 0 , 1 , 2 , 3"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "After a couple of computations we were able to get general formulas for both 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) f ( n ) ⁡ ( x ) and 𝑓 ( 𝑛 ) ⁡ ( 0 ) f ( n ) ⁡ ( 0 ) . We often won’t be able to get a general formula for 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) f ( n ) ⁡ ( x ) so don’t get too excited about getting that formula. Also, as we will see it won’t always be easy to get a general formula for 𝑓 ( 𝑛 ) ⁡ ( 𝑎 ) f ( n ) ⁡ ( a ) ."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) f ( n ) ⁡ ( x )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ( 𝑛 ) ⁡ ( 0 ) f ( n ) ⁡ ( 0 )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) f ( n ) ⁡ ( x )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ( 𝑛 ) ⁡ ( 𝑎 ) f ( n ) ⁡ ( a )"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "So, in this case we’ve got general formulas so all we need to do is plug these into the Taylor Series formula and be done with the problem."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝐞 − 𝑥 = ∞ ∑ 𝑛 = 0 ( − 1 ) 𝑛 ⁢ 𝑥 𝑛 𝑛 ! e − x = ∑ n = 0 ∞ ( − 1 ) n ⁢ x n n !"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Solution 2 The previous solution wasn’t too bad and we often have to do things in that manner. However, in this case there is a much shorter solution method. In the previous section we used series that we’ve already found to help us find a new series. Let’s do the same thing with this one. We already know a Taylor Series for 𝐞 𝑥 e x about 𝑥 = 0 x = 0 and in this case the only difference is we’ve got a “- 𝑥 x ” in the exponent instead of just an 𝑥 x ."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝐞 𝑥 e x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 0 x = 0"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "So, all we need to do is replace the 𝑥 x in the Taylor Series that we found in the first example with “- 𝑥 x ”."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝐞 − 𝑥 = ∞ ∑ 𝑛 = 0 ( − 𝑥 ) 𝑛 𝑛 ! = ∞ ∑ 𝑛 = 0 ( − 1 ) 𝑛 ⁢ 𝑥 𝑛 𝑛 ! e − x = ∑ n = 0 ∞ ( − x ) n n ! = ∑ n = 0 ∞ ( − 1 ) n ⁢ x n n !"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "This is a much shorter method of arriving at the same answer so don’t forget about using previously computed series where possible (and allowed of course)."
+        },
+        {
+            "html_tag": "div",
+            "type": "example",
+            "text": "Example 3 Find the Taylor Series for 𝑓 ⁡ ( 𝑥 ) = 𝑥 4 ⁢ 𝐞 − 3 ⁢ 𝑥 2 f ⁡ ( x ) = x 4 ⁢ e − 3 ⁢ x 2 about 𝑥 = 0 x = 0 . Show Solution For this example, we will take advantage of the fact that we already have a Taylor Series for 𝐞 𝑥 e x about 𝑥 = 0 x = 0 . In this example, unlike the previous example, doing this directly would be significantly longer and more difficult. 𝑥 4 ⁢ 𝐞 − 3 ⁢ 𝑥 2 = 𝑥 4 ⁢ ∞ ∑ 𝑛 = 0 ( − 3 ⁢ 𝑥 2 ) 𝑛 𝑛 ! = 𝑥 4 ⁢ ∞ ∑ 𝑛 = 0 ( − 3 ) 𝑛 ⁢ 𝑥 2 ⁢ 𝑛 𝑛 ! = ∞ ∑ 𝑛 = 0 ( − 3 ) 𝑛 ⁢ 𝑥 2 ⁢ 𝑛 + 4 𝑛 ! x 4 ⁢ e − 3 ⁢ x 2 = x 4 ⁢ ∑ n = 0 ∞ ( − 3 ⁢ x 2 ) n n ! = x 4 ⁢ ∑ n = 0 ∞ ( − 3 ) n ⁢ x 2 ⁢ n n ! = ∑ n = 0 ∞ ( − 3 ) n ⁢ x 2 ⁢ n + 4 n !"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ⁡ ( 𝑥 ) = 𝑥 4 ⁢ 𝐞 − 3 ⁢ 𝑥 2 f ⁡ ( x ) = x 4 ⁢ e − 3 ⁢ x 2"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑥 = 0 x = 0"
+        },
+        {
+            "html_tag": "div",
+            "type": "example-content",
+            "text": "Show Solution For this example, we will take advantage of the fact that we already have a Taylor Series for 𝐞 𝑥 e x about 𝑥 = 0 x = 0 . In this example, unlike the previous example, doing this directly would be significantly longer and more difficult. 𝑥 4 ⁢ 𝐞 − 3 ⁢ 𝑥 2 = 𝑥 4 ⁢ ∞ ∑ 𝑛 = 0 ( − 3 ⁢ 𝑥 2 ) 𝑛 𝑛 ! = 𝑥 4 ⁢ ∞ ∑ 𝑛 = 0 ( − 3 ) 𝑛 ⁢ 𝑥 2 ⁢ 𝑛 𝑛 ! = ∞ ∑ 𝑛 = 0 ( − 3 ) 𝑛 ⁢ 𝑥 2 ⁢ 𝑛 + 4 𝑛 ! x 4 ⁢ e − 3 ⁢ x 2 = x 4 ⁢ ∑ n = 0 ∞ ( − 3 ⁢ x 2 ) n n ! = x 4 ⁢ ∑ n = 0 ∞ ( − 3 ) n ⁢ x 2 ⁢ n n ! = ∑ n = 0 ∞ ( − 3 ) n ⁢ x 2 ⁢ n + 4 n !"
+        },
+        {
+            "html_tag": "div",
+            "type": "solution",
+            "text": "For this example, we will take advantage of the fact that we already have a Taylor Series for 𝐞 𝑥 e x about 𝑥 = 0 x = 0 . In this example, unlike the previous example, doing this directly would be significantly longer and more difficult. 𝑥 4 ⁢ 𝐞 − 3 ⁢ 𝑥 2 = 𝑥 4 ⁢ ∞ ∑ 𝑛 = 0 ( − 3 ⁢ 𝑥 2 ) 𝑛 𝑛 ! = 𝑥 4 ⁢ ∞ ∑ 𝑛 = 0 ( − 3 ) 𝑛 ⁢ 𝑥 2 ⁢ 𝑛 𝑛 ! = ∞ ∑ 𝑛 = 0 ( − 3 ) 𝑛 ⁢ 𝑥 2 ⁢ 𝑛 + 4 𝑛 ! x 4 ⁢ e − 3 ⁢ x 2 = x 4 ⁢ ∑ n = 0 ∞ ( − 3 ⁢ x 2 ) n n ! = x 4 ⁢ ∑ n = 0 ∞ ( − 3 ) n ⁢ x 2 ⁢ n n ! = ∑ n = 0 ∞ ( − 3 ) n ⁢ x 2 ⁢ n + 4 n !"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "For this example, we will take advantage of the fact that we already have a Taylor Series for 𝐞 𝑥 e x about 𝑥 = 0 x = 0 . In this example, unlike the previous example, doing this directly would be significantly longer and more difficult."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝐞 𝑥 e x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 0 x = 0"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑥 4 ⁢ 𝐞 − 3 ⁢ 𝑥 2 = 𝑥 4 ⁢ ∞ ∑ 𝑛 = 0 ( − 3 ⁢ 𝑥 2 ) 𝑛 𝑛 ! = 𝑥 4 ⁢ ∞ ∑ 𝑛 = 0 ( − 3 ) 𝑛 ⁢ 𝑥 2 ⁢ 𝑛 𝑛 ! = ∞ ∑ 𝑛 = 0 ( − 3 ) 𝑛 ⁢ 𝑥 2 ⁢ 𝑛 + 4 𝑛 ! x 4 ⁢ e − 3 ⁢ x 2 = x 4 ⁢ ∑ n = 0 ∞ ( − 3 ⁢ x 2 ) n n ! = x 4 ⁢ ∑ n = 0 ∞ ( − 3 ) n ⁢ x 2 ⁢ n n ! = ∑ n = 0 ∞ ( − 3 ) n ⁢ x 2 ⁢ n + 4 n !"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "To this point we’ve only looked at Taylor Series about 𝑥 = 0 x = 0 (also known as Maclaurin Series) so let’s take a look at a Taylor Series that isn’t about 𝑥 = 0 x = 0 . Also, we’ll pick on the exponential function one more time since it makes some of the work easier. This will be the final Taylor Series for exponentials in this section."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 0 x = 0"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 0 x = 0"
+        },
+        {
+            "html_tag": "div",
+            "type": "example",
+            "text": "Example 4 Find the Taylor Series for 𝑓 ⁡ ( 𝑥 ) = 𝐞 − 𝑥 f ⁡ ( x ) = e − x about 𝑥 = − 4 x = − 4 . Show Solution Finding a general formula for 𝑓 ( 𝑛 ) ⁡ ( − 4 ) f ( n ) ⁡ ( − 4 ) is fairly simple. 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = ( − 1 ) 𝑛 ⁢ 𝐞 − 𝑥 𝑓 ( 𝑛 ) ⁡ ( − 4 ) = ( − 1 ) 𝑛 ⁢ 𝐞 4 f ( n ) ⁡ ( x ) = ( − 1 ) n ⁢ e − x f ( n ) ⁡ ( − 4 ) = ( − 1 ) n ⁢ e 4 The Taylor Series is then, 𝐞 − 𝑥 = ∞ ∑ 𝑛 = 0 ( − 1 ) 𝑛 ⁢ 𝐞 4 𝑛 ! ⁢ ( 𝑥 + 4 ) 𝑛 e − x = ∑ n = 0 ∞ ( − 1 ) n ⁢ e 4 n ! ⁢ ( x + 4 ) n"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ⁡ ( 𝑥 ) = 𝐞 − 𝑥 f ⁡ ( x ) = e − x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑥 = − 4 x = − 4"
+        },
+        {
+            "html_tag": "div",
+            "type": "example-content",
+            "text": "Show Solution Finding a general formula for 𝑓 ( 𝑛 ) ⁡ ( − 4 ) f ( n ) ⁡ ( − 4 ) is fairly simple. 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = ( − 1 ) 𝑛 ⁢ 𝐞 − 𝑥 𝑓 ( 𝑛 ) ⁡ ( − 4 ) = ( − 1 ) 𝑛 ⁢ 𝐞 4 f ( n ) ⁡ ( x ) = ( − 1 ) n ⁢ e − x f ( n ) ⁡ ( − 4 ) = ( − 1 ) n ⁢ e 4 The Taylor Series is then, 𝐞 − 𝑥 = ∞ ∑ 𝑛 = 0 ( − 1 ) 𝑛 ⁢ 𝐞 4 𝑛 ! ⁢ ( 𝑥 + 4 ) 𝑛 e − x = ∑ n = 0 ∞ ( − 1 ) n ⁢ e 4 n ! ⁢ ( x + 4 ) n"
+        },
+        {
+            "html_tag": "div",
+            "type": "solution",
+            "text": "Finding a general formula for 𝑓 ( 𝑛 ) ⁡ ( − 4 ) f ( n ) ⁡ ( − 4 ) is fairly simple. 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = ( − 1 ) 𝑛 ⁢ 𝐞 − 𝑥 𝑓 ( 𝑛 ) ⁡ ( − 4 ) = ( − 1 ) 𝑛 ⁢ 𝐞 4 f ( n ) ⁡ ( x ) = ( − 1 ) n ⁢ e − x f ( n ) ⁡ ( − 4 ) = ( − 1 ) n ⁢ e 4 The Taylor Series is then, 𝐞 − 𝑥 = ∞ ∑ 𝑛 = 0 ( − 1 ) 𝑛 ⁢ 𝐞 4 𝑛 ! ⁢ ( 𝑥 + 4 ) 𝑛 e − x = ∑ n = 0 ∞ ( − 1 ) n ⁢ e 4 n ! ⁢ ( x + 4 ) n"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Finding a general formula for 𝑓 ( 𝑛 ) ⁡ ( − 4 ) f ( n ) ⁡ ( − 4 ) is fairly simple."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ( 𝑛 ) ⁡ ( − 4 ) f ( n ) ⁡ ( − 4 )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = ( − 1 ) 𝑛 ⁢ 𝐞 − 𝑥 𝑓 ( 𝑛 ) ⁡ ( − 4 ) = ( − 1 ) 𝑛 ⁢ 𝐞 4 f ( n ) ⁡ ( x ) = ( − 1 ) n ⁢ e − x f ( n ) ⁡ ( − 4 ) = ( − 1 ) n ⁢ e 4"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "The Taylor Series is then,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝐞 − 𝑥 = ∞ ∑ 𝑛 = 0 ( − 1 ) 𝑛 ⁢ 𝐞 4 𝑛 ! ⁢ ( 𝑥 + 4 ) 𝑛 e − x = ∑ n = 0 ∞ ( − 1 ) n ⁢ e 4 n ! ⁢ ( x + 4 ) n"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Okay, we now need to work some examples that don’t involve the exponential function since these will tend to require a little more work."
+        },
+        {
+            "html_tag": "div",
+            "type": "example",
+            "text": "Example 5 Find the Taylor Series for 𝑓 ⁡ ( 𝑥 ) = c o s ⁡ ( 𝑥 ) f ⁡ ( x ) = cos ⁡ ( x ) about 𝑥 = 0 x = 0 . Show Solution First, we’ll need to take some derivatives of the function and evaluate them at 𝑥 = 0 x = 0 . 𝑓 ( 0 ) ⁡ ( 𝑥 ) = c o s ⁡ 𝑥 𝑓 ( 0 ) ⁡ ( 0 ) = 1 𝑓 ( 1 ) ⁡ ( 𝑥 ) = − s i n ⁡ 𝑥 𝑓 ( 1 ) ⁡ ( 0 ) = 0 𝑓 ( 2 ) ⁡ ( 𝑥 ) = − c o s ⁡ 𝑥 𝑓 ( 2 ) ⁡ ( 0 ) = − 1 𝑓 ( 3 ) ⁡ ( 𝑥 ) = s i n ⁡ 𝑥 𝑓 ( 3 ) ⁡ ( 0 ) = 0 𝑓 ( 4 ) ⁡ ( 𝑥 ) = c o s ⁡ 𝑥 𝑓 ( 4 ) ⁡ ( 0 ) = 1 𝑓 ( 5 ) ⁡ ( 𝑥 ) = − s i n ⁡ 𝑥 𝑓 ( 5 ) ⁡ ( 0 ) = 0 𝑓 ( 6 ) ⁡ ( 𝑥 ) = − c o s ⁡ 𝑥 𝑓 ( 6 ) ⁡ ( 0 ) = − 1 ⋮ ⋮ f ( 0 ) ⁡ ( x ) = cos ⁡ x f ( 0 ) ⁡ ( 0 ) = 1 f ( 1 ) ⁡ ( x ) = − sin ⁡ x f ( 1 ) ⁡ ( 0 ) = 0 f ( 2 ) ⁡ ( x ) = − cos ⁡ x f ( 2 ) ⁡ ( 0 ) = − 1 f ( 3 ) ⁡ ( x ) = sin ⁡ x f ( 3 ) ⁡ ( 0 ) = 0 f ( 4 ) ⁡ ( x ) = cos ⁡ x f ( 4 ) ⁡ ( 0 ) = 1 f ( 5 ) ⁡ ( x ) = − sin ⁡ x f ( 5 ) ⁡ ( 0 ) = 0 f ( 6 ) ⁡ ( x ) = − cos ⁡ x f ( 6 ) ⁡ ( 0 ) = − 1 ⋮ ⋮ In this example, unlike the previous ones, there is not an easy formula for either the general derivative or the evaluation of the derivative. However, there is a clear pattern to the evaluations. So, let’s plug what we’ve got into the Taylor\n            series and see what we get, c o s ⁡ 𝑥 = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( 0 ) 𝑛 ! ⁢ 𝑥 𝑛 = 𝑓 ⁡ ( 0 ) + 𝑓 ′ ⁡ ( 0 ) ⁢ 𝑥 + 𝑓 ″ ⁡ ( 0 ) 2 ! ⁢ 𝑥 2 + 𝑓 ‴ ⁡ ( 0 ) 3 ! ⁢ 𝑥 3 + 𝑓 ( 4 ) ⁡ ( 0 ) 4 ! ⁢ 𝑥 4 + 𝑓 ( 5 ) ⁡ ( 0 ) 5 ! ⁢ 𝑥 5 + ⋯ = 1 ⏟ 𝑛 = 0 + 0 ⏟ 𝑛 = 1 − 1 2 ! ⁢ 𝑥 2 ⏟ 𝑛 = 2 + 0 ⏟ 𝑛 = 3 + 1 4 ! ⁢ 𝑥 4 ⏟ 𝑛 = 4 + 0 ⏟ 𝑛 = 5 − 1 6 ! ⁢ 𝑥 6 ⏟ 𝑛 = 6 + ⋯ cos ⁡ x = ∑ n = 0 ∞ f ( n ) ⁡ ( 0 ) n ! ⁢ x n = f ⁡ ( 0 ) + f ′ ⁡ ( 0 ) ⁢ x + f ″ ⁡ ( 0 ) 2 ! ⁢ x 2 + f ‴ ⁡ ( 0 ) 3 ! ⁢ x 3 + f ( 4 ) ⁡ ( 0 ) 4 ! ⁢ x 4 + f ( 5 ) ⁡ ( 0 ) 5 ! ⁢ x 5 + ⋯ = 1 ⏟ n = 0 + 0 ⏟ n = 1 − 1 2 ! ⁢ x 2 ⏟ n = 2 + 0 ⏟ n = 3 + 1 4 ! ⁢ x 4 ⏟ n = 4 + 0 ⏟ n = 5 − 1 6 ! ⁢ x 6 ⏟ n = 6 + ⋯ So, we only pick up terms with even powers on the 𝑥 x ’s. This doesn’t really help us to get a general formula for the Taylor Series. However, let’s drop the zeroes and “renumber” the terms as follows to see what we can get. c o s ⁡ 𝑥 = 1 ⏟ 𝑛 = 0 − 1 2 ! ⁢ 𝑥 2 ⏟ 𝑛 = 1 + 1 4 ! ⁢ 𝑥 4 ⏟ 𝑛 = 2 − 1 6 ! ⁢ 𝑥 6 ⏟ 𝑛 = 3 + ⋯ cos ⁡ x = 1 ⏟ n = 0 − 1 2 ! ⁢ x 2 ⏟ n = 1 + 1 4 ! ⁢ x 4 ⏟ n = 2 − 1 6 ! ⁢ x 6 ⏟ n = 3 + ⋯ By renumbering the terms as we did we can actually come up with a general formula for the Taylor Series and here it is, c o s ⁡ 𝑥 = ∞ ∑ 𝑛 = 0 ( − 1 ) 𝑛 ⁢ 𝑥 2 ⁢ 𝑛 ( 2 ⁢ 𝑛 ) ! cos ⁡ x = ∑ n = 0 ∞ ( − 1 ) n ⁢ x 2 ⁢ n ( 2 ⁢ n ) !"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ⁡ ( 𝑥 ) = c o s ⁡ ( 𝑥 ) f ⁡ ( x ) = cos ⁡ ( x )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑥 = 0 x = 0"
+        },
+        {
+            "html_tag": "div",
+            "type": "example-content",
+            "text": "Show Solution First, we’ll need to take some derivatives of the function and evaluate them at 𝑥 = 0 x = 0 . 𝑓 ( 0 ) ⁡ ( 𝑥 ) = c o s ⁡ 𝑥 𝑓 ( 0 ) ⁡ ( 0 ) = 1 𝑓 ( 1 ) ⁡ ( 𝑥 ) = − s i n ⁡ 𝑥 𝑓 ( 1 ) ⁡ ( 0 ) = 0 𝑓 ( 2 ) ⁡ ( 𝑥 ) = − c o s ⁡ 𝑥 𝑓 ( 2 ) ⁡ ( 0 ) = − 1 𝑓 ( 3 ) ⁡ ( 𝑥 ) = s i n ⁡ 𝑥 𝑓 ( 3 ) ⁡ ( 0 ) = 0 𝑓 ( 4 ) ⁡ ( 𝑥 ) = c o s ⁡ 𝑥 𝑓 ( 4 ) ⁡ ( 0 ) = 1 𝑓 ( 5 ) ⁡ ( 𝑥 ) = − s i n ⁡ 𝑥 𝑓 ( 5 ) ⁡ ( 0 ) = 0 𝑓 ( 6 ) ⁡ ( 𝑥 ) = − c o s ⁡ 𝑥 𝑓 ( 6 ) ⁡ ( 0 ) = − 1 ⋮ ⋮ f ( 0 ) ⁡ ( x ) = cos ⁡ x f ( 0 ) ⁡ ( 0 ) = 1 f ( 1 ) ⁡ ( x ) = − sin ⁡ x f ( 1 ) ⁡ ( 0 ) = 0 f ( 2 ) ⁡ ( x ) = − cos ⁡ x f ( 2 ) ⁡ ( 0 ) = − 1 f ( 3 ) ⁡ ( x ) = sin ⁡ x f ( 3 ) ⁡ ( 0 ) = 0 f ( 4 ) ⁡ ( x ) = cos ⁡ x f ( 4 ) ⁡ ( 0 ) = 1 f ( 5 ) ⁡ ( x ) = − sin ⁡ x f ( 5 ) ⁡ ( 0 ) = 0 f ( 6 ) ⁡ ( x ) = − cos ⁡ x f ( 6 ) ⁡ ( 0 ) = − 1 ⋮ ⋮ In this example, unlike the previous ones, there is not an easy formula for either the general derivative or the evaluation of the derivative. However, there is a clear pattern to the evaluations. So, let’s plug what we’ve got into the Taylor\n            series and see what we get, c o s ⁡ 𝑥 = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( 0 ) 𝑛 ! ⁢ 𝑥 𝑛 = 𝑓 ⁡ ( 0 ) + 𝑓 ′ ⁡ ( 0 ) ⁢ 𝑥 + 𝑓 ″ ⁡ ( 0 ) 2 ! ⁢ 𝑥 2 + 𝑓 ‴ ⁡ ( 0 ) 3 ! ⁢ 𝑥 3 + 𝑓 ( 4 ) ⁡ ( 0 ) 4 ! ⁢ 𝑥 4 + 𝑓 ( 5 ) ⁡ ( 0 ) 5 ! ⁢ 𝑥 5 + ⋯ = 1 ⏟ 𝑛 = 0 + 0 ⏟ 𝑛 = 1 − 1 2 ! ⁢ 𝑥 2 ⏟ 𝑛 = 2 + 0 ⏟ 𝑛 = 3 + 1 4 ! ⁢ 𝑥 4 ⏟ 𝑛 = 4 + 0 ⏟ 𝑛 = 5 − 1 6 ! ⁢ 𝑥 6 ⏟ 𝑛 = 6 + ⋯ cos ⁡ x = ∑ n = 0 ∞ f ( n ) ⁡ ( 0 ) n ! ⁢ x n = f ⁡ ( 0 ) + f ′ ⁡ ( 0 ) ⁢ x + f ″ ⁡ ( 0 ) 2 ! ⁢ x 2 + f ‴ ⁡ ( 0 ) 3 ! ⁢ x 3 + f ( 4 ) ⁡ ( 0 ) 4 ! ⁢ x 4 + f ( 5 ) ⁡ ( 0 ) 5 ! ⁢ x 5 + ⋯ = 1 ⏟ n = 0 + 0 ⏟ n = 1 − 1 2 ! ⁢ x 2 ⏟ n = 2 + 0 ⏟ n = 3 + 1 4 ! ⁢ x 4 ⏟ n = 4 + 0 ⏟ n = 5 − 1 6 ! ⁢ x 6 ⏟ n = 6 + ⋯ So, we only pick up terms with even powers on the 𝑥 x ’s. This doesn’t really help us to get a general formula for the Taylor Series. However, let’s drop the zeroes and “renumber” the terms as follows to see what we can get. c o s ⁡ 𝑥 = 1 ⏟ 𝑛 = 0 − 1 2 ! ⁢ 𝑥 2 ⏟ 𝑛 = 1 + 1 4 ! ⁢ 𝑥 4 ⏟ 𝑛 = 2 − 1 6 ! ⁢ 𝑥 6 ⏟ 𝑛 = 3 + ⋯ cos ⁡ x = 1 ⏟ n = 0 − 1 2 ! ⁢ x 2 ⏟ n = 1 + 1 4 ! ⁢ x 4 ⏟ n = 2 − 1 6 ! ⁢ x 6 ⏟ n = 3 + ⋯ By renumbering the terms as we did we can actually come up with a general formula for the Taylor Series and here it is, c o s ⁡ 𝑥 = ∞ ∑ 𝑛 = 0 ( − 1 ) 𝑛 ⁢ 𝑥 2 ⁢ 𝑛 ( 2 ⁢ 𝑛 ) ! cos ⁡ x = ∑ n = 0 ∞ ( − 1 ) n ⁢ x 2 ⁢ n ( 2 ⁢ n ) !"
+        },
+        {
+            "html_tag": "div",
+            "type": "solution",
+            "text": "First, we’ll need to take some derivatives of the function and evaluate them at 𝑥 = 0 x = 0 . 𝑓 ( 0 ) ⁡ ( 𝑥 ) = c o s ⁡ 𝑥 𝑓 ( 0 ) ⁡ ( 0 ) = 1 𝑓 ( 1 ) ⁡ ( 𝑥 ) = − s i n ⁡ 𝑥 𝑓 ( 1 ) ⁡ ( 0 ) = 0 𝑓 ( 2 ) ⁡ ( 𝑥 ) = − c o s ⁡ 𝑥 𝑓 ( 2 ) ⁡ ( 0 ) = − 1 𝑓 ( 3 ) ⁡ ( 𝑥 ) = s i n ⁡ 𝑥 𝑓 ( 3 ) ⁡ ( 0 ) = 0 𝑓 ( 4 ) ⁡ ( 𝑥 ) = c o s ⁡ 𝑥 𝑓 ( 4 ) ⁡ ( 0 ) = 1 𝑓 ( 5 ) ⁡ ( 𝑥 ) = − s i n ⁡ 𝑥 𝑓 ( 5 ) ⁡ ( 0 ) = 0 𝑓 ( 6 ) ⁡ ( 𝑥 ) = − c o s ⁡ 𝑥 𝑓 ( 6 ) ⁡ ( 0 ) = − 1 ⋮ ⋮ f ( 0 ) ⁡ ( x ) = cos ⁡ x f ( 0 ) ⁡ ( 0 ) = 1 f ( 1 ) ⁡ ( x ) = − sin ⁡ x f ( 1 ) ⁡ ( 0 ) = 0 f ( 2 ) ⁡ ( x ) = − cos ⁡ x f ( 2 ) ⁡ ( 0 ) = − 1 f ( 3 ) ⁡ ( x ) = sin ⁡ x f ( 3 ) ⁡ ( 0 ) = 0 f ( 4 ) ⁡ ( x ) = cos ⁡ x f ( 4 ) ⁡ ( 0 ) = 1 f ( 5 ) ⁡ ( x ) = − sin ⁡ x f ( 5 ) ⁡ ( 0 ) = 0 f ( 6 ) ⁡ ( x ) = − cos ⁡ x f ( 6 ) ⁡ ( 0 ) = − 1 ⋮ ⋮ In this example, unlike the previous ones, there is not an easy formula for either the general derivative or the evaluation of the derivative. However, there is a clear pattern to the evaluations. So, let’s plug what we’ve got into the Taylor\n            series and see what we get, c o s ⁡ 𝑥 = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( 0 ) 𝑛 ! ⁢ 𝑥 𝑛 = 𝑓 ⁡ ( 0 ) + 𝑓 ′ ⁡ ( 0 ) ⁢ 𝑥 + 𝑓 ″ ⁡ ( 0 ) 2 ! ⁢ 𝑥 2 + 𝑓 ‴ ⁡ ( 0 ) 3 ! ⁢ 𝑥 3 + 𝑓 ( 4 ) ⁡ ( 0 ) 4 ! ⁢ 𝑥 4 + 𝑓 ( 5 ) ⁡ ( 0 ) 5 ! ⁢ 𝑥 5 + ⋯ = 1 ⏟ 𝑛 = 0 + 0 ⏟ 𝑛 = 1 − 1 2 ! ⁢ 𝑥 2 ⏟ 𝑛 = 2 + 0 ⏟ 𝑛 = 3 + 1 4 ! ⁢ 𝑥 4 ⏟ 𝑛 = 4 + 0 ⏟ 𝑛 = 5 − 1 6 ! ⁢ 𝑥 6 ⏟ 𝑛 = 6 + ⋯ cos ⁡ x = ∑ n = 0 ∞ f ( n ) ⁡ ( 0 ) n ! ⁢ x n = f ⁡ ( 0 ) + f ′ ⁡ ( 0 ) ⁢ x + f ″ ⁡ ( 0 ) 2 ! ⁢ x 2 + f ‴ ⁡ ( 0 ) 3 ! ⁢ x 3 + f ( 4 ) ⁡ ( 0 ) 4 ! ⁢ x 4 + f ( 5 ) ⁡ ( 0 ) 5 ! ⁢ x 5 + ⋯ = 1 ⏟ n = 0 + 0 ⏟ n = 1 − 1 2 ! ⁢ x 2 ⏟ n = 2 + 0 ⏟ n = 3 + 1 4 ! ⁢ x 4 ⏟ n = 4 + 0 ⏟ n = 5 − 1 6 ! ⁢ x 6 ⏟ n = 6 + ⋯ So, we only pick up terms with even powers on the 𝑥 x ’s. This doesn’t really help us to get a general formula for the Taylor Series. However, let’s drop the zeroes and “renumber” the terms as follows to see what we can get. c o s ⁡ 𝑥 = 1 ⏟ 𝑛 = 0 − 1 2 ! ⁢ 𝑥 2 ⏟ 𝑛 = 1 + 1 4 ! ⁢ 𝑥 4 ⏟ 𝑛 = 2 − 1 6 ! ⁢ 𝑥 6 ⏟ 𝑛 = 3 + ⋯ cos ⁡ x = 1 ⏟ n = 0 − 1 2 ! ⁢ x 2 ⏟ n = 1 + 1 4 ! ⁢ x 4 ⏟ n = 2 − 1 6 ! ⁢ x 6 ⏟ n = 3 + ⋯ By renumbering the terms as we did we can actually come up with a general formula for the Taylor Series and here it is, c o s ⁡ 𝑥 = ∞ ∑ 𝑛 = 0 ( − 1 ) 𝑛 ⁢ 𝑥 2 ⁢ 𝑛 ( 2 ⁢ 𝑛 ) ! cos ⁡ x = ∑ n = 0 ∞ ( − 1 ) n ⁢ x 2 ⁢ n ( 2 ⁢ n ) !"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "First, we’ll need to take some derivatives of the function and evaluate them at 𝑥 = 0 x = 0 ."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 0 x = 0"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ( 0 ) ⁡ ( 𝑥 ) = c o s ⁡ 𝑥 𝑓 ( 0 ) ⁡ ( 0 ) = 1 𝑓 ( 1 ) ⁡ ( 𝑥 ) = − s i n ⁡ 𝑥 𝑓 ( 1 ) ⁡ ( 0 ) = 0 𝑓 ( 2 ) ⁡ ( 𝑥 ) = − c o s ⁡ 𝑥 𝑓 ( 2 ) ⁡ ( 0 ) = − 1 𝑓 ( 3 ) ⁡ ( 𝑥 ) = s i n ⁡ 𝑥 𝑓 ( 3 ) ⁡ ( 0 ) = 0 𝑓 ( 4 ) ⁡ ( 𝑥 ) = c o s ⁡ 𝑥 𝑓 ( 4 ) ⁡ ( 0 ) = 1 𝑓 ( 5 ) ⁡ ( 𝑥 ) = − s i n ⁡ 𝑥 𝑓 ( 5 ) ⁡ ( 0 ) = 0 𝑓 ( 6 ) ⁡ ( 𝑥 ) = − c o s ⁡ 𝑥 𝑓 ( 6 ) ⁡ ( 0 ) = − 1 ⋮ ⋮ f ( 0 ) ⁡ ( x ) = cos ⁡ x f ( 0 ) ⁡ ( 0 ) = 1 f ( 1 ) ⁡ ( x ) = − sin ⁡ x f ( 1 ) ⁡ ( 0 ) = 0 f ( 2 ) ⁡ ( x ) = − cos ⁡ x f ( 2 ) ⁡ ( 0 ) = − 1 f ( 3 ) ⁡ ( x ) = sin ⁡ x f ( 3 ) ⁡ ( 0 ) = 0 f ( 4 ) ⁡ ( x ) = cos ⁡ x f ( 4 ) ⁡ ( 0 ) = 1 f ( 5 ) ⁡ ( x ) = − sin ⁡ x f ( 5 ) ⁡ ( 0 ) = 0 f ( 6 ) ⁡ ( x ) = − cos ⁡ x f ( 6 ) ⁡ ( 0 ) = − 1 ⋮ ⋮"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "In this example, unlike the previous ones, there is not an easy formula for either the general derivative or the evaluation of the derivative. However, there is a clear pattern to the evaluations. So, let’s plug what we’ve got into the Taylor\n            series and see what we get,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "c o s ⁡ 𝑥 = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( 0 ) 𝑛 ! ⁢ 𝑥 𝑛 = 𝑓 ⁡ ( 0 ) + 𝑓 ′ ⁡ ( 0 ) ⁢ 𝑥 + 𝑓 ″ ⁡ ( 0 ) 2 ! ⁢ 𝑥 2 + 𝑓 ‴ ⁡ ( 0 ) 3 ! ⁢ 𝑥 3 + 𝑓 ( 4 ) ⁡ ( 0 ) 4 ! ⁢ 𝑥 4 + 𝑓 ( 5 ) ⁡ ( 0 ) 5 ! ⁢ 𝑥 5 + ⋯ = 1 ⏟ 𝑛 = 0 + 0 ⏟ 𝑛 = 1 − 1 2 ! ⁢ 𝑥 2 ⏟ 𝑛 = 2 + 0 ⏟ 𝑛 = 3 + 1 4 ! ⁢ 𝑥 4 ⏟ 𝑛 = 4 + 0 ⏟ 𝑛 = 5 − 1 6 ! ⁢ 𝑥 6 ⏟ 𝑛 = 6 + ⋯ cos ⁡ x = ∑ n = 0 ∞ f ( n ) ⁡ ( 0 ) n ! ⁢ x n = f ⁡ ( 0 ) + f ′ ⁡ ( 0 ) ⁢ x + f ″ ⁡ ( 0 ) 2 ! ⁢ x 2 + f ‴ ⁡ ( 0 ) 3 ! ⁢ x 3 + f ( 4 ) ⁡ ( 0 ) 4 ! ⁢ x 4 + f ( 5 ) ⁡ ( 0 ) 5 ! ⁢ x 5 + ⋯ = 1 ⏟ n = 0 + 0 ⏟ n = 1 − 1 2 ! ⁢ x 2 ⏟ n = 2 + 0 ⏟ n = 3 + 1 4 ! ⁢ x 4 ⏟ n = 4 + 0 ⏟ n = 5 − 1 6 ! ⁢ x 6 ⏟ n = 6 + ⋯"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "So, we only pick up terms with even powers on the 𝑥 x ’s. This doesn’t really help us to get a general formula for the Taylor Series. However, let’s drop the zeroes and “renumber” the terms as follows to see what we can get."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "c o s ⁡ 𝑥 = 1 ⏟ 𝑛 = 0 − 1 2 ! ⁢ 𝑥 2 ⏟ 𝑛 = 1 + 1 4 ! ⁢ 𝑥 4 ⏟ 𝑛 = 2 − 1 6 ! ⁢ 𝑥 6 ⏟ 𝑛 = 3 + ⋯ cos ⁡ x = 1 ⏟ n = 0 − 1 2 ! ⁢ x 2 ⏟ n = 1 + 1 4 ! ⁢ x 4 ⏟ n = 2 − 1 6 ! ⁢ x 6 ⏟ n = 3 + ⋯"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "By renumbering the terms as we did we can actually come up with a general formula for the Taylor Series and here it is,"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "c o s ⁡ 𝑥 = ∞ ∑ 𝑛 = 0 ( − 1 ) 𝑛 ⁢ 𝑥 2 ⁢ 𝑛 ( 2 ⁢ 𝑛 ) ! cos ⁡ x = ∑ n = 0 ∞ ( − 1 ) n ⁢ x 2 ⁢ n ( 2 ⁢ n ) !"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "This idea of renumbering the series terms as we did in the previous example isn’t used all that often, but occasionally is very useful. There is one more series where we need to do it so let’s take a look at that so we can get one more example down of renumbering series terms."
+        },
+        {
+            "html_tag": "div",
+            "type": "example",
+            "text": "Example 6 Find the Taylor Series for 𝑓 ⁡ ( 𝑥 ) = s i n ⁡ ( 𝑥 ) f ⁡ ( x ) = sin ⁡ ( x ) about 𝑥 = 0 x = 0 . Show Solution As with the last example we’ll start off in the same manner. 𝑓 ( 0 ) ⁡ ( 𝑥 ) = s i n ⁡ 𝑥 𝑓 ( 0 ) ⁡ ( 0 ) = 0 𝑓 ( 1 ) ⁡ ( 𝑥 ) = c o s ⁡ 𝑥 𝑓 ( 1 ) ⁡ ( 0 ) = 1 𝑓 ( 2 ) ⁡ ( 𝑥 ) = − s i n ⁡ 𝑥 𝑓 ( 2 ) ⁡ ( 0 ) = 0 𝑓 ( 3 ) ⁡ ( 𝑥 ) = − c o s ⁡ 𝑥 𝑓 ( 3 ) ⁡ ( 0 ) = − 1 𝑓 ( 4 ) ⁡ ( 𝑥 ) = s i n ⁡ 𝑥 𝑓 ( 4 ) ⁡ ( 0 ) = 0 𝑓 ( 5 ) ⁡ ( 𝑥 ) = c o s ⁡ 𝑥 𝑓 ( 5 ) ⁡ ( 0 ) = 1 𝑓 ( 6 ) ⁡ ( 𝑥 ) = − s i n ⁡ 𝑥 𝑓 ( 6 ) ⁡ ( 0 ) = 0 ⋮ ⋮ f ( 0 ) ⁡ ( x ) = sin ⁡ x f ( 0 ) ⁡ ( 0 ) = 0 f ( 1 ) ⁡ ( x ) = cos ⁡ x f ( 1 ) ⁡ ( 0 ) = 1 f ( 2 ) ⁡ ( x ) = − sin ⁡ x f ( 2 ) ⁡ ( 0 ) = 0 f ( 3 ) ⁡ ( x ) = − cos ⁡ x f ( 3 ) ⁡ ( 0 ) = − 1 f ( 4 ) ⁡ ( x ) = sin ⁡ x f ( 4 ) ⁡ ( 0 ) = 0 f ( 5 ) ⁡ ( x ) = cos ⁡ x f ( 5 ) ⁡ ( 0 ) = 1 f ( 6 ) ⁡ ( x ) = − sin ⁡ x f ( 6 ) ⁡ ( 0 ) = 0 ⋮ ⋮ So, we get a similar pattern for this one. Let’s plug the numbers into the Taylor Series. s i n ⁡ 𝑥 = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( 0 ) 𝑛 ! ⁢ 𝑥 𝑛 = 1 1 ! ⁢ 𝑥 − 1 3 ! ⁢ 𝑥 3 + 1 5 ! ⁢ 𝑥 5 − 1 7 ! ⁢ 𝑥 7 + ⋯ sin ⁡ x = ∑ n = 0 ∞ f ( n ) ⁡ ( 0 ) n ! ⁢ x n = 1 1 ! ⁢ x − 1 3 ! ⁢ x 3 + 1 5 ! ⁢ x 5 − 1 7 ! ⁢ x 7 + ⋯ In this case we only get terms that have an odd exponent on 𝑥 x and as with the last problem once we ignore the zero terms there is a clear pattern and formula. So renumbering the terms as we did in the previous example we get the following Taylor Series. s i n ⁡ 𝑥 = ∞ ∑ 𝑛 = 0 ( − 1 ) 𝑛 ⁢ 𝑥 2 ⁢ 𝑛 + 1 ( 2 ⁢ 𝑛 + 1 ) ! sin ⁡ x = ∑ n = 0 ∞ ( − 1 ) n ⁢ x 2 ⁢ n + 1 ( 2 ⁢ n + 1 ) !"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ⁡ ( 𝑥 ) = s i n ⁡ ( 𝑥 ) f ⁡ ( x ) = sin ⁡ ( x )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑥 = 0 x = 0"
+        },
+        {
+            "html_tag": "div",
+            "type": "example-content",
+            "text": "Show Solution As with the last example we’ll start off in the same manner. 𝑓 ( 0 ) ⁡ ( 𝑥 ) = s i n ⁡ 𝑥 𝑓 ( 0 ) ⁡ ( 0 ) = 0 𝑓 ( 1 ) ⁡ ( 𝑥 ) = c o s ⁡ 𝑥 𝑓 ( 1 ) ⁡ ( 0 ) = 1 𝑓 ( 2 ) ⁡ ( 𝑥 ) = − s i n ⁡ 𝑥 𝑓 ( 2 ) ⁡ ( 0 ) = 0 𝑓 ( 3 ) ⁡ ( 𝑥 ) = − c o s ⁡ 𝑥 𝑓 ( 3 ) ⁡ ( 0 ) = − 1 𝑓 ( 4 ) ⁡ ( 𝑥 ) = s i n ⁡ 𝑥 𝑓 ( 4 ) ⁡ ( 0 ) = 0 𝑓 ( 5 ) ⁡ ( 𝑥 ) = c o s ⁡ 𝑥 𝑓 ( 5 ) ⁡ ( 0 ) = 1 𝑓 ( 6 ) ⁡ ( 𝑥 ) = − s i n ⁡ 𝑥 𝑓 ( 6 ) ⁡ ( 0 ) = 0 ⋮ ⋮ f ( 0 ) ⁡ ( x ) = sin ⁡ x f ( 0 ) ⁡ ( 0 ) = 0 f ( 1 ) ⁡ ( x ) = cos ⁡ x f ( 1 ) ⁡ ( 0 ) = 1 f ( 2 ) ⁡ ( x ) = − sin ⁡ x f ( 2 ) ⁡ ( 0 ) = 0 f ( 3 ) ⁡ ( x ) = − cos ⁡ x f ( 3 ) ⁡ ( 0 ) = − 1 f ( 4 ) ⁡ ( x ) = sin ⁡ x f ( 4 ) ⁡ ( 0 ) = 0 f ( 5 ) ⁡ ( x ) = cos ⁡ x f ( 5 ) ⁡ ( 0 ) = 1 f ( 6 ) ⁡ ( x ) = − sin ⁡ x f ( 6 ) ⁡ ( 0 ) = 0 ⋮ ⋮ So, we get a similar pattern for this one. Let’s plug the numbers into the Taylor Series. s i n ⁡ 𝑥 = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( 0 ) 𝑛 ! ⁢ 𝑥 𝑛 = 1 1 ! ⁢ 𝑥 − 1 3 ! ⁢ 𝑥 3 + 1 5 ! ⁢ 𝑥 5 − 1 7 ! ⁢ 𝑥 7 + ⋯ sin ⁡ x = ∑ n = 0 ∞ f ( n ) ⁡ ( 0 ) n ! ⁢ x n = 1 1 ! ⁢ x − 1 3 ! ⁢ x 3 + 1 5 ! ⁢ x 5 − 1 7 ! ⁢ x 7 + ⋯ In this case we only get terms that have an odd exponent on 𝑥 x and as with the last problem once we ignore the zero terms there is a clear pattern and formula. So renumbering the terms as we did in the previous example we get the following Taylor Series. s i n ⁡ 𝑥 = ∞ ∑ 𝑛 = 0 ( − 1 ) 𝑛 ⁢ 𝑥 2 ⁢ 𝑛 + 1 ( 2 ⁢ 𝑛 + 1 ) ! sin ⁡ x = ∑ n = 0 ∞ ( − 1 ) n ⁢ x 2 ⁢ n + 1 ( 2 ⁢ n + 1 ) !"
+        },
+        {
+            "html_tag": "div",
+            "type": "solution",
+            "text": "As with the last example we’ll start off in the same manner. 𝑓 ( 0 ) ⁡ ( 𝑥 ) = s i n ⁡ 𝑥 𝑓 ( 0 ) ⁡ ( 0 ) = 0 𝑓 ( 1 ) ⁡ ( 𝑥 ) = c o s ⁡ 𝑥 𝑓 ( 1 ) ⁡ ( 0 ) = 1 𝑓 ( 2 ) ⁡ ( 𝑥 ) = − s i n ⁡ 𝑥 𝑓 ( 2 ) ⁡ ( 0 ) = 0 𝑓 ( 3 ) ⁡ ( 𝑥 ) = − c o s ⁡ 𝑥 𝑓 ( 3 ) ⁡ ( 0 ) = − 1 𝑓 ( 4 ) ⁡ ( 𝑥 ) = s i n ⁡ 𝑥 𝑓 ( 4 ) ⁡ ( 0 ) = 0 𝑓 ( 5 ) ⁡ ( 𝑥 ) = c o s ⁡ 𝑥 𝑓 ( 5 ) ⁡ ( 0 ) = 1 𝑓 ( 6 ) ⁡ ( 𝑥 ) = − s i n ⁡ 𝑥 𝑓 ( 6 ) ⁡ ( 0 ) = 0 ⋮ ⋮ f ( 0 ) ⁡ ( x ) = sin ⁡ x f ( 0 ) ⁡ ( 0 ) = 0 f ( 1 ) ⁡ ( x ) = cos ⁡ x f ( 1 ) ⁡ ( 0 ) = 1 f ( 2 ) ⁡ ( x ) = − sin ⁡ x f ( 2 ) ⁡ ( 0 ) = 0 f ( 3 ) ⁡ ( x ) = − cos ⁡ x f ( 3 ) ⁡ ( 0 ) = − 1 f ( 4 ) ⁡ ( x ) = sin ⁡ x f ( 4 ) ⁡ ( 0 ) = 0 f ( 5 ) ⁡ ( x ) = cos ⁡ x f ( 5 ) ⁡ ( 0 ) = 1 f ( 6 ) ⁡ ( x ) = − sin ⁡ x f ( 6 ) ⁡ ( 0 ) = 0 ⋮ ⋮ So, we get a similar pattern for this one. Let’s plug the numbers into the Taylor Series. s i n ⁡ 𝑥 = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( 0 ) 𝑛 ! ⁢ 𝑥 𝑛 = 1 1 ! ⁢ 𝑥 − 1 3 ! ⁢ 𝑥 3 + 1 5 ! ⁢ 𝑥 5 − 1 7 ! ⁢ 𝑥 7 + ⋯ sin ⁡ x = ∑ n = 0 ∞ f ( n ) ⁡ ( 0 ) n ! ⁢ x n = 1 1 ! ⁢ x − 1 3 ! ⁢ x 3 + 1 5 ! ⁢ x 5 − 1 7 ! ⁢ x 7 + ⋯ In this case we only get terms that have an odd exponent on 𝑥 x and as with the last problem once we ignore the zero terms there is a clear pattern and formula. So renumbering the terms as we did in the previous example we get the following Taylor Series. s i n ⁡ 𝑥 = ∞ ∑ 𝑛 = 0 ( − 1 ) 𝑛 ⁢ 𝑥 2 ⁢ 𝑛 + 1 ( 2 ⁢ 𝑛 + 1 ) ! sin ⁡ x = ∑ n = 0 ∞ ( − 1 ) n ⁢ x 2 ⁢ n + 1 ( 2 ⁢ n + 1 ) !"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "As with the last example we’ll start off in the same manner."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ( 0 ) ⁡ ( 𝑥 ) = s i n ⁡ 𝑥 𝑓 ( 0 ) ⁡ ( 0 ) = 0 𝑓 ( 1 ) ⁡ ( 𝑥 ) = c o s ⁡ 𝑥 𝑓 ( 1 ) ⁡ ( 0 ) = 1 𝑓 ( 2 ) ⁡ ( 𝑥 ) = − s i n ⁡ 𝑥 𝑓 ( 2 ) ⁡ ( 0 ) = 0 𝑓 ( 3 ) ⁡ ( 𝑥 ) = − c o s ⁡ 𝑥 𝑓 ( 3 ) ⁡ ( 0 ) = − 1 𝑓 ( 4 ) ⁡ ( 𝑥 ) = s i n ⁡ 𝑥 𝑓 ( 4 ) ⁡ ( 0 ) = 0 𝑓 ( 5 ) ⁡ ( 𝑥 ) = c o s ⁡ 𝑥 𝑓 ( 5 ) ⁡ ( 0 ) = 1 𝑓 ( 6 ) ⁡ ( 𝑥 ) = − s i n ⁡ 𝑥 𝑓 ( 6 ) ⁡ ( 0 ) = 0 ⋮ ⋮ f ( 0 ) ⁡ ( x ) = sin ⁡ x f ( 0 ) ⁡ ( 0 ) = 0 f ( 1 ) ⁡ ( x ) = cos ⁡ x f ( 1 ) ⁡ ( 0 ) = 1 f ( 2 ) ⁡ ( x ) = − sin ⁡ x f ( 2 ) ⁡ ( 0 ) = 0 f ( 3 ) ⁡ ( x ) = − cos ⁡ x f ( 3 ) ⁡ ( 0 ) = − 1 f ( 4 ) ⁡ ( x ) = sin ⁡ x f ( 4 ) ⁡ ( 0 ) = 0 f ( 5 ) ⁡ ( x ) = cos ⁡ x f ( 5 ) ⁡ ( 0 ) = 1 f ( 6 ) ⁡ ( x ) = − sin ⁡ x f ( 6 ) ⁡ ( 0 ) = 0 ⋮ ⋮"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "So, we get a similar pattern for this one. Let’s plug the numbers into the Taylor Series."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "s i n ⁡ 𝑥 = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( 0 ) 𝑛 ! ⁢ 𝑥 𝑛 = 1 1 ! ⁢ 𝑥 − 1 3 ! ⁢ 𝑥 3 + 1 5 ! ⁢ 𝑥 5 − 1 7 ! ⁢ 𝑥 7 + ⋯ sin ⁡ x = ∑ n = 0 ∞ f ( n ) ⁡ ( 0 ) n ! ⁢ x n = 1 1 ! ⁢ x − 1 3 ! ⁢ x 3 + 1 5 ! ⁢ x 5 − 1 7 ! ⁢ x 7 + ⋯"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "In this case we only get terms that have an odd exponent on 𝑥 x and as with the last problem once we ignore the zero terms there is a clear pattern and formula. So renumbering the terms as we did in the previous example we get the following Taylor Series."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 x"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "s i n ⁡ 𝑥 = ∞ ∑ 𝑛 = 0 ( − 1 ) 𝑛 ⁢ 𝑥 2 ⁢ 𝑛 + 1 ( 2 ⁢ 𝑛 + 1 ) ! sin ⁡ x = ∑ n = 0 ∞ ( − 1 ) n ⁢ x 2 ⁢ n + 1 ( 2 ⁢ n + 1 ) !"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "We really need to work another example or two in which 𝑓 ⁡ ( 𝑥 ) f ⁡ ( x ) isn’t about 𝑥 = 0 x = 0 ."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑓 ⁡ ( 𝑥 ) f ⁡ ( x )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑥 = 0 x = 0"
+        },
+        {
+            "html_tag": "div",
+            "type": "example",
+            "text": "Example 7 Find the Taylor Series for 𝑓 ⁡ ( 𝑥 ) = l n ⁡ ( 𝑥 ) f ⁡ ( x ) = ln ⁡ ( x ) about 𝑥 = 2 x = 2 . Show Solution Here are the first few derivatives and the evaluations. 𝑓 ( 0 ) ⁡ ( 𝑥 ) = l n ⁡ ( 𝑥 ) 𝑓 ( 0 ) ⁡ ( 2 ) = l n ⁡ 2 𝑓 ( 1 ) ⁡ ( 𝑥 ) = 1 𝑥 𝑓 ( 1 ) ⁡ ( 2 ) = 1 2 𝑓 ( 2 ) ⁡ ( 𝑥 ) = − 1 𝑥 2 𝑓 ( 2 ) ⁡ ( 2 ) = − 1 2 2 𝑓 ( 3 ) ⁡ ( 𝑥 ) = 2 𝑥 3 𝑓 ( 3 ) ⁡ ( 2 ) = 2 2 3 𝑓 ( 4 ) ⁡ ( 𝑥 ) = − 2 ⁢ ( 3 ) 𝑥 4 𝑓 ( 4 ) ⁡ ( 2 ) = − 2 ⁢ ( 3 ) 2 4 𝑓 ( 5 ) ⁡ ( 𝑥 ) = 2 ⁢ ( 3 ) ⁢ ( 4 ) 𝑥 5 𝑓 ( 5 ) ⁡ ( 2 ) = 2 ⁢ ( 3 ) ⁢ ( 4 ) 2 5 ⋮ ⋮ 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = ( − 1 ) 𝑛 + 1 ⁢ ( 𝑛 − 1 ) ! 𝑥 𝑛 𝑓 ( 𝑛 ) ⁡ ( 2 ) = ( − 1 ) 𝑛 + 1 ⁢ ( 𝑛 − 1 ) ! 2 𝑛 𝑛 = 1 , 2 , 3 , … f ( 0 ) ⁡ ( x ) = ln ⁡ ( x ) f ( 0 ) ⁡ ( 2 ) = ln ⁡ 2 f ( 1 ) ⁡ ( x ) = 1 x f ( 1 ) ⁡ ( 2 ) = 1 2 f ( 2 ) ⁡ ( x ) = − 1 x 2 f ( 2 ) ⁡ ( 2 ) = − 1 2 2 f ( 3 ) ⁡ ( x ) = 2 x 3 f ( 3 ) ⁡ ( 2 ) = 2 2 3 f ( 4 ) ⁡ ( x ) = − 2 ⁢ ( 3 ) x 4 f ( 4 ) ⁡ ( 2 ) = − 2 ⁢ ( 3 ) 2 4 f ( 5 ) ⁡ ( x ) = 2 ⁢ ( 3 ) ⁢ ( 4 ) x 5 f ( 5 ) ⁡ ( 2 ) = 2 ⁢ ( 3 ) ⁢ ( 4 ) 2 5 ⋮ ⋮ f ( n ) ⁡ ( x ) = ( − 1 ) n + 1 ⁢ ( n − 1 ) ! x n f ( n ) ⁡ ( 2 ) = ( − 1 ) n + 1 ⁢ ( n − 1 ) ! 2 n n = 1 , 2 , 3 , … Note that while we got a general formula here it doesn’t work for 𝑛 = 0 n = 0 . This will happen on occasion so don’t worry about it when it does. In order to plug this into the Taylor Series formula we’ll need to strip out the 𝑛 = 0 n = 0 term first. l n ⁡ ( 𝑥 ) = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( 2 ) 𝑛 ! ⁢ ( 𝑥 − 2 ) 𝑛 = 𝑓 ⁡ ( 2 ) + ∞ ∑ 𝑛 = 1 𝑓 ( 𝑛 ) ⁡ ( 2 ) 𝑛 ! ⁢ ( 𝑥 − 2 ) 𝑛 = l n ⁡ ( 2 ) + ∞ ∑ 𝑛 = 1 ( − 1 ) 𝑛 + 1 ⁢ ( 𝑛 − 1 ) ! 𝑛 ! 2 𝑛 ⁢ ( 𝑥 − 2 ) 𝑛 = l n ⁡ ( 2 ) + ∞ ∑ 𝑛 = 1 ( − 1 ) 𝑛 + 1 𝑛 2 𝑛 ⁢ ( 𝑥 − 2 ) 𝑛 ln ⁡ ( x ) = ∑ n = 0 ∞ f ( n ) ⁡ ( 2 ) n ! ⁢ ( x − 2 ) n = f ⁡ ( 2 ) + ∑ n = 1 ∞ f ( n ) ⁡ ( 2 ) n ! ⁢ ( x − 2 ) n = ln ⁡ ( 2 ) + ∑ n = 1 ∞ ( − 1 ) n + 1 ⁢ ( n − 1 ) ! n ! 2 n ⁢ ( x − 2 ) n = ln ⁡ ( 2 ) + ∑ n = 1 ∞ ( − 1 ) n + 1 n 2 n ⁢ ( x − 2 ) n Notice that we simplified the factorials in this case. You should always simplify them if there are more than one and it’s possible to simplify them. Also, do not get excited about the term sitting in front of the series. Sometimes we need to do that when we can’t get a general formula that will hold for all values of 𝑛 n ."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ⁡ ( 𝑥 ) = l n ⁡ ( 𝑥 ) f ⁡ ( x ) = ln ⁡ ( x )"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑥 = 2 x = 2"
+        },
+        {
+            "html_tag": "div",
+            "type": "example-content",
+            "text": "Show Solution Here are the first few derivatives and the evaluations. 𝑓 ( 0 ) ⁡ ( 𝑥 ) = l n ⁡ ( 𝑥 ) 𝑓 ( 0 ) ⁡ ( 2 ) = l n ⁡ 2 𝑓 ( 1 ) ⁡ ( 𝑥 ) = 1 𝑥 𝑓 ( 1 ) ⁡ ( 2 ) = 1 2 𝑓 ( 2 ) ⁡ ( 𝑥 ) = − 1 𝑥 2 𝑓 ( 2 ) ⁡ ( 2 ) = − 1 2 2 𝑓 ( 3 ) ⁡ ( 𝑥 ) = 2 𝑥 3 𝑓 ( 3 ) ⁡ ( 2 ) = 2 2 3 𝑓 ( 4 ) ⁡ ( 𝑥 ) = − 2 ⁢ ( 3 ) 𝑥 4 𝑓 ( 4 ) ⁡ ( 2 ) = − 2 ⁢ ( 3 ) 2 4 𝑓 ( 5 ) ⁡ ( 𝑥 ) = 2 ⁢ ( 3 ) ⁢ ( 4 ) 𝑥 5 𝑓 ( 5 ) ⁡ ( 2 ) = 2 ⁢ ( 3 ) ⁢ ( 4 ) 2 5 ⋮ ⋮ 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = ( − 1 ) 𝑛 + 1 ⁢ ( 𝑛 − 1 ) ! 𝑥 𝑛 𝑓 ( 𝑛 ) ⁡ ( 2 ) = ( − 1 ) 𝑛 + 1 ⁢ ( 𝑛 − 1 ) ! 2 𝑛 𝑛 = 1 , 2 , 3 , … f ( 0 ) ⁡ ( x ) = ln ⁡ ( x ) f ( 0 ) ⁡ ( 2 ) = ln ⁡ 2 f ( 1 ) ⁡ ( x ) = 1 x f ( 1 ) ⁡ ( 2 ) = 1 2 f ( 2 ) ⁡ ( x ) = − 1 x 2 f ( 2 ) ⁡ ( 2 ) = − 1 2 2 f ( 3 ) ⁡ ( x ) = 2 x 3 f ( 3 ) ⁡ ( 2 ) = 2 2 3 f ( 4 ) ⁡ ( x ) = − 2 ⁢ ( 3 ) x 4 f ( 4 ) ⁡ ( 2 ) = − 2 ⁢ ( 3 ) 2 4 f ( 5 ) ⁡ ( x ) = 2 ⁢ ( 3 ) ⁢ ( 4 ) x 5 f ( 5 ) ⁡ ( 2 ) = 2 ⁢ ( 3 ) ⁢ ( 4 ) 2 5 ⋮ ⋮ f ( n ) ⁡ ( x ) = ( − 1 ) n + 1 ⁢ ( n − 1 ) ! x n f ( n ) ⁡ ( 2 ) = ( − 1 ) n + 1 ⁢ ( n − 1 ) ! 2 n n = 1 , 2 , 3 , … Note that while we got a general formula here it doesn’t work for 𝑛 = 0 n = 0 . This will happen on occasion so don’t worry about it when it does. In order to plug this into the Taylor Series formula we’ll need to strip out the 𝑛 = 0 n = 0 term first. l n ⁡ ( 𝑥 ) = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( 2 ) 𝑛 ! ⁢ ( 𝑥 − 2 ) 𝑛 = 𝑓 ⁡ ( 2 ) + ∞ ∑ 𝑛 = 1 𝑓 ( 𝑛 ) ⁡ ( 2 ) 𝑛 ! ⁢ ( 𝑥 − 2 ) 𝑛 = l n ⁡ ( 2 ) + ∞ ∑ 𝑛 = 1 ( − 1 ) 𝑛 + 1 ⁢ ( 𝑛 − 1 ) ! 𝑛 ! 2 𝑛 ⁢ ( 𝑥 − 2 ) 𝑛 = l n ⁡ ( 2 ) + ∞ ∑ 𝑛 = 1 ( − 1 ) 𝑛 + 1 𝑛 2 𝑛 ⁢ ( 𝑥 − 2 ) 𝑛 ln ⁡ ( x ) = ∑ n = 0 ∞ f ( n ) ⁡ ( 2 ) n ! ⁢ ( x − 2 ) n = f ⁡ ( 2 ) + ∑ n = 1 ∞ f ( n ) ⁡ ( 2 ) n ! ⁢ ( x − 2 ) n = ln ⁡ ( 2 ) + ∑ n = 1 ∞ ( − 1 ) n + 1 ⁢ ( n − 1 ) ! n ! 2 n ⁢ ( x − 2 ) n = ln ⁡ ( 2 ) + ∑ n = 1 ∞ ( − 1 ) n + 1 n 2 n ⁢ ( x − 2 ) n Notice that we simplified the factorials in this case. You should always simplify them if there are more than one and it’s possible to simplify them. Also, do not get excited about the term sitting in front of the series. Sometimes we need to do that when we can’t get a general formula that will hold for all values of 𝑛 n ."
+        },
+        {
+            "html_tag": "div",
+            "type": "solution",
+            "text": "Here are the first few derivatives and the evaluations. 𝑓 ( 0 ) ⁡ ( 𝑥 ) = l n ⁡ ( 𝑥 ) 𝑓 ( 0 ) ⁡ ( 2 ) = l n ⁡ 2 𝑓 ( 1 ) ⁡ ( 𝑥 ) = 1 𝑥 𝑓 ( 1 ) ⁡ ( 2 ) = 1 2 𝑓 ( 2 ) ⁡ ( 𝑥 ) = − 1 𝑥 2 𝑓 ( 2 ) ⁡ ( 2 ) = − 1 2 2 𝑓 ( 3 ) ⁡ ( 𝑥 ) = 2 𝑥 3 𝑓 ( 3 ) ⁡ ( 2 ) = 2 2 3 𝑓 ( 4 ) ⁡ ( 𝑥 ) = − 2 ⁢ ( 3 ) 𝑥 4 𝑓 ( 4 ) ⁡ ( 2 ) = − 2 ⁢ ( 3 ) 2 4 𝑓 ( 5 ) ⁡ ( 𝑥 ) = 2 ⁢ ( 3 ) ⁢ ( 4 ) 𝑥 5 𝑓 ( 5 ) ⁡ ( 2 ) = 2 ⁢ ( 3 ) ⁢ ( 4 ) 2 5 ⋮ ⋮ 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = ( − 1 ) 𝑛 + 1 ⁢ ( 𝑛 − 1 ) ! 𝑥 𝑛 𝑓 ( 𝑛 ) ⁡ ( 2 ) = ( − 1 ) 𝑛 + 1 ⁢ ( 𝑛 − 1 ) ! 2 𝑛 𝑛 = 1 , 2 , 3 , … f ( 0 ) ⁡ ( x ) = ln ⁡ ( x ) f ( 0 ) ⁡ ( 2 ) = ln ⁡ 2 f ( 1 ) ⁡ ( x ) = 1 x f ( 1 ) ⁡ ( 2 ) = 1 2 f ( 2 ) ⁡ ( x ) = − 1 x 2 f ( 2 ) ⁡ ( 2 ) = − 1 2 2 f ( 3 ) ⁡ ( x ) = 2 x 3 f ( 3 ) ⁡ ( 2 ) = 2 2 3 f ( 4 ) ⁡ ( x ) = − 2 ⁢ ( 3 ) x 4 f ( 4 ) ⁡ ( 2 ) = − 2 ⁢ ( 3 ) 2 4 f ( 5 ) ⁡ ( x ) = 2 ⁢ ( 3 ) ⁢ ( 4 ) x 5 f ( 5 ) ⁡ ( 2 ) = 2 ⁢ ( 3 ) ⁢ ( 4 ) 2 5 ⋮ ⋮ f ( n ) ⁡ ( x ) = ( − 1 ) n + 1 ⁢ ( n − 1 ) ! x n f ( n ) ⁡ ( 2 ) = ( − 1 ) n + 1 ⁢ ( n − 1 ) ! 2 n n = 1 , 2 , 3 , … Note that while we got a general formula here it doesn’t work for 𝑛 = 0 n = 0 . This will happen on occasion so don’t worry about it when it does. In order to plug this into the Taylor Series formula we’ll need to strip out the 𝑛 = 0 n = 0 term first. l n ⁡ ( 𝑥 ) = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( 2 ) 𝑛 ! ⁢ ( 𝑥 − 2 ) 𝑛 = 𝑓 ⁡ ( 2 ) + ∞ ∑ 𝑛 = 1 𝑓 ( 𝑛 ) ⁡ ( 2 ) 𝑛 ! ⁢ ( 𝑥 − 2 ) 𝑛 = l n ⁡ ( 2 ) + ∞ ∑ 𝑛 = 1 ( − 1 ) 𝑛 + 1 ⁢ ( 𝑛 − 1 ) ! 𝑛 ! 2 𝑛 ⁢ ( 𝑥 − 2 ) 𝑛 = l n ⁡ ( 2 ) + ∞ ∑ 𝑛 = 1 ( − 1 ) 𝑛 + 1 𝑛 2 𝑛 ⁢ ( 𝑥 − 2 ) 𝑛 ln ⁡ ( x ) = ∑ n = 0 ∞ f ( n ) ⁡ ( 2 ) n ! ⁢ ( x − 2 ) n = f ⁡ ( 2 ) + ∑ n = 1 ∞ f ( n ) ⁡ ( 2 ) n ! ⁢ ( x − 2 ) n = ln ⁡ ( 2 ) + ∑ n = 1 ∞ ( − 1 ) n + 1 ⁢ ( n − 1 ) ! n ! 2 n ⁢ ( x − 2 ) n = ln ⁡ ( 2 ) + ∑ n = 1 ∞ ( − 1 ) n + 1 n 2 n ⁢ ( x − 2 ) n Notice that we simplified the factorials in this case. You should always simplify them if there are more than one and it’s possible to simplify them. Also, do not get excited about the term sitting in front of the series. Sometimes we need to do that when we can’t get a general formula that will hold for all values of 𝑛 n ."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Here are the first few derivatives and the evaluations."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ( 0 ) ⁡ ( 𝑥 ) = l n ⁡ ( 𝑥 ) 𝑓 ( 0 ) ⁡ ( 2 ) = l n ⁡ 2 𝑓 ( 1 ) ⁡ ( 𝑥 ) = 1 𝑥 𝑓 ( 1 ) ⁡ ( 2 ) = 1 2 𝑓 ( 2 ) ⁡ ( 𝑥 ) = − 1 𝑥 2 𝑓 ( 2 ) ⁡ ( 2 ) = − 1 2 2 𝑓 ( 3 ) ⁡ ( 𝑥 ) = 2 𝑥 3 𝑓 ( 3 ) ⁡ ( 2 ) = 2 2 3 𝑓 ( 4 ) ⁡ ( 𝑥 ) = − 2 ⁢ ( 3 ) 𝑥 4 𝑓 ( 4 ) ⁡ ( 2 ) = − 2 ⁢ ( 3 ) 2 4 𝑓 ( 5 ) ⁡ ( 𝑥 ) = 2 ⁢ ( 3 ) ⁢ ( 4 ) 𝑥 5 𝑓 ( 5 ) ⁡ ( 2 ) = 2 ⁢ ( 3 ) ⁢ ( 4 ) 2 5 ⋮ ⋮ 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = ( − 1 ) 𝑛 + 1 ⁢ ( 𝑛 − 1 ) ! 𝑥 𝑛 𝑓 ( 𝑛 ) ⁡ ( 2 ) = ( − 1 ) 𝑛 + 1 ⁢ ( 𝑛 − 1 ) ! 2 𝑛 𝑛 = 1 , 2 , 3 , … f ( 0 ) ⁡ ( x ) = ln ⁡ ( x ) f ( 0 ) ⁡ ( 2 ) = ln ⁡ 2 f ( 1 ) ⁡ ( x ) = 1 x f ( 1 ) ⁡ ( 2 ) = 1 2 f ( 2 ) ⁡ ( x ) = − 1 x 2 f ( 2 ) ⁡ ( 2 ) = − 1 2 2 f ( 3 ) ⁡ ( x ) = 2 x 3 f ( 3 ) ⁡ ( 2 ) = 2 2 3 f ( 4 ) ⁡ ( x ) = − 2 ⁢ ( 3 ) x 4 f ( 4 ) ⁡ ( 2 ) = − 2 ⁢ ( 3 ) 2 4 f ( 5 ) ⁡ ( x ) = 2 ⁢ ( 3 ) ⁢ ( 4 ) x 5 f ( 5 ) ⁡ ( 2 ) = 2 ⁢ ( 3 ) ⁢ ( 4 ) 2 5 ⋮ ⋮ f ( n ) ⁡ ( x ) = ( − 1 ) n + 1 ⁢ ( n − 1 ) ! x n f ( n ) ⁡ ( 2 ) = ( − 1 ) n + 1 ⁢ ( n − 1 ) ! 2 n n = 1 , 2 , 3 , …"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Note that while we got a general formula here it doesn’t work for 𝑛 = 0 n = 0 . This will happen on occasion so don’t worry about it when it does."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑛 = 0 n = 0"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "In order to plug this into the Taylor Series formula we’ll need to strip out the 𝑛 = 0 n = 0 term first."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑛 = 0 n = 0"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "l n ⁡ ( 𝑥 ) = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( 2 ) 𝑛 ! ⁢ ( 𝑥 − 2 ) 𝑛 = 𝑓 ⁡ ( 2 ) + ∞ ∑ 𝑛 = 1 𝑓 ( 𝑛 ) ⁡ ( 2 ) 𝑛 ! ⁢ ( 𝑥 − 2 ) 𝑛 = l n ⁡ ( 2 ) + ∞ ∑ 𝑛 = 1 ( − 1 ) 𝑛 + 1 ⁢ ( 𝑛 − 1 ) ! 𝑛 ! 2 𝑛 ⁢ ( 𝑥 − 2 ) 𝑛 = l n ⁡ ( 2 ) + ∞ ∑ 𝑛 = 1 ( − 1 ) 𝑛 + 1 𝑛 2 𝑛 ⁢ ( 𝑥 − 2 ) 𝑛 ln ⁡ ( x ) = ∑ n = 0 ∞ f ( n ) ⁡ ( 2 ) n ! ⁢ ( x − 2 ) n = f ⁡ ( 2 ) + ∑ n = 1 ∞ f ( n ) ⁡ ( 2 ) n ! ⁢ ( x − 2 ) n = ln ⁡ ( 2 ) + ∑ n = 1 ∞ ( − 1 ) n + 1 ⁢ ( n − 1 ) ! n ! 2 n ⁢ ( x − 2 ) n = ln ⁡ ( 2 ) + ∑ n = 1 ∞ ( − 1 ) n + 1 n 2 n ⁢ ( x − 2 ) n"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Notice that we simplified the factorials in this case. You should always simplify them if there are more than one and it’s possible to simplify them."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Also, do not get excited about the term sitting in front of the series. Sometimes we need to do that when we can’t get a general formula that will hold for all values of 𝑛 n ."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑛 n"
+        },
+        {
+            "html_tag": "div",
+            "type": "example",
+            "text": "Example 8 Find the Taylor Series for 𝑓 ⁡ ( 𝑥 ) = 1 𝑥 2 f ⁡ ( x ) = 1 x 2 about 𝑥 = − 1 x = − 1 . Show Solution Again, here are the derivatives and evaluations. 𝑓 ( 0 ) ⁡ ( 𝑥 ) = 1 𝑥 2 𝑓 ( 0 ) ⁡ ( − 1 ) = 1 ( − 1 ) 2 = 1 𝑓 ( 1 ) ⁡ ( 𝑥 ) = − 2 𝑥 3 𝑓 ( 1 ) ⁡ ( − 1 ) = − 2 ( − 1 ) 3 = 2 𝑓 ( 2 ) ⁡ ( 𝑥 ) = 2 ⁢ ( 3 ) 𝑥 4 𝑓 ( 2 ) ⁡ ( − 1 ) = 2 ⁢ ( 3 ) ( − 1 ) 4 = 2 ⁢ ( 3 ) 𝑓 ( 3 ) ⁡ ( 𝑥 ) = − 2 ⁢ ( 3 ) ⁢ ( 4 ) 𝑥 5 𝑓 ( 3 ) ⁡ ( − 1 ) = − 2 ⁢ ( 3 ) ⁢ ( 4 ) ( − 1 ) 5 = 2 ⁢ ( 3 ) ⁢ ( 4 ) ⋮ ⋮ 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = ( − 1 ) 𝑛 ⁢ ( 𝑛 + 1 ) ! 𝑥 𝑛 + 2 𝑓 ( 𝑛 ) ⁡ ( − 1 ) = ( − 1 ) 𝑛 ⁢ ( 𝑛 + 1 ) ! ( − 1 ) 𝑛 + 2 = ( 𝑛 + 1 ) ! f ( 0 ) ⁡ ( x ) = 1 x 2 f ( 0 ) ⁡ ( − 1 ) = 1 ( − 1 ) 2 = 1 f ( 1 ) ⁡ ( x ) = − 2 x 3 f ( 1 ) ⁡ ( − 1 ) = − 2 ( − 1 ) 3 = 2 f ( 2 ) ⁡ ( x ) = 2 ⁢ ( 3 ) x 4 f ( 2 ) ⁡ ( − 1 ) = 2 ⁢ ( 3 ) ( − 1 ) 4 = 2 ⁢ ( 3 ) f ( 3 ) ⁡ ( x ) = − 2 ⁢ ( 3 ) ⁢ ( 4 ) x 5 f ( 3 ) ⁡ ( − 1 ) = − 2 ⁢ ( 3 ) ⁢ ( 4 ) ( − 1 ) 5 = 2 ⁢ ( 3 ) ⁢ ( 4 ) ⋮ ⋮ f ( n ) ⁡ ( x ) = ( − 1 ) n ⁢ ( n + 1 ) ! x n + 2 f ( n ) ⁡ ( − 1 ) = ( − 1 ) n ⁢ ( n + 1 ) ! ( − 1 ) n + 2 = ( n + 1 ) ! Notice that all the negative signs will cancel out in the evaluation. Also, this formula will work for all 𝑛 n , unlike the previous example. Here is the Taylor Series for this function. 1 𝑥 2 = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( − 1 ) 𝑛 ! ⁢ ( 𝑥 + 1 ) 𝑛 = ∞ ∑ 𝑛 = 0 ( 𝑛 + 1 ) ! 𝑛 ! ⁢ ( 𝑥 + 1 ) 𝑛 = ∞ ∑ 𝑛 = 0 ( 𝑛 + 1 ) ⁢ ( 𝑥 + 1 ) 𝑛 1 x 2 = ∑ n = 0 ∞ f ( n ) ⁡ ( − 1 ) n ! ⁢ ( x + 1 ) n = ∑ n = 0 ∞ ( n + 1 ) ! n ! ⁢ ( x + 1 ) n = ∑ n = 0 ∞ ( n + 1 ) ⁢ ( x + 1 ) n"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ⁡ ( 𝑥 ) = 1 𝑥 2 f ⁡ ( x ) = 1 x 2"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑥 = − 1 x = − 1"
+        },
+        {
+            "html_tag": "div",
+            "type": "example-content",
+            "text": "Show Solution Again, here are the derivatives and evaluations. 𝑓 ( 0 ) ⁡ ( 𝑥 ) = 1 𝑥 2 𝑓 ( 0 ) ⁡ ( − 1 ) = 1 ( − 1 ) 2 = 1 𝑓 ( 1 ) ⁡ ( 𝑥 ) = − 2 𝑥 3 𝑓 ( 1 ) ⁡ ( − 1 ) = − 2 ( − 1 ) 3 = 2 𝑓 ( 2 ) ⁡ ( 𝑥 ) = 2 ⁢ ( 3 ) 𝑥 4 𝑓 ( 2 ) ⁡ ( − 1 ) = 2 ⁢ ( 3 ) ( − 1 ) 4 = 2 ⁢ ( 3 ) 𝑓 ( 3 ) ⁡ ( 𝑥 ) = − 2 ⁢ ( 3 ) ⁢ ( 4 ) 𝑥 5 𝑓 ( 3 ) ⁡ ( − 1 ) = − 2 ⁢ ( 3 ) ⁢ ( 4 ) ( − 1 ) 5 = 2 ⁢ ( 3 ) ⁢ ( 4 ) ⋮ ⋮ 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = ( − 1 ) 𝑛 ⁢ ( 𝑛 + 1 ) ! 𝑥 𝑛 + 2 𝑓 ( 𝑛 ) ⁡ ( − 1 ) = ( − 1 ) 𝑛 ⁢ ( 𝑛 + 1 ) ! ( − 1 ) 𝑛 + 2 = ( 𝑛 + 1 ) ! f ( 0 ) ⁡ ( x ) = 1 x 2 f ( 0 ) ⁡ ( − 1 ) = 1 ( − 1 ) 2 = 1 f ( 1 ) ⁡ ( x ) = − 2 x 3 f ( 1 ) ⁡ ( − 1 ) = − 2 ( − 1 ) 3 = 2 f ( 2 ) ⁡ ( x ) = 2 ⁢ ( 3 ) x 4 f ( 2 ) ⁡ ( − 1 ) = 2 ⁢ ( 3 ) ( − 1 ) 4 = 2 ⁢ ( 3 ) f ( 3 ) ⁡ ( x ) = − 2 ⁢ ( 3 ) ⁢ ( 4 ) x 5 f ( 3 ) ⁡ ( − 1 ) = − 2 ⁢ ( 3 ) ⁢ ( 4 ) ( − 1 ) 5 = 2 ⁢ ( 3 ) ⁢ ( 4 ) ⋮ ⋮ f ( n ) ⁡ ( x ) = ( − 1 ) n ⁢ ( n + 1 ) ! x n + 2 f ( n ) ⁡ ( − 1 ) = ( − 1 ) n ⁢ ( n + 1 ) ! ( − 1 ) n + 2 = ( n + 1 ) ! Notice that all the negative signs will cancel out in the evaluation. Also, this formula will work for all 𝑛 n , unlike the previous example. Here is the Taylor Series for this function. 1 𝑥 2 = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( − 1 ) 𝑛 ! ⁢ ( 𝑥 + 1 ) 𝑛 = ∞ ∑ 𝑛 = 0 ( 𝑛 + 1 ) ! 𝑛 ! ⁢ ( 𝑥 + 1 ) 𝑛 = ∞ ∑ 𝑛 = 0 ( 𝑛 + 1 ) ⁢ ( 𝑥 + 1 ) 𝑛 1 x 2 = ∑ n = 0 ∞ f ( n ) ⁡ ( − 1 ) n ! ⁢ ( x + 1 ) n = ∑ n = 0 ∞ ( n + 1 ) ! n ! ⁢ ( x + 1 ) n = ∑ n = 0 ∞ ( n + 1 ) ⁢ ( x + 1 ) n"
+        },
+        {
+            "html_tag": "div",
+            "type": "solution",
+            "text": "Again, here are the derivatives and evaluations. 𝑓 ( 0 ) ⁡ ( 𝑥 ) = 1 𝑥 2 𝑓 ( 0 ) ⁡ ( − 1 ) = 1 ( − 1 ) 2 = 1 𝑓 ( 1 ) ⁡ ( 𝑥 ) = − 2 𝑥 3 𝑓 ( 1 ) ⁡ ( − 1 ) = − 2 ( − 1 ) 3 = 2 𝑓 ( 2 ) ⁡ ( 𝑥 ) = 2 ⁢ ( 3 ) 𝑥 4 𝑓 ( 2 ) ⁡ ( − 1 ) = 2 ⁢ ( 3 ) ( − 1 ) 4 = 2 ⁢ ( 3 ) 𝑓 ( 3 ) ⁡ ( 𝑥 ) = − 2 ⁢ ( 3 ) ⁢ ( 4 ) 𝑥 5 𝑓 ( 3 ) ⁡ ( − 1 ) = − 2 ⁢ ( 3 ) ⁢ ( 4 ) ( − 1 ) 5 = 2 ⁢ ( 3 ) ⁢ ( 4 ) ⋮ ⋮ 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = ( − 1 ) 𝑛 ⁢ ( 𝑛 + 1 ) ! 𝑥 𝑛 + 2 𝑓 ( 𝑛 ) ⁡ ( − 1 ) = ( − 1 ) 𝑛 ⁢ ( 𝑛 + 1 ) ! ( − 1 ) 𝑛 + 2 = ( 𝑛 + 1 ) ! f ( 0 ) ⁡ ( x ) = 1 x 2 f ( 0 ) ⁡ ( − 1 ) = 1 ( − 1 ) 2 = 1 f ( 1 ) ⁡ ( x ) = − 2 x 3 f ( 1 ) ⁡ ( − 1 ) = − 2 ( − 1 ) 3 = 2 f ( 2 ) ⁡ ( x ) = 2 ⁢ ( 3 ) x 4 f ( 2 ) ⁡ ( − 1 ) = 2 ⁢ ( 3 ) ( − 1 ) 4 = 2 ⁢ ( 3 ) f ( 3 ) ⁡ ( x ) = − 2 ⁢ ( 3 ) ⁢ ( 4 ) x 5 f ( 3 ) ⁡ ( − 1 ) = − 2 ⁢ ( 3 ) ⁢ ( 4 ) ( − 1 ) 5 = 2 ⁢ ( 3 ) ⁢ ( 4 ) ⋮ ⋮ f ( n ) ⁡ ( x ) = ( − 1 ) n ⁢ ( n + 1 ) ! x n + 2 f ( n ) ⁡ ( − 1 ) = ( − 1 ) n ⁢ ( n + 1 ) ! ( − 1 ) n + 2 = ( n + 1 ) ! Notice that all the negative signs will cancel out in the evaluation. Also, this formula will work for all 𝑛 n , unlike the previous example. Here is the Taylor Series for this function. 1 𝑥 2 = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( − 1 ) 𝑛 ! ⁢ ( 𝑥 + 1 ) 𝑛 = ∞ ∑ 𝑛 = 0 ( 𝑛 + 1 ) ! 𝑛 ! ⁢ ( 𝑥 + 1 ) 𝑛 = ∞ ∑ 𝑛 = 0 ( 𝑛 + 1 ) ⁢ ( 𝑥 + 1 ) 𝑛 1 x 2 = ∑ n = 0 ∞ f ( n ) ⁡ ( − 1 ) n ! ⁢ ( x + 1 ) n = ∑ n = 0 ∞ ( n + 1 ) ! n ! ⁢ ( x + 1 ) n = ∑ n = 0 ∞ ( n + 1 ) ⁢ ( x + 1 ) n"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Again, here are the derivatives and evaluations."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ( 0 ) ⁡ ( 𝑥 ) = 1 𝑥 2 𝑓 ( 0 ) ⁡ ( − 1 ) = 1 ( − 1 ) 2 = 1 𝑓 ( 1 ) ⁡ ( 𝑥 ) = − 2 𝑥 3 𝑓 ( 1 ) ⁡ ( − 1 ) = − 2 ( − 1 ) 3 = 2 𝑓 ( 2 ) ⁡ ( 𝑥 ) = 2 ⁢ ( 3 ) 𝑥 4 𝑓 ( 2 ) ⁡ ( − 1 ) = 2 ⁢ ( 3 ) ( − 1 ) 4 = 2 ⁢ ( 3 ) 𝑓 ( 3 ) ⁡ ( 𝑥 ) = − 2 ⁢ ( 3 ) ⁢ ( 4 ) 𝑥 5 𝑓 ( 3 ) ⁡ ( − 1 ) = − 2 ⁢ ( 3 ) ⁢ ( 4 ) ( − 1 ) 5 = 2 ⁢ ( 3 ) ⁢ ( 4 ) ⋮ ⋮ 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = ( − 1 ) 𝑛 ⁢ ( 𝑛 + 1 ) ! 𝑥 𝑛 + 2 𝑓 ( 𝑛 ) ⁡ ( − 1 ) = ( − 1 ) 𝑛 ⁢ ( 𝑛 + 1 ) ! ( − 1 ) 𝑛 + 2 = ( 𝑛 + 1 ) ! f ( 0 ) ⁡ ( x ) = 1 x 2 f ( 0 ) ⁡ ( − 1 ) = 1 ( − 1 ) 2 = 1 f ( 1 ) ⁡ ( x ) = − 2 x 3 f ( 1 ) ⁡ ( − 1 ) = − 2 ( − 1 ) 3 = 2 f ( 2 ) ⁡ ( x ) = 2 ⁢ ( 3 ) x 4 f ( 2 ) ⁡ ( − 1 ) = 2 ⁢ ( 3 ) ( − 1 ) 4 = 2 ⁢ ( 3 ) f ( 3 ) ⁡ ( x ) = − 2 ⁢ ( 3 ) ⁢ ( 4 ) x 5 f ( 3 ) ⁡ ( − 1 ) = − 2 ⁢ ( 3 ) ⁢ ( 4 ) ( − 1 ) 5 = 2 ⁢ ( 3 ) ⁢ ( 4 ) ⋮ ⋮ f ( n ) ⁡ ( x ) = ( − 1 ) n ⁢ ( n + 1 ) ! x n + 2 f ( n ) ⁡ ( − 1 ) = ( − 1 ) n ⁢ ( n + 1 ) ! ( − 1 ) n + 2 = ( n + 1 ) !"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Notice that all the negative signs will cancel out in the evaluation. Also, this formula will work for all 𝑛 n , unlike the previous example."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑛 n"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Here is the Taylor Series for this function."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "1 𝑥 2 = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( − 1 ) 𝑛 ! ⁢ ( 𝑥 + 1 ) 𝑛 = ∞ ∑ 𝑛 = 0 ( 𝑛 + 1 ) ! 𝑛 ! ⁢ ( 𝑥 + 1 ) 𝑛 = ∞ ∑ 𝑛 = 0 ( 𝑛 + 1 ) ⁢ ( 𝑥 + 1 ) 𝑛 1 x 2 = ∑ n = 0 ∞ f ( n ) ⁡ ( − 1 ) n ! ⁢ ( x + 1 ) n = ∑ n = 0 ∞ ( n + 1 ) ! n ! ⁢ ( x + 1 ) n = ∑ n = 0 ∞ ( n + 1 ) ⁢ ( x + 1 ) n"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Now, let’s work one of the easier examples in this section. The problem for most students is that it may not appear to be that easy (or maybe it will appear to be too easy) at first glance."
+        },
+        {
+            "html_tag": "div",
+            "type": "example",
+            "text": "Example 9 Find the Taylor Series for 𝑓 ⁡ ( 𝑥 ) = 𝑥 3 − 1 0 ⁢ 𝑥 2 + 6 f ⁡ ( x ) = x 3 − 10 ⁢ x 2 + 6 about 𝑥 = 3 x = 3 . Show Solution Here are the derivatives for this problem. 𝑓 ( 0 ) ⁡ ( 𝑥 ) = 𝑥 3 − 1 0 ⁢ 𝑥 2 + 6 𝑓 ( 0 ) ⁡ ( 3 ) = − 5 7 𝑓 ( 1 ) ⁡ ( 𝑥 ) = 3 ⁢ 𝑥 2 − 2 0 ⁢ 𝑥 𝑓 ( 1 ) ⁡ ( 3 ) = − 3 3 𝑓 ( 2 ) ⁡ ( 𝑥 ) = 6 ⁢ 𝑥 − 2 0 𝑓 ( 2 ) ⁡ ( 3 ) = − 2 𝑓 ( 3 ) ⁡ ( 𝑥 ) = 6 𝑓 ( 3 ) ⁡ ( 3 ) = 6 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = 0 𝑓 ( 4 ) ⁡ ( 3 ) = 0 𝑛 ≥ 4 f ( 0 ) ⁡ ( x ) = x 3 − 10 ⁢ x 2 + 6 f ( 0 ) ⁡ ( 3 ) = − 57 f ( 1 ) ⁡ ( x ) = 3 ⁢ x 2 − 20 ⁢ x f ( 1 ) ⁡ ( 3 ) = − 33 f ( 2 ) ⁡ ( x ) = 6 ⁢ x − 20 f ( 2 ) ⁡ ( 3 ) = − 2 f ( 3 ) ⁡ ( x ) = 6 f ( 3 ) ⁡ ( 3 ) = 6 f ( n ) ⁡ ( x ) = 0 f ( 4 ) ⁡ ( 3 ) = 0 n ≥ 4 This Taylor series will terminate after 𝑛 = 3 n = 3 . This will always happen when we are finding the Taylor Series of a polynomial. Here is the Taylor Series for this one. 𝑥 3 − 1 0 ⁢ 𝑥 2 + 6 = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( 3 ) 𝑛 ! ⁢ ( 𝑥 − 3 ) 𝑛 = 𝑓 ⁡ ( 3 ) + 𝑓 ′ ⁡ ( 3 ) ⁢ ( 𝑥 − 3 ) + 𝑓 ″ ⁡ ( 3 ) 2 ! ⁢ ( 𝑥 − 3 ) 2 + 𝑓 ‴ ⁡ ( 3 ) 3 ! ⁢ ( 𝑥 − 3 ) 3 + 0 = − 5 7 − 3 3 ⁢ ( 𝑥 − 3 ) − ( 𝑥 − 3 ) 2 + ( 𝑥 − 3 ) 3 x 3 − 10 ⁢ x 2 + 6 = ∑ n = 0 ∞ f ( n ) ⁡ ( 3 ) n ! ⁢ ( x − 3 ) n = f ⁡ ( 3 ) + f ′ ⁡ ( 3 ) ⁢ ( x − 3 ) + f ″ ⁡ ( 3 ) 2 ! ⁢ ( x − 3 ) 2 + f ‴ ⁡ ( 3 ) 3 ! ⁢ ( x − 3 ) 3 + 0 = − 57 − 33 ⁢ ( x − 3 ) − ( x − 3 ) 2 + ( x − 3 ) 3 When finding the Taylor Series of a polynomial we don’t do any simplification of the right-hand side. We leave it like it is. In fact, if we were to multiply everything out we just get back to the original polynomial! While it’s not apparent that writing the Taylor Series for a polynomial is useful there are times where this needs to be done. The problem is that they are beyond the scope of this course and so aren’t covered here. For example, there is one application to series in the field of Differential Equations where this needs to be done on occasion."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ⁡ ( 𝑥 ) = 𝑥 3 − 1 0 ⁢ 𝑥 2 + 6 f ⁡ ( x ) = x 3 − 10 ⁢ x 2 + 6"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑥 = 3 x = 3"
+        },
+        {
+            "html_tag": "div",
+            "type": "example-content",
+            "text": "Show Solution Here are the derivatives for this problem. 𝑓 ( 0 ) ⁡ ( 𝑥 ) = 𝑥 3 − 1 0 ⁢ 𝑥 2 + 6 𝑓 ( 0 ) ⁡ ( 3 ) = − 5 7 𝑓 ( 1 ) ⁡ ( 𝑥 ) = 3 ⁢ 𝑥 2 − 2 0 ⁢ 𝑥 𝑓 ( 1 ) ⁡ ( 3 ) = − 3 3 𝑓 ( 2 ) ⁡ ( 𝑥 ) = 6 ⁢ 𝑥 − 2 0 𝑓 ( 2 ) ⁡ ( 3 ) = − 2 𝑓 ( 3 ) ⁡ ( 𝑥 ) = 6 𝑓 ( 3 ) ⁡ ( 3 ) = 6 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = 0 𝑓 ( 4 ) ⁡ ( 3 ) = 0 𝑛 ≥ 4 f ( 0 ) ⁡ ( x ) = x 3 − 10 ⁢ x 2 + 6 f ( 0 ) ⁡ ( 3 ) = − 57 f ( 1 ) ⁡ ( x ) = 3 ⁢ x 2 − 20 ⁢ x f ( 1 ) ⁡ ( 3 ) = − 33 f ( 2 ) ⁡ ( x ) = 6 ⁢ x − 20 f ( 2 ) ⁡ ( 3 ) = − 2 f ( 3 ) ⁡ ( x ) = 6 f ( 3 ) ⁡ ( 3 ) = 6 f ( n ) ⁡ ( x ) = 0 f ( 4 ) ⁡ ( 3 ) = 0 n ≥ 4 This Taylor series will terminate after 𝑛 = 3 n = 3 . This will always happen when we are finding the Taylor Series of a polynomial. Here is the Taylor Series for this one. 𝑥 3 − 1 0 ⁢ 𝑥 2 + 6 = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( 3 ) 𝑛 ! ⁢ ( 𝑥 − 3 ) 𝑛 = 𝑓 ⁡ ( 3 ) + 𝑓 ′ ⁡ ( 3 ) ⁢ ( 𝑥 − 3 ) + 𝑓 ″ ⁡ ( 3 ) 2 ! ⁢ ( 𝑥 − 3 ) 2 + 𝑓 ‴ ⁡ ( 3 ) 3 ! ⁢ ( 𝑥 − 3 ) 3 + 0 = − 5 7 − 3 3 ⁢ ( 𝑥 − 3 ) − ( 𝑥 − 3 ) 2 + ( 𝑥 − 3 ) 3 x 3 − 10 ⁢ x 2 + 6 = ∑ n = 0 ∞ f ( n ) ⁡ ( 3 ) n ! ⁢ ( x − 3 ) n = f ⁡ ( 3 ) + f ′ ⁡ ( 3 ) ⁢ ( x − 3 ) + f ″ ⁡ ( 3 ) 2 ! ⁢ ( x − 3 ) 2 + f ‴ ⁡ ( 3 ) 3 ! ⁢ ( x − 3 ) 3 + 0 = − 57 − 33 ⁢ ( x − 3 ) − ( x − 3 ) 2 + ( x − 3 ) 3 When finding the Taylor Series of a polynomial we don’t do any simplification of the right-hand side. We leave it like it is. In fact, if we were to multiply everything out we just get back to the original polynomial! While it’s not apparent that writing the Taylor Series for a polynomial is useful there are times where this needs to be done. The problem is that they are beyond the scope of this course and so aren’t covered here. For example, there is one application to series in the field of Differential Equations where this needs to be done on occasion."
+        },
+        {
+            "html_tag": "div",
+            "type": "solution",
+            "text": "Here are the derivatives for this problem. 𝑓 ( 0 ) ⁡ ( 𝑥 ) = 𝑥 3 − 1 0 ⁢ 𝑥 2 + 6 𝑓 ( 0 ) ⁡ ( 3 ) = − 5 7 𝑓 ( 1 ) ⁡ ( 𝑥 ) = 3 ⁢ 𝑥 2 − 2 0 ⁢ 𝑥 𝑓 ( 1 ) ⁡ ( 3 ) = − 3 3 𝑓 ( 2 ) ⁡ ( 𝑥 ) = 6 ⁢ 𝑥 − 2 0 𝑓 ( 2 ) ⁡ ( 3 ) = − 2 𝑓 ( 3 ) ⁡ ( 𝑥 ) = 6 𝑓 ( 3 ) ⁡ ( 3 ) = 6 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = 0 𝑓 ( 4 ) ⁡ ( 3 ) = 0 𝑛 ≥ 4 f ( 0 ) ⁡ ( x ) = x 3 − 10 ⁢ x 2 + 6 f ( 0 ) ⁡ ( 3 ) = − 57 f ( 1 ) ⁡ ( x ) = 3 ⁢ x 2 − 20 ⁢ x f ( 1 ) ⁡ ( 3 ) = − 33 f ( 2 ) ⁡ ( x ) = 6 ⁢ x − 20 f ( 2 ) ⁡ ( 3 ) = − 2 f ( 3 ) ⁡ ( x ) = 6 f ( 3 ) ⁡ ( 3 ) = 6 f ( n ) ⁡ ( x ) = 0 f ( 4 ) ⁡ ( 3 ) = 0 n ≥ 4 This Taylor series will terminate after 𝑛 = 3 n = 3 . This will always happen when we are finding the Taylor Series of a polynomial. Here is the Taylor Series for this one. 𝑥 3 − 1 0 ⁢ 𝑥 2 + 6 = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( 3 ) 𝑛 ! ⁢ ( 𝑥 − 3 ) 𝑛 = 𝑓 ⁡ ( 3 ) + 𝑓 ′ ⁡ ( 3 ) ⁢ ( 𝑥 − 3 ) + 𝑓 ″ ⁡ ( 3 ) 2 ! ⁢ ( 𝑥 − 3 ) 2 + 𝑓 ‴ ⁡ ( 3 ) 3 ! ⁢ ( 𝑥 − 3 ) 3 + 0 = − 5 7 − 3 3 ⁢ ( 𝑥 − 3 ) − ( 𝑥 − 3 ) 2 + ( 𝑥 − 3 ) 3 x 3 − 10 ⁢ x 2 + 6 = ∑ n = 0 ∞ f ( n ) ⁡ ( 3 ) n ! ⁢ ( x − 3 ) n = f ⁡ ( 3 ) + f ′ ⁡ ( 3 ) ⁢ ( x − 3 ) + f ″ ⁡ ( 3 ) 2 ! ⁢ ( x − 3 ) 2 + f ‴ ⁡ ( 3 ) 3 ! ⁢ ( x − 3 ) 3 + 0 = − 57 − 33 ⁢ ( x − 3 ) − ( x − 3 ) 2 + ( x − 3 ) 3 When finding the Taylor Series of a polynomial we don’t do any simplification of the right-hand side. We leave it like it is. In fact, if we were to multiply everything out we just get back to the original polynomial! While it’s not apparent that writing the Taylor Series for a polynomial is useful there are times where this needs to be done. The problem is that they are beyond the scope of this course and so aren’t covered here. For example, there is one application to series in the field of Differential Equations where this needs to be done on occasion."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Here are the derivatives for this problem."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑓 ( 0 ) ⁡ ( 𝑥 ) = 𝑥 3 − 1 0 ⁢ 𝑥 2 + 6 𝑓 ( 0 ) ⁡ ( 3 ) = − 5 7 𝑓 ( 1 ) ⁡ ( 𝑥 ) = 3 ⁢ 𝑥 2 − 2 0 ⁢ 𝑥 𝑓 ( 1 ) ⁡ ( 3 ) = − 3 3 𝑓 ( 2 ) ⁡ ( 𝑥 ) = 6 ⁢ 𝑥 − 2 0 𝑓 ( 2 ) ⁡ ( 3 ) = − 2 𝑓 ( 3 ) ⁡ ( 𝑥 ) = 6 𝑓 ( 3 ) ⁡ ( 3 ) = 6 𝑓 ( 𝑛 ) ⁡ ( 𝑥 ) = 0 𝑓 ( 4 ) ⁡ ( 3 ) = 0 𝑛 ≥ 4 f ( 0 ) ⁡ ( x ) = x 3 − 10 ⁢ x 2 + 6 f ( 0 ) ⁡ ( 3 ) = − 57 f ( 1 ) ⁡ ( x ) = 3 ⁢ x 2 − 20 ⁢ x f ( 1 ) ⁡ ( 3 ) = − 33 f ( 2 ) ⁡ ( x ) = 6 ⁢ x − 20 f ( 2 ) ⁡ ( 3 ) = − 2 f ( 3 ) ⁡ ( x ) = 6 f ( 3 ) ⁡ ( 3 ) = 6 f ( n ) ⁡ ( x ) = 0 f ( 4 ) ⁡ ( 3 ) = 0 n ≥ 4"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "This Taylor series will terminate after 𝑛 = 3 n = 3 . This will always happen when we are finding the Taylor Series of a polynomial. Here is the Taylor Series for this one."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "inline-math",
+            "text": "𝑛 = 3 n = 3"
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝑥 3 − 1 0 ⁢ 𝑥 2 + 6 = ∞ ∑ 𝑛 = 0 𝑓 ( 𝑛 ) ⁡ ( 3 ) 𝑛 ! ⁢ ( 𝑥 − 3 ) 𝑛 = 𝑓 ⁡ ( 3 ) + 𝑓 ′ ⁡ ( 3 ) ⁢ ( 𝑥 − 3 ) + 𝑓 ″ ⁡ ( 3 ) 2 ! ⁢ ( 𝑥 − 3 ) 2 + 𝑓 ‴ ⁡ ( 3 ) 3 ! ⁢ ( 𝑥 − 3 ) 3 + 0 = − 5 7 − 3 3 ⁢ ( 𝑥 − 3 ) − ( 𝑥 − 3 ) 2 + ( 𝑥 − 3 ) 3 x 3 − 10 ⁢ x 2 + 6 = ∑ n = 0 ∞ f ( n ) ⁡ ( 3 ) n ! ⁢ ( x − 3 ) n = f ⁡ ( 3 ) + f ′ ⁡ ( 3 ) ⁢ ( x − 3 ) + f ″ ⁡ ( 3 ) 2 ! ⁢ ( x − 3 ) 2 + f ‴ ⁡ ( 3 ) 3 ! ⁢ ( x − 3 ) 3 + 0 = − 57 − 33 ⁢ ( x − 3 ) − ( x − 3 ) 2 + ( x − 3 ) 3"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "When finding the Taylor Series of a polynomial we don’t do any simplification of the right-hand side. We leave it like it is. In fact, if we were to multiply everything out we just get back to the original polynomial!"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "While it’s not apparent that writing the Taylor Series for a polynomial is useful there are times where this needs to be done. The problem is that they are beyond the scope of this course and so aren’t covered here. For example, there is one application to series in the field of Differential Equations where this needs to be done on occasion."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "So, we’ve seen quite a few examples of Taylor Series to this point and in all of them we were able to find general formulas for the series. This won’t always be the case. To see an example of one that doesn’t have a general formula check out the last example in the next section."
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Before leaving this section there are three important Taylor Series that we’ve derived in this section that we should summarize up in one place. In my class I will assume that you know these formulas from this point on."
+        },
+        {
+            "html_tag": "mjx-container",
+            "type": "equation",
+            "text": "𝐞 𝑥 = ∞ ∑ 𝑛 = 0 𝑥 𝑛 𝑛 ! c o s ⁡ 𝑥 = ∞ ∑ 𝑛 = 0 ( − 1 ) 𝑛 ⁢ 𝑥 2 ⁢ 𝑛 ( 2 ⁢ 𝑛 ) ! s i n ⁡ 𝑥 = ∞ ∑ 𝑛 = 0 ( − 1 ) 𝑛 ⁢ 𝑥 2 ⁢ 𝑛 + 1 ( 2 ⁢ 𝑛 + 1 ) ! e x = ∑ n = 0 ∞ x n n ! cos ⁡ x = ∑ n = 0 ∞ ( − 1 ) n ⁢ x 2 ⁢ n ( 2 ⁢ n ) ! sin ⁡ x = ∑ n = 0 ∞ ( − 1 ) n ⁢ x 2 ⁢ n + 1 ( 2 ⁢ n + 1 ) !"
+        },
+        {
+            "html_tag": "p",
+            "type": "paragraph",
+            "text": "Jump to"
+        }
+    ],
+    "structure": {
+        "paragraphs": 71,
+        "equations": 0,
+        "images": 0,
+        "examples": 9,
+        "example_content": 9,
+        "solution_content": 9
+    }
+}

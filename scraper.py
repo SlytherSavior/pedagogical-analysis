@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 import json
 
-URL = "https://tutorial.math.lamar.edu/Classes/CalcI/Tangents_Rates.aspx"
+URL = "https://tutorial.math.lamar.edu/Classes/CalcII/TaylorSeries.aspx"
 
 
 def fetching_page(url):
@@ -112,7 +112,7 @@ def parsing(html):
     return items
 
 
-def save_json(data, filename="categorical_analysis.json"):
+def save_json(data, filename="categorical_analysis2.json"):
 
     with open(filename, "w", encoding="utf-8") as file:
         json.dump(
