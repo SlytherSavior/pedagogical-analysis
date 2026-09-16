@@ -12,13 +12,13 @@ src/
 	prompt.py        Define the Gemini system prompt and rubric.
 	gemini.py        Evaluate processed content with Gemini.
 scripts/
-	test_scraper.py  Small exploratory scraper test.
+	test_scraper.py  Random Test file
 data/
 	raw/             Scraped article JSON and raw extraction fixtures.
 	processed/       Content-count and structure analyses.
 	results/         LLM-generated pedagogical analyses.
 notebooks/
-	pedagogy.ipynb   Workspace for exploratory analysis.
+	pedagogy.ipynb   TBD
 ```
 
 ## Articles
