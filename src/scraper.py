@@ -2,8 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 import json
+from pathlib import Path
 
 URL = "https://tutorial.math.lamar.edu/Classes/CalcII/TaylorSeries.aspx"
+ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_OUTPUT = ROOT / "data" / "raw" / "categorical_analysis2.json"
 
 
 def fetching_page(url):
@@ -112,9 +115,14 @@ def parsing(html):
     return items
 
 
-def save_json(data, filename="categorical_analysis2.json"):
+def save_json(data, filename=DEFAULT_OUTPUT):
 
-    with open(filename, "w", encoding="utf-8") as file:
+    output_path = Path(filename)
+    if not output_path.is_absolute():
+        output_path = ROOT / output_path
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as file:
         json.dump(
             data,
             file,
@@ -151,4 +159,4 @@ if __name__ == "__main__":
 
     save_json(article)
 
-    print(f"Extracted {len(items)} content blocks.")
+    print(f"Extracted {len(items)} content blocks to {DEFAULT_OUTPUT}.")
