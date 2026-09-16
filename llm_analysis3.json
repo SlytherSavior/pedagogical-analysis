@@ -1,0 +1,37 @@
+{
+  "article_id": "https://tutorial.math.lamar.edu/Classes/CalcI/Tangents_Rates.aspx",
+  "pedagogical_analysis": {
+    "constructive_alignment": {
+      "score": 3,
+      "justification": "The instructional content directly addresses the stated learning outcomes of understanding tangent lines and rates of change as introductory motivations for limits. However, while detailed worked examples are included, there are no structured independent practice tasks or assessments embedded within the lesson to evaluate student mastery."
+    },
+    "activation_of_prior_knowledge": {
+      "score": 4,
+      "justification": "The text explicitly bridges prior algebra knowledge to new calculus concepts by reminding students how line equations are constructed using points and slopes, and by connecting geometric tangents to intuitive mental concepts like moving in the same direction."
+    },
+    "problem_centeredness": {
+      "score": 3,
+      "justification": "The material introduces applied real-world contexts, such as air volume in a balloon and distance traveled by a car, to explain rates of change. However, the core focus remains primarily topic-based and focused on mathematical definitions and tabular approximations."
+    },
+    "cognitive_load_management": {
+      "score": 4,
+      "justification": "The lesson is well-segmented into distinct thematic subheadings (Tangent Lines, Rates of Change, Velocity Problem, Change of Notation). It uses formatted numerical tables and clear signaling words to break complex numerical limits into digestible steps."
+    },
+    "scaffolding_and_fading": {
+      "score": 2,
+      "justification": "The content relies on static support: detailed fully worked examples are provided, but there is a lack of intermediate partially faded examples or scaffolded execution tasks for the learner."
+    },
+    "learner_engagement": {
+      "score": 2,
+      "justification": "The lesson is predominantly passive (reading text and observing worked solutions), though it briefly prompts the student actively with a suggestion to build a table of values to verify rates of change at other points."
+    },
+    "formative_feedback_utility": {
+      "score": 1,
+      "justification": "No standalone practice problems or interactive check-for-understanding questions are included in the text, leaving no opportunity for feedback on independent student practice."
+    },
+    "motivational_design": {
+      "score": 4,
+      "justification": "The text demonstrates strong motivational design by explicitly establishing the long-term importance of rates of change in calculus, using relatable physical scenarios, and adopting a supportive, reassuring tone regarding upcoming challenging concepts."
+    }
+  }
+}

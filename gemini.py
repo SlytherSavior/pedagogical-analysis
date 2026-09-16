@@ -15,7 +15,7 @@ from prompt import SYSTEM_PROMPT, build_prompt
 MODEL = "gemini-3.6-flash"
 
 INPUT_FILE = Path("content_analysis2.json")
-OUTPUT_FILE = Path("llm_analysis2.json")
+OUTPUT_FILE = Path("llm_analysis4.json")
 
 load_dotenv(Path(__file__).with_name(".env"))
 
@@ -30,13 +30,14 @@ def load_article(path):
 def validate_analysis(result):
 
     required_criteria = [
-        "explanation_quality",
-        "conceptual_understanding",
-        "scaffolding",
-        "worked_examples",
-        "cognitive_demand",
-        "practice_opportunities",
-        "feedback"
+        "constructive_alignment",
+        "activation_of_prior_knowledge",
+        "problem_centeredness",
+        "cognitive_load_management",
+        "scaffolding_and_fading",
+        "learner_engagement",
+        "formative_feedback_utility",
+        "motivational_design"
     ]
 
     if "article_id" not in result:

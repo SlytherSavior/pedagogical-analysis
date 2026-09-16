@@ -29,121 +29,87 @@ Evaluate the article using the following criteria.
 
 All scores must be integers from 1 to 5.
 
-1. EXPLANATION QUALITY
+1. CONSTRUCTIVE ALIGNMENT
 
-Evaluate how clearly the article explains concepts.
+Definition: The degree to which the intended learning outcomes, the instructional content, and the practice/assessment tasks are in absolute harmony. If a material promises to teach a learner how to "analyze" a system, the practice must require analysis, not merely the recall of definitions.
 
-1 = Concepts are poorly explained or mostly presented without explanation.
-2 = Limited explanations; important concepts are difficult to follow.
-3 = Generally understandable explanations with some gaps.
-4 = Clear and well-developed explanations.
-5 = Exceptionally clear explanations that make difficult concepts accessible.
+1 = Severe misalignment: content and practice do not match the stated or implied learning goals.
+2 = Weak alignment: practice assesses lower-order skills than the material promises.
+3 = Partial alignment: most content aligns with the goals, but notable tangents or missing assessments remain.
+4 = Strong alignment: goals, content, and practice clearly correspond, though implicit goals may require slight inference.
+5 = Perfect constructive alignment: every section and practice task maps unambiguously to a stated learning outcome.
 
-2. CONCEPTUAL UNDERSTANDING
+2. ACTIVATION OF PRIOR KNOWLEDGE
 
-Evaluate whether the material helps learners understand underlying
-concepts rather than merely perform procedures.
+Definition: How effectively the material prepares the learner before introducing new concepts. According to Ausubel's Subsumption Theory, new knowledge must be anchored to existing cognitive schemas through analogies, prerequisite reviews, or recall of past experiences.
 
-1 = Almost entirely procedural; little conceptual explanation.
-2 = Mostly procedural with limited conceptual discussion.
-3 = Contains both procedural and conceptual material.
-4 = Strong conceptual explanations alongside procedures.
-5 = Deeply develops conceptual understanding, intuition, and relationships.
+1 = No activation: introduces complex new material with no context, analogy, or prerequisite warning.
+2 = Superficial activation: mentions a prerequisite without helping the learner recall or visualize it.
+3 = Basic anchoring: uses a standard analogy or briefly reviews prior concepts.
+4 = Strong activation: explicitly bridges existing knowledge to the new topic and explains the connection.
+5 = Expert schema building: prompts recall of a specific mental model or experience and uses it as the foundation for the new concept.
 
-3. SCAFFOLDING
+3. PROBLEM-CENTEREDNESS
 
-Evaluate how effectively the material supports the learner as concepts
-increase in complexity.
+Definition: The extent to which the learning is anchored in authentic, real-world problems rather than abstract, isolated facts. Learners acquire skills more effectively when they are shown the whole task or problem they will eventually be able to solve.
 
-Consider:
-- prerequisite knowledge
-- progression from simple to complex
-- intermediate explanations
-- step-by-step support
-- transitions between concepts
+1 = Pure abstraction: concepts are taught in a vacuum with no real-world use or context.
+2 = Fact-centric: focuses mainly on definitions and isolated components; application is an afterthought.
+3 = Applied examples: uses hypothetical or generic scenarios, but remains primarily topic-based.
+4 = Task-oriented: explicitly frames the material around solving a realistic task or scenario.
+5 = Deeply problem-centered: an authentic, complex real-world problem drives the entire lesson.
 
-1 = Little or no scaffolding.
-2 = Some support but major gaps exist.
-3 = Adequate scaffolding.
-4 = Strong and consistent scaffolding.
-5 = Carefully structured scaffolding that progressively supports independence.
+4. COGNITIVE LOAD MANAGEMENT
 
-4. WORKED EXAMPLES
+Definition: The material's ability to protect working memory through chunking,
+signaling, clear sequencing, defined terminology, and removal of irrelevant detail.
 
-Evaluate the pedagogical quality of examples and their solutions.
+1 = Cognitive overload: walls of text, disconnected diagrams, undefined jargon, or excessive tangents.
+2 = High friction: poor structure forces the learner to hold too many unconnected pieces in mind.
+3 = Adequate processing: reasonably formatted, with some structure but occasional density or minor tangents.
+4 = Well-segmented: uses clear signaling and breaks concepts into digestible chunks.
+5 = Optimized for working memory: exceptionally clean, sequenced, and signaled presentation with minimal extraneous load.
 
-Consider:
-- relevance to concepts
-- completeness
-- explanation of steps
-- reasoning behind steps
-- progression in difficulty
+5. SCAFFOLDING AND FADING
 
-1 = Examples are absent or poorly explained.
-2 = Examples exist but provide limited instructional value.
-3 = Examples adequately demonstrate procedures.
-4 = Examples are well explained and support learning.
-5 = Examples are exceptionally clear, purposeful, and progressively developed.
+Definition: The temporal progression of learner support. It measures how effectively the material transitions from expert demonstration (fully worked examples) to partial support (completion tasks/faded examples) to independent learner execution.
 
-5. COGNITIVE DEMAND
+1 = No support progression: jumps from theory directly to complex independent problem solving.
+2 = Static support: provides examples but has a drastic difficulty leap without transitional help.
+3 = Basic scaffolding: progresses from simple examples to harder problems but lacks intermediate support.
+4 = Clear fading: demonstrates a process fully, then provides hints or partial setups before independent work.
+5 = Adaptive scaffolding architecture: smoothly moves from worked examples to faded examples and independent practice.
 
-Evaluate the level of cognitive processing required from the learner.
+6. LEARNER ENGAGEMENT (ICAP)
 
-Use the revised Bloom's taxonomy:
+Definition: What the learner is explicitly asked to do, ranging from passive
+receiving to active, constructive, and interactive knowledge generation.
 
-Remember
-Understand
-Apply
-Analyze
-Evaluate
-Create
+1 = Passive: only reading or watching, with no prompts for action.
+2 = Active (minimal): pauses for reflection or simple right-or-wrong knowledge checks.
+3 = Constructive (basic): asks the learner to summarize, fill gaps, or execute a standard procedure independently.
+4 = Constructive (high): applies concepts to novel scenarios, creates original work, or justifies reasoning.
+5 = Interactive/generative: modifies models, predicts outcomes before seeing solutions, or synthesizes concepts into a novel creation.
 
-1 = Primarily recall.
-2 = Mostly understanding.
-3 = Primarily application.
-4 = Significant analysis/evaluation.
-5 = Strong higher-order thinking involving analysis, evaluation,
-    or creation.
+7. FORMATIVE FEEDBACK UTILITY
 
-IMPORTANT:
-This score represents the overall cognitive demand of the material,
-not simply the difficulty of the mathematics.
+Definition: When a learner practices, what happens next? This evaluates the depth of the provided solutions or feedback mechanisms. Feedback must move beyond Task-level (right/wrong) to Process-level (how to fix it) and Self-regulatory-level (how to check your own work).
 
-6. PRACTICE OPPORTUNITIES
+1 = No feedback: practice has no answers or solutions for verification.
+2 = Task-level only: provides only the final correct answer.
+3 = Process-level (basic): provides a worked solution that shows the correct path.
+4 = Corrective: explains the solution and highlights common mistakes or misconceptions.
+5 = Self-regulatory: explains the solution, addresses errors, and teaches a method for checking future work.
 
-Evaluate whether learners are given opportunities to actively practice
-the concepts.
+8. MOTIVATIONAL DESIGN (ARCS)
 
-Consider:
-- exercises
-- questions
-- application problems
-- self-check activities
-- opportunities to solve independently
+Definition:  The emotional and motivational engineering of the text. Evaluates how well the material captures Attention (novelty/curiosity), establishes Relevance (personal/career utility), builds Confidence (achievable milestones), and ensures Satisfaction (feeling of accomplishment).
 
-1 = No meaningful practice.
-2 = Very limited practice.
-3 = Some practice opportunities.
-4 = Good opportunities for practice.
-5 = Extensive and well-designed practice opportunities.
-
-7. FEEDBACK
-
-Evaluate whether learners receive useful feedback about their performance.
-
-Consider:
-- worked solutions
-- answer explanations
-- hints
-- common mistakes
-- corrective explanations
-- self-check mechanisms
-
-1 = No meaningful feedback.
-2 = Very limited feedback.
-3 = Basic feedback is available.
-4 = Good feedback mechanisms.
-5 = Detailed, corrective, and instructionally useful feedback.
+1 = Demotivating: dry, intimidating, or lacking any attempt to build interest.
+2 = Neutral: clear presentation without warmth or a reason for the learner to care.
+3 = Intermittently engaging: occasional hooks or encouragement without sustained momentum.
+4 = Strong motivational design: establishes relevance, uses a supportive tone, and builds confidence through achievable milestones.
+5 = Highly inspiring: sustains curiosity, connects skills to learner goals, affirms progress, and ends with empowerment.
 """
 
 
@@ -167,39 +133,44 @@ Return JSON with exactly this structure:
 
   "pedagogical_analysis": {{
 
-    "explanation_quality": {{
+    "constructive_alignment": {{
       "score": 1,
-      "justification": "...",
+      "justification": "..."
     }},
 
-    "conceptual_understanding": {{
+    "activation_of_prior_knowledge": {{
       "score": 1,
-      "justification": "...",
+      "justification": "..."
     }},
 
-    "scaffolding": {{
+    "problem_centeredness": {{
       "score": 1,
-      "justification": "...",
+      "justification": "..."
     }},
 
-    "worked_examples": {{
+    "cognitive_load_management": {{
       "score": 1,
-      "justification": "...",
+      "justification": "..."
     }},
 
-    "cognitive_demand": {{
+    "scaffolding_and_fading": {{
       "score": 1,
-      "justification": "...",
+      "justification": "..."
     }},
 
-    "practice_opportunities": {{
+    "learner_engagement": {{
       "score": 1,
-      "justification": "...",
+      "justification": "..."
     }},
 
-    "feedback": {{
+    "formative_feedback_utility": {{
       "score": 1,
-      "justification": "...",
+      "justification": "..."
+    }},
+
+    "motivational_design": {{
+      "score": 1,
+      "justification": "..."
     }}
   }}
 }}
