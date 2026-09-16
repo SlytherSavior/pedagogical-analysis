@@ -26,32 +26,6 @@ notebooks/
 - Tangent Lines and Rates of Change: <https://tutorial.math.lamar.edu/Classes/CalcI/Tangents_Rates.aspx>
 - Taylor Series: <https://tutorial.math.lamar.edu/Classes/CalcII/TaylorSeries.aspx>
 
-## Setup
-
-Install the Python dependencies used by the scripts:
-
-```bash
-pip install requests beautifulsoup4 playwright google-genai python-dotenv
-playwright install chromium
-```
-
-Create a `.env` file in the repository root with the Gemini API key expected by
-`src/gemini.py`:
-
-```text
-EX_API_KEY=your-api-key
-```
-
-## Workflow
-
-Run commands from the repository root:
-
-```bash
-python src/scraper.py
-python src/extract.py
-python src/gemini.py
-```
-
 The scripts use repository-relative paths internally, so they can also be
 launched from another working directory. The default flow reads
 `data/raw/categorical_analysis2.json`, writes
