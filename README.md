@@ -1,6 +1,6 @@
 # Pedagogical Analysis
 
-This repository extracts instructional content from calculus pages and evaluates
+This repository extracts instructional content from mathematical text blogs pages and evaluates
 the resulting material against a pedagogical rubric.
 
 ## Repository layout
