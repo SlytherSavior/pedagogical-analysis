@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 INPUT_FILE = ROOT / "data" / "processed" / "content_analysis2.json"
 OUTPUT_FILE = ROOT / "data" / "results" / "llm_analysis4.json"
 
-load_dotenv(Path(__file__).with_name(".env"))
+load_dotenv(ROOT / ".env")
 
 
 def load_article(path):
